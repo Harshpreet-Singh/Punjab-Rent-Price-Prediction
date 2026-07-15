@@ -37,6 +37,5 @@ def inspect_dataset(df):
 def main():
     print("Preprocessing pipeline initialized.")
 
-
 if __name__ == "__main__":
     main()

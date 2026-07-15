@@ -17,6 +17,5 @@ def train_linear_regression():
 def main():
     print("Training module initialized.")
 
-
 if __name__ == "__main__":
     main()
