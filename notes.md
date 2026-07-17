@@ -60,3 +60,8 @@
 | location | YES           | Strong categorical feature                          |
 | city     | YES           | Useful categorical feature                          |
 | title    | NO (for now)  | Free-text feature; keep it for a future improvement |
+
+# target -> Price
+
+* A good feature should have some relationship with the target.
+* This process of choosing useful columns is called Feature Selection.

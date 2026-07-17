@@ -11,31 +11,27 @@ Steps to be implemented:
 4. Encode categorical features
 5. Split train and test data
 """
-
 import pandas as pd
 
 # Dataset path
-DATA_PATH = "data/punjab_rental_dataset.csv"
+DATA_PATH = "../data/punjab_rental_dataset.csv"
 
 
 def load_dataset():
     """
     Load the cleaned rental dataset.
     """
-    # TODO: Implement dataset loading
-    pass
 
-
-def inspect_dataset(df):
-    """
-    Display basic information about the dataset.
-    """
-    # TODO: Implement dataset inspection
-    pass
+    df = pd.read_csv(DATA_PATH)
+    return df
 
 
 def main():
-    print("Preprocessing pipeline initialized.")
+
+    df = load_dataset()
+
+    print(df.head())
+
 
 if __name__ == "__main__":
     main()
