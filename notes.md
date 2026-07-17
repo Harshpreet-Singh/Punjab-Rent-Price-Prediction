@@ -9,6 +9,15 @@
 
 * Unsupervised Learning is a type of Machine Learning where the data has no labels, and the model tries to discover patterns or groups on its own.
 
+| Supervised Learning      | Unsupervised Learning             |
+| ------------------------ | --------------------------------- |
+| Has labels               | No labels                         |
+| Knows the correct answer | Finds patterns itself             |
+| Used for prediction      | Used for grouping and exploration |
+| Example: Predict rent    | Example: Group similar houses     |
+
+
+
 # What is a model?
 - A model is simply the learned relationship between the input features and the target.
 
@@ -33,3 +42,21 @@
 - A label is simply the answer we want the model to learn.
 * House Details = Features
 * Price = Label (Target)
+
+
+# 2 types of supervised learning :  
+1. Regression       - Used when the output is a number.   (predict salary, temperature)
+2. Classification   - Used when the output is a category. (spam or not, pass or fail)
+
+
+<!-- and here price can't be a column then model would be considered as cheating  -->
+
+# Final Features Set (Version 1)
+| Column   | Use?          | Reason                                              |
+| -------- | ------------- | --------------------------------------------------- |
+| bhk      | YES           | Important predictor                                 |
+| bathroom | YES           | Useful numeric feature                              |
+| area     | YES           | Strong predictor                                    |
+| location | YES           | Strong categorical feature                          |
+| city     | YES           | Useful categorical feature                          |
+| title    | NO (for now)  | Free-text feature; keep it for a future improvement |
