@@ -78,3 +78,46 @@ so what we need to do is "One-Hot Encoding"
 | area     | Numeric     | No         |
 | city     | Categorical | Yes        |
 | location | Categorical | Yes        |
+
+-------------------------------------------------------------------
+first we need to know train-test split
+like we can't train the model for 100% of data, it will be pure memorizing of the data 
+so we will train using 80% and test using 20% that how correctly it predicts 
+
+Training ≈ 11,101 rows
+Testing ≈ 2,776 rows
+
+* that's why we will see : test_size=0.2
+
+
+* also fixing randomness of data 
+By writing: random_state=42
+we're telling Python: "Use the same random split every time."
+- It ensures that data shuffling and train-test splits happen the exact same way every time you run the code. This reproducibility allows you to reliably compare different models or debug errors.
+
+
+#### visually : 
+Entire Dataset
+       │
+       ▼
+┌───────────────────┐
+│ Train-Test Split  │
+└───────────────────┘
+       │
+       ├──────────────► Train Set
+       │                  │
+       │                  ▼
+       │              Train Model
+       │
+       └──────────────► Test Set
+                          │
+                          ▼
+                   Evaluate Model
+
+
+
+* kinda move to actual model training now 
+
+Pandas → Data handling
+Matplotlib → Visualization
+Scikit-learn → Machine Learning
