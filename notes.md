@@ -119,5 +119,7 @@ Entire Dataset
 * kinda move to actual model training now 
 
 Pandas → Data handling
+
 Matplotlib → Visualization
+
 Scikit-learn → Machine Learning
