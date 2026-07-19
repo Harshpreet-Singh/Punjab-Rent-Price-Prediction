@@ -65,3 +65,16 @@
 
 * A good feature should have some relationship with the target.
 * This process of choosing useful columns is called Feature Selection.
+
+
+
+* you can't give mohali, kharar, sas nagar to model to train, because model work on numerical operations 
+so what we need to do is "One-Hot Encoding"
+
+| Feature  | Type        | Encoding?  |
+| -------- | ----------- | ---------- |
+| bhk      | Numeric     | No         |
+| bathroom | Numeric     | No         |
+| area     | Numeric     | No         |
+| city     | Categorical | Yes        |
+| location | Categorical | Yes        |
