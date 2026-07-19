@@ -4,18 +4,27 @@ preprocessing.py
 Purpose:
 Prepare the rental dataset for Machine Learning.
 
-Steps to be implemented:
+Pipeline:
 1. Load dataset
-2. Inspect data
+2. Inspect dataset
 3. Select features and target
-4. Encode categorical features
-5. Split train and test data 
+4. Split train and test data
 """
 
 import pandas as pd
+from sklearn.model_selection import train_test_split
 
 # Dataset path
-DATA_PATH = "./data/punjab_rental_dataset.csv"
+DATA_PATH = "data/punjab_rental_dataset.csv"
+
+
+def load_dataset():
+    """
+    Load the cleaned rental dataset.
+    """
+    df = pd.read_csv(DATA_PATH)
+    return df
+
 
 def inspect_dataset(df):
     """
@@ -41,19 +50,64 @@ def inspect_dataset(df):
     print(df.describe())
 
 
-def load_dataset():
+def select_features_target(df):
     """
-    Load the cleaned rental dataset.
+    Separate features (X) and target (y).
     """
 
-    df = pd.read_csv(DATA_PATH)
-    return df
+    X = df[
+        [
+            "bhk",
+            "bathroom",
+            "area",
+            "location",
+            "city",
+        ]
+    ]
+
+    y = df["price"]
+
+    return X, y
+
+
+def split_data(X, y):
+    """
+    Split the dataset into training and testing sets.
+    """
+
+    X_train, X_test, y_train, y_test = train_test_split(
+        X,
+        y,
+        test_size=0.2,
+        random_state=42,
+    )
+
+    return X_train, X_test, y_train, y_test
+
 
 def main():
+    """
+    Execute the preprocessing pipeline.
+    """
 
+    # Load dataset
     df = load_dataset()
 
+    # Inspect dataset
     inspect_dataset(df)
+
+    # Select features and target
+    X, y = select_features_target(df)
+
+    # Split dataset
+    X_train, X_test, y_train, y_test = split_data(X, y)
+
+    # Display split information
+    print("\n========== Train-Test Split ==========")
+    print(f"X_train Shape : {X_train.shape}")
+    print(f"X_test Shape  : {X_test.shape}")
+    print(f"y_train Shape : {y_train.shape}")
+    print(f"y_test Shape  : {y_test.shape}")
 
 
 if __name__ == "__main__":
