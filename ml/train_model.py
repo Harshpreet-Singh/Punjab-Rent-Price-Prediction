@@ -1,21 +1,50 @@
 """
 train_model.py
 
-Purpose:
-Train Machine Learning models for rent prediction.
+Train a Linear Regression model
+using the preprocessed rental dataset.
 """
 
+import joblib
 
-def train_linear_regression():
-    """
-    Train Linear Regression model.
-    """
-    # TODO
-    pass
+from sklearn.linear_model import LinearRegression
+
+from preprocessing import preprocess_data
+
+
+MODEL_PATH = "./models/linear_regression.pkl"
+
+
+def train_model():
+
+    print("Loading preprocessed data...")
+
+    X_train, X_test, y_train, y_test, preprocessor = preprocess_data()
+
+    print("Training Linear Regression model...")
+
+    model = LinearRegression()
+
+    model.fit(X_train, y_train)
+
+    print("Training completed successfully.")
+
+    return model, preprocessor, X_test, y_test
+
+
+def save_model(model):
+
+    joblib.dump(model, MODEL_PATH)
+
+    print(f"Model saved to: {MODEL_PATH}")
 
 
 def main():
-    print("Training module initialized.")
+
+    model, preprocessor, X_test, y_test = train_model()
+
+    save_model(model)
+
 
 if __name__ == "__main__":
     main()
