@@ -146,3 +146,23 @@ Preprocess data
 Train Linear Regression
         ↓
 Save trained model
+
+
+
+
+# Training my first model : 
+
+1. When we write:
+
+- model.fit(X_train, y_train)
+
+Scikit-learn starts looking for patterns.
+
+It asks questions like:
+1. How much does area affect rent?
+2. Does BHK matter?
+3. Does bathroom matter?
+4. How important is location?
+
+Then it calculates the best weights.
+Those weights become your trained model.
