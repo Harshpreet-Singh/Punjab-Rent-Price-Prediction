@@ -72,9 +72,7 @@ def split_data(X, y):
 
 
 def encode_features(X_train, X_test):
-    """
-    Encode categorical columns using One-Hot Encoding.
-    """
+    """Encode categorical columns using One-Hot Encoding."""
 
     categorical_features = [
         "location",
@@ -84,7 +82,7 @@ def encode_features(X_train, X_test):
     preprocessor = ColumnTransformer(
         transformers=[
             (
-                "cat",
+                "categorical",
                 OneHotEncoder(handle_unknown="ignore"),
                 categorical_features,
             )
@@ -99,29 +97,48 @@ def encode_features(X_train, X_test):
     return X_train_encoded, X_test_encoded, preprocessor
 
 
-def main():
+def preprocess_data():
+    """
+    Complete preprocessing pipeline.
+    Returns processed data ready for model training.
+    """
 
-    # Load dataset
     df = load_dataset()
 
-    # Inspect dataset
-    inspect_dataset(df)
-
-    # Feature selection
     X, y = select_features_target(df)
 
-    # Train-test split
     X_train, X_test, y_train, y_test = split_data(X, y)
 
-    # Encode features
     X_train_encoded, X_test_encoded, preprocessor = encode_features(
         X_train,
         X_test,
     )
 
-    print("\n========== Encoded Data ==========")
-    print(f"X_train Shape : {X_train_encoded.shape}")
-    print(f"X_test Shape  : {X_test_encoded.shape}")
+    return (
+        X_train_encoded,
+        X_test_encoded,
+        y_train,
+        y_test,
+        preprocessor,
+    )
+
+
+def main():
+    """
+    Run preprocessing pipeline independently.
+    """
+
+    df = load_dataset()
+
+    inspect_dataset(df)
+
+    X_train, X_test, y_train, y_test, _ = preprocess_data()
+
+    print("\n========== Final Dataset ==========")
+    print(f"X_train Shape : {X_train.shape}")
+    print(f"X_test Shape  : {X_test.shape}")
+    print(f"y_train Shape : {y_train.shape}")
+    print(f"y_test Shape  : {y_test.shape}")
 
 
 if __name__ == "__main__":
