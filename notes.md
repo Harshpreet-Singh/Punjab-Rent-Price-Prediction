@@ -122,6 +122,9 @@ Matplotlib → Visualization
 Scikit-learn → Machine Learning
 
 
+<!-- preprocessing.py 's responsibilities  -->
+split and finalize data for training 
+
 
 Where are those learned weights stored?
 
@@ -133,3 +136,13 @@ Inside the trained model.
 - That .pkl file contains the learned parameters.
 
 You don't need to train every time; Just load the saved model.
+
+
+<!-- train_model.py 's responsibilities -->
+Load data
+        ↓
+Preprocess data
+        ↓
+Train Linear Regression
+        ↓
+Save trained model
