@@ -166,3 +166,26 @@ It asks questions like:
 
 Then it calculates the best weights.
 Those weights become your trained model.
+
+
+
+till version 1 of train_model.py 
+CURRENT PIPELINE: 
+Dataset
+      ↓
+Preprocessing
+      ↓
+Train-Test Split
+      ↓
+Encoding
+      ↓
+Linear Regression
+      ↓
+Saved Model
+
+
+ml ---|
+      |- preprocessing.py → prepares data.
+      |- train_model.py → trains and saves both the model and the preprocessor.
+      |- evaluate_model.py → loads the saved model and evaluates it.
+      |- predict.py → loads both saved files to make predictions.
