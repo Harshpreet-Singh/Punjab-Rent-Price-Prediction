@@ -3,33 +3,25 @@ preprocessing.py
 
 Purpose:
 Prepare the rental dataset for Machine Learning.
-
-Pipeline:
-1. Load dataset
-2. Inspect dataset
-3. Select features and target
-4. Split train and test data
 """
 
 import pandas as pd
+
+from sklearn.compose import ColumnTransformer
 from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import OneHotEncoder
 
 # Dataset path
 DATA_PATH = "data/punjab_rental_dataset.csv"
 
 
 def load_dataset():
-    """
-    Load the cleaned rental dataset.
-    """
-    df = pd.read_csv(DATA_PATH)
-    return df
+    """Load the cleaned rental dataset."""
+    return pd.read_csv(DATA_PATH)
 
 
 def inspect_dataset(df):
-    """
-    Display basic information about the dataset.
-    """
+    """Display basic information about the dataset."""
 
     print("\n========== Dataset Shape ==========")
     print(df.shape)
@@ -51,9 +43,7 @@ def inspect_dataset(df):
 
 
 def select_features_target(df):
-    """
-    Separate features (X) and target (y).
-    """
+    """Separate features and target."""
 
     X = df[
         [
@@ -71,24 +61,45 @@ def select_features_target(df):
 
 
 def split_data(X, y):
-    """
-    Split the dataset into training and testing sets.
-    """
+    """Split dataset into train and test sets."""
 
-    X_train, X_test, y_train, y_test = train_test_split(
+    return train_test_split(
         X,
         y,
         test_size=0.2,
         random_state=42,
     )
 
-    return X_train, X_test, y_train, y_test
+
+def encode_features(X_train, X_test):
+    """
+    Encode categorical columns using One-Hot Encoding.
+    """
+
+    categorical_features = [
+        "location",
+        "city",
+    ]
+
+    preprocessor = ColumnTransformer(
+        transformers=[
+            (
+                "cat",
+                OneHotEncoder(handle_unknown="ignore"),
+                categorical_features,
+            )
+        ],
+        remainder="passthrough",
+    )
+
+    X_train_encoded = preprocessor.fit_transform(X_train)
+
+    X_test_encoded = preprocessor.transform(X_test)
+
+    return X_train_encoded, X_test_encoded, preprocessor
 
 
 def main():
-    """
-    Execute the preprocessing pipeline.
-    """
 
     # Load dataset
     df = load_dataset()
@@ -96,18 +107,21 @@ def main():
     # Inspect dataset
     inspect_dataset(df)
 
-    # Select features and target
+    # Feature selection
     X, y = select_features_target(df)
 
-    # Split dataset
+    # Train-test split
     X_train, X_test, y_train, y_test = split_data(X, y)
 
-    # Display split information
-    print("\n========== Train-Test Split ==========")
-    print(f"X_train Shape : {X_train.shape}")
-    print(f"X_test Shape  : {X_test.shape}")
-    print(f"y_train Shape : {y_train.shape}")
-    print(f"y_test Shape  : {y_test.shape}")
+    # Encode features
+    X_train_encoded, X_test_encoded, preprocessor = encode_features(
+        X_train,
+        X_test,
+    )
+
+    print("\n========== Encoded Data ==========")
+    print(f"X_train Shape : {X_train_encoded.shape}")
+    print(f"X_test Shape  : {X_test_encoded.shape}")
 
 
 if __name__ == "__main__":
