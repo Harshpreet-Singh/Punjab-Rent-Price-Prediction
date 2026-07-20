@@ -117,9 +117,19 @@ Entire Dataset
 
 
 * kinda move to actual model training now 
-
 Pandas → Data handling
-
 Matplotlib → Visualization
-
 Scikit-learn → Machine Learning
+
+
+
+Where are those learned weights stored?
+
+Inside the trained model.
+* That's why we later save it as:
+       models/
+           linear_regression.pkl
+
+- That .pkl file contains the learned parameters.
+
+You don't need to train every time; Just load the saved model.
