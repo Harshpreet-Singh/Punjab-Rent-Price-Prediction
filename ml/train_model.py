@@ -6,9 +6,7 @@ using the preprocessed rental dataset.
 """
 
 import joblib
-
 from sklearn.linear_model import LinearRegression
-
 from preprocessing import preprocess_data
 
 
