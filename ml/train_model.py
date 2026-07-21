@@ -11,7 +11,7 @@ from preprocessing import preprocess_data
 
 
 MODEL_PATH = "./models/linear_regression.pkl"
-
+PREPROCESSOR_PATH = "./models/preprocessor.pkl"
 
 def train_model():
 
@@ -30,11 +30,13 @@ def train_model():
     return model, preprocessor, X_test, y_test
 
 
-def save_model(model):
+def save_model(model, preprocessor):
 
     joblib.dump(model, MODEL_PATH)
+    joblib.dump(preprocessor, PREPROCESSOR_PATH)
 
     print(f"Model saved to: {MODEL_PATH}")
+    print(f"Preprocessor saved to: {PREPROCESSOR_PATH}")
 
 # why joblib : 
 # Because ML models are Python objects.
@@ -47,7 +49,7 @@ def main():
 
     model, preprocessor, X_test, y_test = train_model()
 
-    save_model(model)
+    save_model(model, preprocessor)
 
 
 if __name__ == "__main__":
