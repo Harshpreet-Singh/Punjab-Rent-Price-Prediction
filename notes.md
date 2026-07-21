@@ -189,3 +189,21 @@ ml ---|
       |- train_model.py → trains and saves both the model and the preprocessor.
       |- evaluate_model.py → loads the saved model and evaluates it.
       |- predict.py → loads both saved files to make predictions.
+
+
+
+<!-- evaluate_model.py 's responsibilities -->
+Load Model
+        ↓
+Load Preprocessor
+        ↓
+Preprocess Data
+        ↓
+Predict
+        ↓
+Calculate
+
+MAE
+MSE
+RMSE
+R²
