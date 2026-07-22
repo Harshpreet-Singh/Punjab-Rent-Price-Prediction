@@ -16,9 +16,13 @@ from sklearn.metrics import (
 from preprocessing import preprocess_data
 
 
-MODEL_PATH = "./models/linear_regression.pkl"
-METRICS_PATH = "./outputs/metrics/linear_regression_metrics.txt"
+# MODEL_PATH = "./models/linear_regression.pkl"
+# METRICS_PATH = "./outputs/metrics/linear_regression_metrics.txt"
 
+MODEL_NAME = "decision_tree"
+
+MODEL_PATH = f"./models/{MODEL_NAME}.pkl"
+METRICS_PATH = f"./outputs/metrics/{MODEL_NAME}_metrics.txt"
 
 def load_model():
     """

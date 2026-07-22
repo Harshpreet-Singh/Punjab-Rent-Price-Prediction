@@ -203,10 +203,10 @@ Predict
         ↓
 Calculate
 
-MAE
+1. MAE (Lower is Better)
 MSE
-RMSE
-R²
+2. RMSE (Lower is Better)
+3. R² Score (Higher is Better)
 
 ========== Evaluation ==========
 MAE  : 5341.42
