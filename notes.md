@@ -243,3 +243,19 @@ Decision Tree says:
 - Different situations follow different rules.
 
 That's much closer to real estate.
+
+### problem in decision tree ??
+- Overfitting
+
+Think of two students.
+Student A:
+
+Understands concepts.
+Can solve new questions.
+
+Student B:
+Memorized last year's paper.
+Scores well only if the same questions appear.
+
+* Decision Trees can become Student B if we let them grow without limits.
+
