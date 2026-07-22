@@ -259,3 +259,9 @@ Scores well only if the same questions appear.
 
 * Decision Trees can become Student B if we let them grow without limits.
 
+
+| Model             | How it thinks                                |
+| ----------------- | -------------------------------------------- |
+| Linear Regression | Draw one best-fit line                       |
+| Decision Tree     | Ask a sequence of yes/no questions           |
+| Random Forest     | Combine predictions from many decision trees |
