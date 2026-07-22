@@ -259,6 +259,15 @@ Scores well only if the same questions appear.
 
 * Decision Trees can become Student B if we let them grow without limits.
 
+| Linear Regression                   | Decision Tree                              |
+| ----------------------------------- | ------------------------------------------ |
+| Fits one equation                   | Learns many decision rules                 |
+| Assumes mostly linear relationships | Handles non-linear relationships naturally |
+| Simple and interpretable            | Can model complex patterns                 |
+| Fast                                | Can become complex                         |
+| Less prone to overfitting           | Can overfit if unrestricted                |
+
+
 
 | Model             | How it thinks                                |
 | ----------------- | -------------------------------------------- |
