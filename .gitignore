@@ -1,1 +1,13 @@
 summary.md
+__pycache__/
+*.pyc
+
+.venv/
+venv/
+
+.env
+
+.vscode/*
+!.vscode/settings.json
+
+outputs/predictions/*.csv
