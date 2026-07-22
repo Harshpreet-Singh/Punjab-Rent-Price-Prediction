@@ -213,3 +213,33 @@ MAE  : 5341.42
 MSE  : 61204859.80
 RMSE : 7823.35
 R²   : 0.6648
+
+
+
+## Decision Tree instead of linear regression
+
+WHY DECISION TREE ? 
+because it asks question not just give answer by seeing only 1 factor
+
+----------------------- VISUAL -----------------------
+                    Area > 1500?
+
+                   /            \
+
+                No              Yes
+
+             Area >1000?     Luxury?
+
+             /      \         /     \
+
+         ₹12k     ₹20k     ₹40k   ₹28k
+
+* Why is it often better?
+
+Linear Regression says:
+- Everything follows one equation.
+
+Decision Tree says:
+- Different situations follow different rules.
+
+That's much closer to real estate.
