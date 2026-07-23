@@ -296,6 +296,18 @@ Imagine asking for medical advice.
 
 * Random Forest works in the same spirit.
 
+# decision tree v/s random forest
+
+| Decision Tree      | Random Forest                               |
+| ------------------ | ------------------------------------------- |
+| Faster to train    | Slower                                      |
+| Easy to visualize  | Difficult to visualize individual decisions |
+| Small model        | Larger model                                |
+| Can overfit easily | Usually generalizes better                  |
+
+
+
+
 | Model             | How it thinks                                |
 | ----------------- | -------------------------------------------- |
 | Linear Regression | Draw one best-fit line                       |
