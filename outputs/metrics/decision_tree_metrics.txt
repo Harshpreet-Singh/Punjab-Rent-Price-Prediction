@@ -1,5 +1,5 @@
-Linear Regression Evaluation
-===================================
+Decision Tree Evaluation
+========================================
 
 MAE  : 6320.19
 MSE  : 80929287.71

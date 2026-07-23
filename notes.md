@@ -337,4 +337,59 @@ R²   : 0.8714
 | Decision Tree     |     6320.19 |     8996.07 |     0.5567 |  🥉  |
 | **Random Forest** | **3049.13** | **4845.95** | **0.8714** |  🥇  |
 
-make a file compare models.py as we will not compare manually each model trained with each different algorithm, so we will make this file that gives model_comparison.csv that compares side by side 
+make a file compare_models.py as we will not compare manually each model trained with each different algorithm, so we will make this file that gives model_comparison.csv that compares side by side 
+==================================================
+Comparing Machine Learning Models
+==================================================
+
+Evaluating: Linear Regression
+Loading trained model...
+Loading preprocessed data...
+Making predictions...
+
+========== Evaluation ==========
+Model: Linear Regression
+MAE  : 5341.42
+MSE  : 61204859.80
+RMSE : 7823.35
+R²   : 0.6648
+
+Metrics saved to: outputs\metrics\linear_regression_metrics.txt
+
+Evaluating: Decision Tree
+Loading trained model...
+Loading preprocessed data...
+Making predictions...
+
+========== Evaluation ==========
+Model: Decision Tree
+MAE  : 6320.19
+MSE  : 80929287.71
+RMSE : 8996.07
+R²   : 0.5567
+
+Metrics saved to: outputs\metrics\decision_tree_metrics.txt
+
+Evaluating: Random Forest
+Loading trained model...
+Loading preprocessed data...
+Making predictions...
+
+========== Evaluation ==========
+Model: Random Forest
+MAE  : 3049.13
+MSE  : 23483264.20
+RMSE : 4845.95
+R²   : 0.8714
+
+Metrics saved to: outputs\metrics\random_forest_metrics.txt
+
+==================================================
+Final Model Comparison
+==================================================
+               Model          MAE           MSE         RMSE        R2
+2      Random Forest  3049.126716  2.348326e+07  4845.953384  0.871376
+0  Linear Regression  5341.424574  6.120486e+07  7823.353488  0.664765
+1      Decision Tree  6320.185282  8.092929e+07  8996.070682  0.556729
+
+Comparison saved to: outputs\metrics\model_comparison.csv
