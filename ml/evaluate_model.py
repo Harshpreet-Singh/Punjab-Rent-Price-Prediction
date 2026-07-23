@@ -43,7 +43,7 @@ def load_model(model_name):
     return joblib.load(model_path)
 
 
-def calculate_metrics(model, X_test, y_test):
+def calculate_metrics(model, X_test, y_test, model_name):
     """
     Calculate evaluation metrics.
     """
@@ -68,9 +68,7 @@ def calculate_metrics(model, X_test, y_test):
 
 
 def save_metrics(metrics, model_name):
-    """
-    Save metrics to a text file.
-    """
+    """ Save metrics to a text file. """
 
     METRICS_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -90,17 +88,13 @@ def save_metrics(metrics, model_name):
 
 
 def model_name_to_title(model_name):
-    """
-    Convert file name into readable title.
-    """
+    """ Convert file name into readable title. """
 
     return model_name.replace("_", " ").title()
 
 
 def evaluate(model_name):
-    """
-    Evaluate a trained model.
-    """
+    """ Evaluate a trained model. """
 
     print("Loading trained model...")
 
