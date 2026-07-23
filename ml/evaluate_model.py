@@ -1,11 +1,24 @@
 """
 evaluate_model.py
 
-Evaluate the trained Linear Regression model.
+│
+├── load_model()
+│
+├── calculate_metrics()
+│
+├── save_metrics()
+│
+├── evaluate()
+│
+└── main()
+
+Evaluate any trained machine learning model.
 """
 
-import joblib
 from math import sqrt
+from pathlib import Path
+
+import joblib
 
 from sklearn.metrics import (
     mean_absolute_error,
@@ -16,35 +29,24 @@ from sklearn.metrics import (
 from preprocessing import preprocess_data
 
 
-# MODEL_PATH = "./models/linear_regression.pkl"
-# METRICS_PATH = "./outputs/metrics/linear_regression_metrics.txt"
+MODELS_DIR = Path("./models")
+METRICS_DIR = Path("./outputs/metrics")
 
-MODEL_NAME = "random_forest"
 
-MODEL_PATH = f"./models/{MODEL_NAME}.pkl"
-METRICS_PATH = f"./outputs/metrics/{MODEL_NAME}_metrics.txt"
-
-def load_model():
+def load_model(model_name):
     """
-    Load the trained model.
+    Load a trained model.
     """
 
-    model = joblib.load(MODEL_PATH)
+    model_path = MODELS_DIR / f"{model_name}.pkl"
 
-    return model
+    return joblib.load(model_path)
 
 
-def evaluate():
-
-    print("Loading trained model...")
-
-    model = load_model()
-
-    print("Loading preprocessed data...")
-
-    X_train, X_test, y_train, y_test, _ = preprocess_data()
-
-    print("Making predictions...")
+def calculate_metrics(model, X_test, y_test):
+    """
+    Calculate evaluation metrics.
+    """
 
     predictions = model.predict(X_test)
 
@@ -56,32 +58,80 @@ def evaluate():
 
     r2 = r2_score(y_test, predictions)
 
+    return {
+        "Model": model_name_to_title(model_name),
+        "MAE": mae,
+        "MSE": mse,
+        "RMSE": rmse,
+        "R2": r2,
+    }
+
+
+def save_metrics(metrics, model_name):
+    """
+    Save metrics to a text file.
+    """
+
+    METRICS_DIR.mkdir(parents=True, exist_ok=True)
+
+    metrics_path = METRICS_DIR / f"{model_name}_metrics.txt"
+
+    with open(metrics_path, "w") as file:
+
+        file.write(f"{model_name_to_title(model_name)} Evaluation\n")
+        file.write("=" * 40 + "\n\n")
+
+        file.write(f"MAE  : {metrics['MAE']:.2f}\n")
+        file.write(f"MSE  : {metrics['MSE']:.2f}\n")
+        file.write(f"RMSE : {metrics['RMSE']:.2f}\n")
+        file.write(f"R²   : {metrics['R2']:.4f}\n")
+
+    print(f"\nMetrics saved to: {metrics_path}")
+
+
+def model_name_to_title(model_name):
+    """
+    Convert file name into readable title.
+    """
+
+    return model_name.replace("_", " ").title()
+
+
+def evaluate(model_name):
+    """
+    Evaluate a trained model.
+    """
+
+    print("Loading trained model...")
+
+    model = load_model(model_name)
+
+    print("Loading preprocessed data...")
+
+    _, X_test, _, y_test, _ = preprocess_data()
+
+    print("Making predictions...")
+
+    metrics = calculate_metrics(model, X_test, y_test)
+
     print("\n========== Evaluation ==========")
 
-    print(f"MAE  : {mae:.2f}")
+    print(f"Model: {metrics['Model']}")
+    print(f"MAE  : {metrics['MAE']:.2f}")
+    print(f"MSE  : {metrics['MSE']:.2f}")
+    print(f"RMSE : {metrics['RMSE']:.2f}")
+    print(f"R²   : {metrics['R2']:.4f}")
 
-    print(f"MSE  : {mse:.2f}")
+    save_metrics(metrics, model_name)
 
-    print(f"RMSE : {rmse:.2f}")
-
-    print(f"R²   : {r2:.4f}")
-
-    with open(METRICS_PATH, "w") as file:
-
-        file.write("Linear Regression Evaluation\n")
-        file.write("=" * 35 + "\n\n")
-
-        file.write(f"MAE  : {mae:.2f}\n")
-        file.write(f"MSE  : {mse:.2f}\n")
-        file.write(f"RMSE : {rmse:.2f}\n")
-        file.write(f"R²   : {r2:.4f}\n")
-
-    print(f"\nMetrics saved to: {METRICS_PATH}")
+    return metrics
 
 
 def main():
 
-    evaluate()
+    MODEL_NAME = "random_forest"
+
+    evaluate(MODEL_NAME)
 
 
 if __name__ == "__main__":
