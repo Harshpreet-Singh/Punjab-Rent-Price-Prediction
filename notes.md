@@ -296,6 +296,13 @@ Imagine asking for medical advice.
 
 * Random Forest works in the same spirit.
 
+========== Evaluation ==========
+MAE  : 3049.13
+MSE  : 23483264.20
+RMSE : 4845.95
+R²   : 0.8714
+
+
 # decision tree v/s random forest
 
 | Decision Tree      | Random Forest                               |
