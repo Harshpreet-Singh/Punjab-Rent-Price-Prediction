@@ -214,6 +214,7 @@ MSE  : 61204859.80
 RMSE : 7823.35
 R²   : 0.6648
 
+---------------------------------------------------------------------------------------------------------------------------------------
 
 
 ## Decision Tree instead of linear regression
@@ -268,9 +269,30 @@ Scores well only if the same questions appear.
 | Less prone to overfitting           | Can overfit if unrestricted                |
 
 
+later in decision tree we will make changes, trying to make it better 
+The algorithm doesn't change. The training code doesn't change. Only the configuration changes. -> That's called hyperparameter tuning.
+
+========== Evaluation ==========
+MAE  : 6320.19
+MSE  : 80929287.71
+RMSE : 8996.07
+R²   : 0.5567
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+# Why do we need random forest ?
+
+Instead of building one tree... it builds many trees.
+Instead of trusting one tree... we trust the forest.
+
+That's why it's called 'Random Forest'.
+
 
 | Model             | How it thinks                                |
 | ----------------- | -------------------------------------------- |
 | Linear Regression | Draw one best-fit line                       |
 | Decision Tree     | Ask a sequence of yes/no questions           |
 | Random Forest     | Combine predictions from many decision trees |
+
+
+

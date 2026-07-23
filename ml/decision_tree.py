@@ -20,9 +20,12 @@ def train_decision_tree():
     print("Training Decision Tree model...")
 
 #   Model Creation - Create a Decision Tree. Don't let it grow beyond 5 levels, and keep the results reproducible
+    MAX_DEPTH = 5
+    RANDOM_STATE = 42
+
     model = DecisionTreeRegressor(
-        max_depth=5,
-        random_state=42
+        max_depth=MAX_DEPTH,
+        random_state=RANDOM_STATE
     )
 
 #   Training
