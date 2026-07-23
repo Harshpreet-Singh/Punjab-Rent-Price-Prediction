@@ -106,7 +106,7 @@ def evaluate(model_name, verbose= True):
 
     print("Making predictions...")
 
-    metrics = calculate_metrics(model, X_test, y_test)
+    metrics = calculate_metrics(model, X_test, y_test, model_name)
 
     print("\n========== Evaluation ==========")
 

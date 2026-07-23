@@ -1,5 +1,5 @@
-Linear Regression Evaluation
-===================================
+Random Forest Evaluation
+========================================
 
 MAE  : 3049.13
 MSE  : 23483264.20
