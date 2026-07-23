@@ -287,6 +287,14 @@ Instead of trusting one tree... we trust the forest.
 
 That's why it's called 'Random Forest'.
 
+- Real-Life Analogy
+
+Imagine asking for medical advice.
+
+* One doctor Could make a mistake.
+* A panel of 100 experienced doctors is Much more reliable.
+
+* Random Forest works in the same spirit.
 
 | Model             | How it thinks                                |
 | ----------------- | -------------------------------------------- |
