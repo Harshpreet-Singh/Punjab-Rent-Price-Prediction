@@ -337,4 +337,4 @@ R²   : 0.8714
 | Decision Tree     |     6320.19 |     8996.07 |     0.5567 |  🥉  |
 | **Random Forest** | **3049.13** | **4845.95** | **0.8714** |  🥇  |
 
-
+make a file compare models.py as we will not compare manually each model trained with each different algorithm, so we will make this file that gives model_comparison.csv that compares side by side 

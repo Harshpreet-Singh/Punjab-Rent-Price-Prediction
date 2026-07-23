@@ -93,7 +93,7 @@ def model_name_to_title(model_name):
     return model_name.replace("_", " ").title()
 
 
-def evaluate(model_name):
+def evaluate(model_name, verbose= True):
     """ Evaluate a trained model. """
 
     print("Loading trained model...")
