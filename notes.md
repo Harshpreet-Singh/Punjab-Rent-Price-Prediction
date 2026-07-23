@@ -296,6 +296,14 @@ Imagine asking for medical advice.
 
 * Random Forest works in the same spirit.
 
+"What's a great first model for tabular data?"
+
+# Random Forest is one of the most common answers because it:
+-      works well on structured datasets,
+-      handles non-linear relationships,
+-      usually requires little preprocessing,
+-      often performs well without extensive tuning.
+
 ========== Evaluation ==========
 MAE  : 3049.13
 MSE  : 23483264.20
@@ -321,5 +329,12 @@ R²   : 0.8714
 | Decision Tree     | Ask a sequence of yes/no questions           |
 | Random Forest     | Combine predictions from many decision trees |
 
+
+
+| Model             |       MAE ↓ |      RMSE ↓ |       R² ↑ | Rank |
+| ----------------- | ----------: | ----------: | ---------: | :--: |
+| Linear Regression |     5341.42 |     7823.35 |     0.6648 |  🥈  |
+| Decision Tree     |     6320.19 |     8996.07 |     0.5567 |  🥉  |
+| **Random Forest** | **3049.13** | **4845.95** | **0.8714** |  🥇  |
 
 
