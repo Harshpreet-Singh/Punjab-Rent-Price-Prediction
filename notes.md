@@ -393,3 +393,22 @@ Final Model Comparison
 1      Decision Tree  6320.185282  8.092929e+07  8996.070682  0.556729
 
 Comparison saved to: outputs\metrics\model_comparison.csv
+
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------
+completed till now : 
+| Stage          | What You Learned                        |
+| -------------- | --------------------------------------- |
+| Data Cleaning  | Cleaning and preparing real-world data  |
+| EDA            | Understanding patterns in data          |
+| Preprocessing  | Preparing data for ML                   |
+| Model Training | Training different algorithms           |
+| Evaluation     | Measuring model performance             |
+| Comparison     | Selecting the best model systematically |
+
+---------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------
+---------------------------------------------------------------------------
