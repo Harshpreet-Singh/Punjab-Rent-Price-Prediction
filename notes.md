@@ -1,4 +1,5 @@
-# rent prediction project is a Supervised Regression problem.
+# Rent Prediction Project 
+
 
 * Supervised Learning is a type of Machine Learning where the model learns from data that already contains the correct answers (labels).
 
@@ -44,12 +45,15 @@
 * Price = Label (Target)
 
 
-# 2 types of supervised learning :  
+# 2 Types of supervised learning :  
 1. Regression       - Used when the output is a number.   (predict salary, temperature)
 2. Classification   - Used when the output is a category. (spam or not, pass or fail)
 
 
-<!-- and here price can't be a column then model would be considered as cheating  -->
+
+
+`and here price can't be a column then model would be considered as cheating `
+
 
 # Final Features Set (Version 1)
 | Column   | Use?          | Reason                                              |
@@ -61,7 +65,7 @@
 | city     | YES           | Useful categorical feature                          |
 | title    | NO (for now)  | Free-text feature; keep it for a future improvement |
 
-# target -> Price
+# Target -> Price
 
 * A good feature should have some relationship with the target.
 * This process of choosing useful columns is called Feature Selection.
@@ -92,11 +96,12 @@ Testing ≈ 2,776 rows
 
 * also fixing randomness of data 
 By writing: random_state=42
-we're telling Python: "Use the same random split every time."
+we're telling Python: "Use the same random split every time.
 - It ensures that data shuffling and train-test splits happen the exact same way every time you run the code. This reproducibility allows you to reliably compare different models or debug errors.
 
 
-#### visually : 
+## visually : 
+```text
 Entire Dataset
        │
        ▼
@@ -113,8 +118,7 @@ Entire Dataset
                           │
                           ▼
                    Evaluate Model
-
-
+```
 
 * kinda move to actual model training now 
 Pandas → Data handling
@@ -137,8 +141,7 @@ Inside the trained model.
 
 You don't need to train every time; Just load the saved model.
 
-
-<!-- train_model.py 's responsibilities -->
+` train_model.py 's responsibilities`
 Load data
         ↓
 Preprocess data
@@ -214,21 +217,23 @@ MSE  : 61204859.80
 RMSE : 7823.35
 R²   : 0.6648
 
----------------------------------------------------------------------------------------------------------------------------------------
 
+<hr>
+<hr>
+<hr>
+<hr>
 
-=====================================================================================================================================================
-=====================================================================================================================================================
-summary_ver2.md's progress below
-=====================================================================================================================================================
-=====================================================================================================================================================
+# summary_ver2.md's progress below
+
 
 ## Decision Tree instead of linear regression
 
 WHY DECISION TREE ? 
+
 because it asks question not just give answer by seeing only 1 factor
 
 ----------------------- VISUAL -----------------------
+
                     Area > 1500?
 
                    /            \
@@ -349,12 +354,17 @@ Comparing Machine Learning Models
 ==================================================
 
 Evaluating: Linear Regression
+
 Loading trained model...
+
 Loading preprocessed data...
+
 Making predictions...
 
 ========== Evaluation ==========
+
 Model: Linear Regression
+
 MAE  : 5341.42
 MSE  : 61204859.80
 RMSE : 7823.35
@@ -403,9 +413,10 @@ Comparison saved to: outputs\metrics\model_comparison.csv
 
 
 
----------------------------------------------------------------------------------------------------------------------------------------
----------------------------------------------------------------------------------------------------------------------------------------
-completed till now : 
+<hr>
+<hr>
+
+### Completed till now : 
 | Stage          | What You Learned                        |
 | -------------- | --------------------------------------- |
 | Data Cleaning  | Cleaning and preparing real-world data  |
@@ -422,13 +433,14 @@ completed till now :
 moving to prediction part now 
 then the question comes 
 
-How does the model know what 'Phase 7' means?
+How does the model know what 'Phase 7' means?<br>
 ANSWER - It doesn't.
 
 The preprocessor knows.
 
 transformation is applied here by:
 - transformed_data = preprocessor.transform(input_data)
+
 That's why saving preprocessor.pkl earlier was so important—it ensures the model sees new inputs in exactly the same format as the training data.
 
 
@@ -451,13 +463,14 @@ Predicted Rent: ₹24,396.75
 
 
 
-## Phase 1        ✔ Data Cleaning
+## Phase 1    &nbsp; &nbsp; &nbsp; &nbsp;    ✔ Data Cleaning
 
-## Phase 2        ✔ Exploratory Data Analysis
+## Phase 2    &nbsp; &nbsp; &nbsp; &nbsp;    ✔ Exploratory Data Analysis
 
-## Phase 3        ✔ Power BI Dashboard
+## Phase 3    &nbsp; &nbsp; &nbsp; &nbsp;    ✔ Power BI Dashboard
 
-## Phase 4        ✔ Machine Learning
+## Phase 4    &nbsp; &nbsp; &nbsp; &nbsp;    ✔ Machine Learning
+
 - Linear Regression
 - Decision Tree
 - Random Forest
@@ -475,9 +488,23 @@ Found the best model: Random Forest
 
 You can now predict rent for new houses.
 
-=====================================================================================================================================================
-=====================================================================================================================================================
-summary_ver3.md's progress below
-=====================================================================================================================================================
-=====================================================================================================================================================
+<hr>
+<hr>
+<hr>
+<hr>
 
+# summary_ver3.md's progress below
+
+
+we will do most important topic in ML
+* Hyperparameter Tuning <br>
+Parameter v/s Hyperparameter
+
+- *Parameter:* These are learned during training, the algorithm figures them out automatically.
+
+- *Hyperparameter:* These are chosen before training, the algorithm does not learn them.You decide them.
+
+Example for Random Forest:<br>
+      Number of trees = 100<br>
+      Maximum depth = 15<br>
+      Minimum samples split = 4
