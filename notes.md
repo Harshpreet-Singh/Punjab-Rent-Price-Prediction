@@ -101,6 +101,7 @@ we're telling Python: "Use the same random split every time.
 
 
 ## visually : 
+
 ```text
 Entire Dataset
        │
@@ -126,7 +127,8 @@ Matplotlib → Visualization
 Scikit-learn → Machine Learning
 
 
-<!-- preprocessing.py 's responsibilities  -->
+`preprocessing.py 's responsibilities`
+
 split and finalize data for training 
 
 
@@ -195,7 +197,8 @@ ml ---|
 
 
 
-<!-- evaluate_model.py 's responsibilities -->
+`evaluate_model.py 's responsibilities`
+
 Load Model
         ↓
 Load Preprocessor
@@ -212,10 +215,11 @@ MSE
 3. R² Score (Higher is Better)
 
 ========== Evaluation ==========
-MAE  : 5341.42
-MSE  : 61204859.80
-RMSE : 7823.35
-R²   : 0.6648
+
+MAE  : 5341.42<br>
+MSE  : 61204859.80<br>
+RMSE : 7823.35<br>
+R²   : 0.6648<br>
 
 
 <hr>
@@ -284,9 +288,10 @@ later in decision tree we will make changes, trying to make it better
 The algorithm doesn't change. The training code doesn't change. Only the configuration changes. -> That's called hyperparameter tuning.
 
 ========== Evaluation ==========
-MAE  : 6320.19
-MSE  : 80929287.71
-RMSE : 8996.07
+
+MAE  : 6320.19<br>
+MSE  : 80929287.71<br>
+RMSE : 8996.07<br>
 R²   : 0.5567
 
 ---------------------------------------------------------------------------------------------------------------------------------------
@@ -315,10 +320,12 @@ Imagine asking for medical advice.
 -      usually requires little preprocessing,
 -      often performs well without extensive tuning.
 
-========== Evaluation ==========
-MAE  : 3049.13
-MSE  : 23483264.20
-RMSE : 4845.95
+
+========== Evaluation ========== 
+
+MAE  : 3049.13<br>
+MSE  : 23483264.20<br>
+RMSE : 4845.95<br>
 R²   : 0.8714
 
 
@@ -365,9 +372,9 @@ Making predictions...
 
 Model: Linear Regression
 
-MAE  : 5341.42
-MSE  : 61204859.80
-RMSE : 7823.35
+MAE  : 5341.42<br>
+MSE  : 61204859.80<br>
+RMSE : 7823.35<br>
 R²   : 0.6648
 
 Metrics saved to: outputs\metrics\linear_regression_metrics.txt
@@ -378,10 +385,12 @@ Loading preprocessed data...
 Making predictions...
 
 ========== Evaluation ==========
+
 Model: Decision Tree
-MAE  : 6320.19
-MSE  : 80929287.71
-RMSE : 8996.07
+
+MAE  : 6320.19<br>
+MSE  : 80929287.71<br>
+RMSE : 8996.07<br>
 R²   : 0.5567
 
 Metrics saved to: outputs\metrics\decision_tree_metrics.txt
@@ -392,10 +401,12 @@ Loading preprocessed data...
 Making predictions...
 
 ========== Evaluation ==========
+
 Model: Random Forest
-MAE  : 3049.13
-MSE  : 23483264.20
-RMSE : 4845.95
+
+MAE  : 3049.13<br>
+MSE  : 23483264.20<br>
+RMSE : 4845.95<br>
 R²   : 0.8714
 
 Metrics saved to: outputs\metrics\random_forest_metrics.txt
@@ -403,11 +414,12 @@ Metrics saved to: outputs\metrics\random_forest_metrics.txt
 ==================================================
 Final Model Comparison
 ==================================================
+```text
                Model          MAE           MSE         RMSE        R2
 2      Random Forest  3049.126716  2.348326e+07  4845.953384  0.871376
 0  Linear Regression  5341.424574  6.120486e+07  7823.353488  0.664765
 1      Decision Tree  6320.185282  8.092929e+07  8996.070682  0.556729
-
+```
 Comparison saved to: outputs\metrics\model_comparison.csv
 
 
