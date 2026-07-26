@@ -735,3 +735,20 @@ Evaluate on Test Set
 Save Model
 ```
 _Notice that Cross Validation happens before saving the final model._
+
+
+# Cross Validation vs Train-Test Split
+
+| Train-Test Split              | Cross Validation                      |
+| ----------------------------- | ------------------------------------- |
+| One evaluation                | Multiple evaluations                  |
+| Faster                        | Slower                                |
+| Can depend on one lucky split | More reliable                         |
+| Good for quick experiments    | Better for model selection and tuning |
+
+## Quick Recap
+- A single train-test split may give a lucky or unlucky score.
+- Cross Validation evaluates the model multiple times using different train/test partitions.
+- In k-Fold Cross Validation, every sample is used for training multiple times and for testing exactly once.
+- We usually use the average score across all folds.
+- GridSearchCV and RandomizedSearchCV rely on Cross Validation to compare hyperparameter settings fairly.
