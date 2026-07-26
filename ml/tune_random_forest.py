@@ -6,6 +6,12 @@ from sklearn.model_selection import GridSearchCV
 
 from preprocessing import preprocess_data
 from evaluate_model import calculate_metrics, save_metrics
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+MODELS_DIR = BASE_DIR / "models"
+METRICS_DIR = BASE_DIR / "outputs" / "metrics"
+
 def load_preprocessed_data():
     pass
 
