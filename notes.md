@@ -520,3 +520,24 @@ Example for Random Forest:<br>
       Number of trees = 100<br>
       Maximum depth = 15<br>
       Minimum samples split = 4
+
+## Common Hyperparameters
+| Hyperparameter      | Meaning                                     |
+| ------------------- | ------------------------------------------- |
+| `n_estimators`      | Number of trees                             |
+| `max_depth`         | Maximum depth of each tree                  |
+| `min_samples_split` | Minimum samples required to split a node    |
+| `min_samples_leaf`  | Minimum samples required at a leaf          |
+| `max_features`      | Number of features considered at each split |
+| `bootstrap`         | Whether to sample with replacement          |
+
+The goal of tuning is to find the combination that gives the best performance on unseen data;
+
+`increasing the number doesn't always improve the model`
+
+### Key Takeaways
+* Parameters are learned automatically from data during training.
+* Hyperparameters are chosen before training and control how the model learns.
+* Different hyperparameter values can produce very different models.
+* Hyperparameter tuning is the process of searching for the best settings.
+
