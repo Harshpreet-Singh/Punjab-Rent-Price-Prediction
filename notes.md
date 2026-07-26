@@ -752,3 +752,128 @@ _Notice that Cross Validation happens before saving the final model._
 - In k-Fold Cross Validation, every sample is used for training multiple times and for testing exactly once.
 - We usually use the average score across all folds.
 - GridSearchCV and RandomizedSearchCV rely on Cross Validation to compare hyperparameter settings fairly.
+
+
+# GridSearchCV
+
+- It compares different hyperparameter combinations.
+
+* Suppose we want to test: max_depth(10,20,30)
+GridSearchCV will automatically do: Train Model (max_depth=10 then 20 then 30)
+and then choose the best score
+
+suppose : We only gave 5 values:
+
+3 depth values
+2 tree values
+
+**But GridSearchCV generated 6 models.**
+
+This is why it's called Grid Search.
+
+It creates a grid of all possible combinations
+
+## visual workflow 
+```text
+Hyperparameter Grid
+
+↓
+
+Combination 1
+
+↓
+
+5-Fold CV
+
+↓
+
+Score
+
+↓
+
+Combination 2
+
+↓
+
+5-Fold CV
+
+↓
+
+Score
+
+↓
+
+Combination 3
+
+↓
+
+5-Fold CV
+
+↓
+
+Score
+
+↓
+
+...
+
+↓
+
+Best Combination
+```
+
+#### Why Is It Reliable?
+
+Remember Cross Validation?
+
+- Instead of evaluating each combination once...
+
+- GridSearchCV evaluates each combination multiple times.
+
+So if we have:
+
+6 combinations and 5-fold Cross Validation
+
+Python actually trains: 6 × 5 = **30 models**
+
+# Why Not Always Use GridSearchCV?
+
+Suppose we try:
+
+```text
+5 values of n_estimators
+
+×
+
+5 values of max_depth
+
+×
+
+4 values of min_samples_split
+
+×
+
+4 values of min_samples_leaf
+```
+Total combinations:
+```text
+5 × 5 × 4 × 4 = 400
+```
+With 5-fold Cross Validation:
+
+```text
+400 × 5 = 2,000 model trainings
+```
+That's why **GridSearchCV** can become slow as the search space grows.
+
+This is exactly why RandomizedSearchCV exists—we'll cover that after using GridSearchCV.
+
+### Quick Recap
+GridSearchCV tests every possible hyperparameter combination.
+
+- Each combination is evaluated using Cross Validation.
+- It reports:
+* `best_params_`
+* `best_score_`
+* `best_estimator_`
+- It's thorough but can become computationally expensive with many hyperparameters and values.
