@@ -541,3 +541,44 @@ The goal of tuning is to find the combination that gives the best performance on
 * Different hyperparameter values can produce very different models.
 * Hyperparameter tuning is the process of searching for the best settings.
 
+<hr>
+<hr>
+
+**What is the goal of any ML model?**
+The goal is: **Learn the underlying pattern so it can make accurate predictions on new, unseen data**
+
+For example, our model learned from 13,877 rental listings.
+
+We don't care if it predicts those same listings perfectly.
+
+We care whether it can correctly predict the rent of **a brand-new house** that it has never seen before.
+
+That ability is called **Generalization**
+
+
+<hr>
+<hr>
+
+## 2 Type of Errors
+1. High Bias 
+2. High Variance
+
+```text
+---------- HIGH BIAS ----------   | ---------- HIGH VARIANCE ---------- 
+The model is too simple.      | The model is too complex.
+It doesn't learn enough.          | It memorizes the training data.
+It misses important patterns.     | It performs poorly on unseen data.
+This is called Underfitting . | This is called Overfitting.
+
+```
+
+Remember our old made models using different algorithms 
+* Linear Regression - Very simple.  (higher bias.)
+* Decision Tree - Very flexible.    (higher variance)
+* Random Forest - Reduced variance by keeping model flexible.
+
+Quick Recap
+- High Bias → Underfitting: The model is too simple and misses important patterns.
+- High Variance → Overfitting: The model is too complex and memorizes the training data.
+- Good ML models generalize well to unseen data.
+- Hyperparameters help control the balance between bias and variance.
