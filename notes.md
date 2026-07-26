@@ -582,3 +582,156 @@ Quick Recap
 - High Variance → Overfitting: The model is too complex and memorizes the training data.
 - Good ML models generalize well to unseen data.
 - Hyperparameters help control the balance between bias and variance.
+
+
+## How do we reliably measure whether a model truly generalizes well instead of getting lucky with one train-test split?
+- Everything after this (GridSearchCV, RandomizedSearchCV, Hyperparameter Tuning) depends on **Cross Validation.**
+<!-- 
+The Problem with Train-Test Split
+
+Imagine you have 100 students.
+
+You randomly select:
+
+80 for practice
+20 for the final exam
+
+Suppose the 20 students happen to be the easiest ones.
+
+Your student scores 95%.
+
+Amazing?
+
+Maybe.
+
+Or maybe the exam was just easy.
+
+Now imagine another random split.
+
+This time the 20 students are the hardest ones.
+
+Your student scores 82%.
+
+Did the student's knowledge suddenly decrease?
+
+No.
+
+Only the test set changed.
+
+Exactly the same thing happens in Machine Learning.
+
+Different train-test splits can produce different results.
+
+Example
+
+Suppose we train Random Forest five times.
+
+Each time, we randomly split the dataset differently. -->
+
+## k-Fold Cross Validation
+
+The most common method is k-Fold Cross Validation.
+
+Suppose we choose:
+
+k = 5
+
+We divide the dataset into 5 equal parts (folds).
+
+Dataset
+```text
+┌────┬────┬────┬────┬────┐
+│ F1 │ F2 │ F3 │ F4 │ F5 │
+└────┴────┴────┴────┴────┘
+```
+Now we train 5 times.
+
+- `Round 1`
+```text 
+Test - [F1]
+
+Train - [F2][F3][F4][F5]
+```
+
+- `Round 2 `
+```text 
+Train - [F1]
+
+Test - [F2]
+
+Train - [F3][F4][F5]
+```
+- `Round 3`
+```text
+Train - [F1][F2]
+
+Test - [F3]
+
+Train - [F4][F5]
+```
+- `Round 4`
+```text
+Train - [F1][F2][F3]
+
+Test - [F4]
+
+Train - [F5]
+```
+- `Round 5`
+```text
+Train - [F1][F2][F3][F4]
+
+Test - [F5]
+```
+
+Every row in the dataset:
+
+becomes part of the training set multiple times.
+becomes part of the test set exactly once.
+
+Nothing is wasted.
+
+then the average score is considered : 
+- Suppost : (0.87 + 0.86 + 0.88 + 0.85 + 0.87) / 5 = 0.866
+
+_Instead of trusting one score, we trust the average._
+
+
+**What Does k Mean?**
+
+k is simply the number of folds
+
+### Does Cross Validation Train the Final Model?
+
+* This is a common misconception.
+
+**No.**
+
+Cross Validation is used to **evaluate different models** or different hyperparameter combinations.
+
+After deciding which settings are best, **we train one final model on the full training data using those settings**.
+
+<hr>
+
+- Where Does It Fit?
+
+Our workflow will become:
+
+```text
+Preprocessing
+      ↓
+Choose Hyperparameters
+      ↓
+Cross Validation
+      ↓
+Average Score
+      ↓
+Best Hyperparameters
+      ↓
+Train Final Model
+      ↓
+Evaluate on Test Set
+      ↓
+Save Model
+```
+_Notice that Cross Validation happens before saving the final model._
