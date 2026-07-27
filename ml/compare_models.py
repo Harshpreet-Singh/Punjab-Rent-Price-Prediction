@@ -58,9 +58,7 @@ MODELS = [
 
 
 def compare_models():
-    """
-    Evaluate all models and compare their performance.
-    """
+    """ Evaluate all models and compare their performance. """
 
     results = []
 

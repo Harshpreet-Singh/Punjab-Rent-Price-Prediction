@@ -135,3 +135,33 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+
+# ------------------------------------------------------------------
+# Verbose ka simple matlab:
+#
+# "verbose" decide karta hai ki program run hote time terminal me
+# messages print honge ya nahi.
+#
+# Agar verbose=True hai:
+# - "Loading trained model..." print hoga.
+# - "Loading preprocessed data..." print hoga.
+# - "Making predictions..." print hoga.
+# - Saare evaluation metrics (MAE, MSE, RMSE, R²) screen par dikhengi.
+# - Metrics kis file me save hui hain, uska path bhi print hoga.
+#
+# Agar verbose=False hai:
+# - Program bilkul same kaam karega.
+# - Model evaluate hoga.
+# - Metrics calculate hongi.
+# - Metrics file bhi save hogi.
+# - Bas terminal me koi messages print nahi honge.
+#
+# Matlab verbose sirf output (print statements) ko control karta hai.
+# Iska evaluation, prediction ya metrics ke results par koi effect nahi padta.
+#
+# Example:
+# evaluate("random_forest_tuned", verbose=True)   # Sab messages dikhenge.
+# evaluate("random_forest_tuned", verbose=False)  # Silent mode me chalega.
+# ------------------------------------------------------------------

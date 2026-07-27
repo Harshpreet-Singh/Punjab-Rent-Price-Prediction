@@ -917,3 +917,27 @@ MAE   : 3040.46
 MSE   : 23207172.35
 RMSE  : 4817.38
 R²    : 0.8729
+
+
+# comparing 4 models now (including random_forest_tuned.pkl)
+
+==================================================
+Comparing Machine Learning Models
+==================================================
+
+Evaluating: Linear Regression
+
+Evaluating: Decision Tree
+
+Evaluating: Random Forest
+
+Evaluating: Random Forest Tuned
+
+==================================================
+Final Model Comparison
+==================================================
+                 Model          MAE           MSE         RMSE        R2
+3  Random Forest Tuned  3040.463118  2.320717e+07  4817.382313  0.872888
+2        Random Forest  3049.126716  2.348326e+07  4845.953384  0.871376
+0    Linear Regression  5341.424574  6.120486e+07  7823.353488  0.664765
+1        Decision Tree  6320.185282  8.092929e+07  8996.070682  0.556729
