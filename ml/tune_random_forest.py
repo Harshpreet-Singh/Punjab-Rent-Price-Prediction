@@ -34,9 +34,7 @@ def create_param_grid():
 
 
 def tune_model(X_train, y_train, param_grid):
-    """
-    Tune the Random Forest model using GridSearchCV.
-    """
+    """ Tune the Random Forest model using GridSearchCV. """
 
     model = RandomForestRegressor(random_state=42)
 
@@ -57,9 +55,14 @@ def tune_model(X_train, y_train, param_grid):
     return grid_search
 
 
-def save_model():
-    pass
+def save_model(model):
+    """ Save the tuned Random Forest model. """
 
+    model_path = MODELS_DIR / "random_forest_tuned.pkl"
+
+    joblib.dump(model, model_path)
+
+    print(f"\nModel saved to: {model_path}")
 
 def main():
     print("Loading preprocessed data...")
@@ -85,6 +88,26 @@ def main():
     print(grid_search.best_params_)
 
     print(f"\nBest Cross Validation R²: {grid_search.best_score_:.4f}")
+
+    # model saving script below: 
+
+    best_model = grid_search.best_estimator_
+
+    y_pred = best_model.predict(X_test)
+
+    metrics = calculate_metrics(y_test, y_pred)
+
+    save_metrics(
+        metrics,
+        "random_forest_tuned",
+    )
+
+    save_model(best_model)
+
+    print("\nTest Set Performance:")
+
+    for metric, value in metrics.items():
+        print(f"{metric}: {value:.4f}")
 
 if __name__ == "__main__":
     main()

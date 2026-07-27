@@ -881,6 +881,18 @@ GridSearchCV tests every possible hyperparameter combination.
 
 # After using GridSearchCV
 
+Grid Search Completed!
+
+Best Parameters: {'max_depth': None, 'min_samples_leaf': 1, 'min_samples_split': 2, 'n_estimators': 200}
+
+**Best Cross Validation R²: 0.8031**
+
+Earlier, _0.8714 was the test-set R²._
+
+Now, _**0.8031** is the average Cross Validation R² over **5 folds**._
+
+These are not the same thing, so `don't compare them directly.`
+
 ```text
 | Earlier              | Now                                |
 | -------------------- | ---------------------------------- |
