@@ -66,8 +66,8 @@ def main():
 
     X_train, X_test, y_train, y_test = load_preprocessed_data()
 
-    print(f"Training samples : {len(X_train)}")
-    print(f"Testing samples  : {len(X_test)}")
+    print(f"Training samples : {X_train.shape[0]}")          # len() don't work here so use shape[0] here 0 gives - Number of rows, and [1] gives no. of columns
+    print(f"Testing samples  : {X_test.shape[0]}")
 
     print("\nCreating parameter grid...")
 

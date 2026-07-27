@@ -877,3 +877,14 @@ GridSearchCV tests every possible hyperparameter combination.
 * `best_score_`
 * `best_estimator_`
 - It's thorough but can become computationally expensive with many hyperparameters and values.
+
+
+# After using GridSearchCV
+
+```text
+| Earlier              | Now                                |
+| -------------------- | ---------------------------------- |
+| Test Set R²          | Cross Validation R²                |
+| One train-test split | Average of 5 different splits      |
+| Final evaluation     | Used for selecting hyperparameters |
+```
