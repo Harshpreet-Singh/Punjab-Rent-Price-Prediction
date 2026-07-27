@@ -900,3 +900,20 @@ These are not the same thing, so `don't compare them directly.`
 | One train-test split | Average of 5 different splits      |
 | Final evaluation     | Used for selecting hyperparameters |
 ```
+
+### Final output of tune_random_forest.py
+Best Parameters:
+{'max_depth': None, 'min_samples_leaf': 1, 'min_samples_split': 2, 'n_estimators': 200}
+
+Best Cross Validation R²: 0.8031
+
+Metrics saved to: E:\Punjab-Rent-Price-Prediction\outputs\metrics\random_forest_tuned_metrics.txt
+
+Model saved to: E:\Punjab-Rent-Price-Prediction\models\random_forest_tuned.pkl
+
+========== Tuned Model Performance ==========
+Model : Random Forest Tuned
+MAE   : 3040.46
+MSE   : 23207172.35
+RMSE  : 4817.38
+R²    : 0.8729

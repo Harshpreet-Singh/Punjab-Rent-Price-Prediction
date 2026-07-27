@@ -58,6 +58,8 @@ def tune_model(X_train, y_train, param_grid):
 def save_model(model):
     """ Save the tuned Random Forest model. """
 
+    MODELS_DIR.mkdir(parents=True, exist_ok=True)
+
     model_path = MODELS_DIR / "random_forest_tuned.pkl"
 
     joblib.dump(model, model_path)
@@ -107,10 +109,13 @@ def main():
 
     save_model(best_model)
 
-    print("\nTest Set Performance:")
+    print("\n========== Tuned Model Performance ==========")
 
-    for metric, value in metrics.items():
-        print(f"{metric}: {value:.4f}")
+    print(f"Model : {metrics['Model']}")
+    print(f"MAE   : {metrics['MAE']:.2f}")
+    print(f"MSE   : {metrics['MSE']:.2f}")
+    print(f"RMSE  : {metrics['RMSE']:.2f}")
+    print(f"R²    : {metrics['R2']:.4f}")
 
 if __name__ == "__main__":
     main()
