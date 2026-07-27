@@ -33,8 +33,28 @@ def create_param_grid():
     return param_grid
 
 
-def tune_model():
-    pass
+def tune_model(X_train, y_train, param_grid):
+    """
+    Tune the Random Forest model using GridSearchCV.
+    """
+
+    model = RandomForestRegressor(random_state=42)
+
+    grid_search = GridSearchCV(
+        estimator=model,            # tells GridSearchCV which model to tune.   
+        param_grid=param_grid,      # dictionary we created earlier.
+        cv=5,                       # 5-Fold Cross Validation. Every hyperparameter combination is evaluated 5 times.
+        scoring="r2",               # Since our project compares models using R², we'll continue using it
+        n_jobs=-1,                  # Use all CPU cores. Much faster.
+        verbose=2,                  # for formatting the output
+        refit=True,                 # After finding the best hyperparameters, GridSearchCV automatically trains one final model on the entire training set.
+    )
+
+    print("\nStarting Grid Search...\n")
+
+    grid_search.fit(X_train, y_train)
+
+    return grid_search
 
 
 def save_model():
@@ -53,11 +73,18 @@ def main():
 
     param_grid = create_param_grid()
 
-    print("Parameter Grid:")
+    grid_search = tune_model(
+        X_train,
+        y_train,
+        param_grid,
+    )
 
-    for parameter, values in param_grid.items():
-        print(f"{parameter}: {values}")
+    print("\nGrid Search Completed!")
 
+    print("\nBest Parameters:")
+    print(grid_search.best_params_)
+
+    print(f"\nBest Cross Validation R²: {grid_search.best_score_:.4f}")
 
 if __name__ == "__main__":
     main()
