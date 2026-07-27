@@ -29,8 +29,10 @@ from sklearn.metrics import (
 from preprocessing import preprocess_data
 
 
-MODELS_DIR = Path("./models")
-METRICS_DIR = Path("./outputs/metrics")
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+MODELS_DIR = BASE_DIR / "models"
+METRICS_DIR = BASE_DIR / "outputs" / "metrics"
 
 
 def load_model(model_name):

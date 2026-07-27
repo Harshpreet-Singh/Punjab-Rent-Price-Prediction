@@ -93,9 +93,12 @@ def main():
 
     best_model = grid_search.best_estimator_
 
-    y_pred = best_model.predict(X_test)
-
-    metrics = calculate_metrics(y_test, y_pred)
+    metrics = calculate_metrics(
+        best_model,
+        X_test,
+        y_test,
+        "random_forest_tuned",
+    )
 
     save_metrics(
         metrics,
