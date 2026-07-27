@@ -36,9 +36,7 @@ METRICS_DIR = BASE_DIR / "outputs" / "metrics"
 
 
 def load_model(model_name):
-    """
-    Load a trained model.
-    """
+    """ Load a trained model. """
 
     model_path = MODELS_DIR / f"{model_name}.pkl"
 
@@ -69,7 +67,7 @@ def calculate_metrics(model, X_test, y_test, model_name):
     }
 
 
-def save_metrics(metrics, model_name):
+def save_metrics(metrics, model_name, verbose=True):
     """ Save metrics to a text file. """
 
     METRICS_DIR.mkdir(parents=True, exist_ok=True)
@@ -86,7 +84,8 @@ def save_metrics(metrics, model_name):
         file.write(f"RMSE : {metrics['RMSE']:.2f}\n")
         file.write(f"R²   : {metrics['R2']:.4f}\n")
 
-    print(f"\nMetrics saved to: {metrics_path}")
+    if verbose:
+        print(f"\nMetrics saved to: {metrics_path}")
 
 
 def model_name_to_title(model_name):
@@ -95,37 +94,41 @@ def model_name_to_title(model_name):
     return model_name.replace("_", " ").title()
 
 
-def evaluate(model_name, verbose= True):
+def evaluate(model_name, verbose=True):
     """ Evaluate a trained model. """
 
-    print("Loading trained model...")
+    if verbose:
+        print("Loading trained model...")
 
     model = load_model(model_name)
 
-    print("Loading preprocessed data...")
+    if verbose:
+        print("Loading preprocessed data...")
 
     _, X_test, _, y_test, _ = preprocess_data()
 
-    print("Making predictions...")
+    if verbose:
+        print("Making predictions...")
 
     metrics = calculate_metrics(model, X_test, y_test, model_name)
 
-    print("\n========== Evaluation ==========")
+    if verbose:
+        print("\n========== Evaluation ==========")
 
-    print(f"Model: {metrics['Model']}")
-    print(f"MAE  : {metrics['MAE']:.2f}")
-    print(f"MSE  : {metrics['MSE']:.2f}")
-    print(f"RMSE : {metrics['RMSE']:.2f}")
-    print(f"R²   : {metrics['R2']:.4f}")
+        print(f"Model: {metrics['Model']}")
+        print(f"MAE  : {metrics['MAE']:.2f}")
+        print(f"MSE  : {metrics['MSE']:.2f}")
+        print(f"RMSE : {metrics['RMSE']:.2f}")
+        print(f"R²   : {metrics['R2']:.4f}")
 
-    save_metrics(metrics, model_name)
+    save_metrics(metrics, model_name, verbose)
 
     return metrics
 
 
 def main():
 
-    MODEL_NAME = "random_forest"
+    MODEL_NAME = "random_forest_tuned"
 
     evaluate(MODEL_NAME)
 

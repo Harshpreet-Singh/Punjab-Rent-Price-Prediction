@@ -45,13 +45,15 @@ import pandas as pd
 
 from evaluate_model import evaluate
 
+BASE_DIR = Path(__file__).resolve().parent.parent
 
-OUTPUT_DIR = Path("./outputs/metrics")
+OUTPUT_DIR = BASE_DIR / "outputs" / "metrics"
 
 MODELS = [
     "linear_regression",
     "decision_tree",
     "random_forest",
+    "random_forest_tuned"
 ]
 
 
