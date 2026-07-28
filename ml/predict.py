@@ -19,25 +19,19 @@ PREPROCESSOR_PATH = MODELS_DIR / "preprocessor.pkl"
 
 
 def load_model():
-    """
-    Load the trained model.
-    """
+    """ Load the trained model. """
 
     return joblib.load(MODEL_PATH)
 
 
 def load_preprocessor():
-    """
-    Load the fitted preprocessor.
-    """
+    """ Load the fitted preprocessor. """
 
     return joblib.load(PREPROCESSOR_PATH)
 
 
 def get_user_input():
-    """
-    Get property details from the user.
-    """
+    """ Get property details from the user. """
 
     print("\n========== Enter Property Details ==========\n")
 
@@ -59,9 +53,7 @@ def get_user_input():
 
 
 def predict_rent(model, preprocessor, input_data):
-    """
-    Predict rent using the trained model.
-    """
+    """ Predict rent using the trained model. """
 
     transformed_data = preprocessor.transform(input_data)
 
