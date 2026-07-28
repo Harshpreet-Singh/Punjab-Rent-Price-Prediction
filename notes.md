@@ -975,3 +975,32 @@ Feature Engineering means:
 
 - Creating better input features from the existing data so that the model can learn patterns more easily.
 
+## we will categorise the houses based on their area (small, medium, large)
+
+using the ml/inspect.py file : output:
+
+==================================================
+Area Statistics
+==================================================
+count    13877.000000
+mean      1260.748865
+std        900.747353
+min          1.000000
+25%        750.000000
+50%       1200.000000
+75%       1680.000000
+max      10000.000000
+Name: area, dtype: float64
+
+Quartiles:
+0.25     750.0
+0.50    1200.0
+0.75    1680.0
+Name: area, dtype: float64
+
+| Condition  | Category |
+| ---------- | -------- |
+| <= 750     | Small    |
+| 750 - 1680 | Medium   |
+| > 1680     | Large    |
+
