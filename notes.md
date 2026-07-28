@@ -958,3 +958,20 @@ City: SAS Nagar
 
 ========== Prediction ==========
 Predicted Rent: ₹24,231.23
+
+
+
+<hr>
+<hr>
+<hr>
+<hr>
+
+# summary_ver4.md's progress below
+
+
+
+# FEATURE ENGINEERING
+Feature Engineering means:
+
+- Creating better input features from the existing data so that the model can learn patterns more easily.
+
