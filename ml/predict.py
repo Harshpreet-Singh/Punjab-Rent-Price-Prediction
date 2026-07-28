@@ -10,7 +10,7 @@ import joblib
 import pandas as pd
 
 
-MODEL_NAME = "random_forest"
+MODEL_NAME = "random_forest_tuned"
 
 MODELS_DIR = Path("./models")
 

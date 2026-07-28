@@ -941,3 +941,20 @@ Final Model Comparison
 2        Random Forest  3049.126716  2.348326e+07  4845.953384  0.871376
 0    Linear Regression  5341.424574  6.120486e+07  7823.353488  0.664765
 1        Decision Tree  6320.185282  8.092929e+07  8996.070682  0.556729
+
+
+# SECOND PREDICTION USING RANDOM_FOREST_TUNED MODEL + PREPROCESSOR (preprocessor toh jruri hai side by side hona)
+==================================================
+Punjab Rent Price Prediction
+==================================================
+
+========== Enter Property Details ==========
+
+BHK: 3
+Bathroom: 2
+Area (sqft): 1500
+Location: Phase 7
+City: SAS Nagar
+
+========== Prediction ==========
+Predicted Rent: ₹24,231.23
