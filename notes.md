@@ -1004,3 +1004,13 @@ Name: area, dtype: float64
 | 750 - 1680 | Medium   |
 | > 1680     | Large    |
 
+
+## we will work on the title and categorise on the basis of furnishing
+
+| Title                | Feature         |
+| -------------------- | --------------- |
+| Fully Furnished 2BHK | Fully Furnished |
+| semi-furnished flat  | Semi Furnished  |
+| nothing mentioned    | Unknown         |
+
+

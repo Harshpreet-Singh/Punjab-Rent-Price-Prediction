@@ -30,8 +30,66 @@ def add_area_category(df):
 
 
 def extract_furnishing(df):
-    """Extract furnishing information from title."""
-    pass
+    """
+    Extract furnishing status from property title.
+
+    Categories:
+    - Fully Furnished
+    - Semi Furnished
+    - Furnished
+    - Unknown
+    """
+
+    def get_furnishing(title):
+
+        if pd.isna(title):
+            return "Unknown"
+
+        title = title.lower()
+
+        # Check fully furnished first
+        fully_furnished_keywords = [
+            "fully furnished",
+            "full furnished",
+            "fully-furnished"
+        ]
+
+        for keyword in fully_furnished_keywords:
+            if keyword in title:
+                return "Fully Furnished"
+
+
+        # Check semi furnished
+        semi_furnished_keywords = [
+            "semi furnished",
+            "semi-furnished",
+            "semi furnished flat",
+            "semi furnished floor"
+        ]
+
+        for keyword in semi_furnished_keywords:
+            if keyword in title:
+                return "Semi Furnished"
+
+
+        # Check generic furnished
+        furnished_keywords = [
+            " furnished",
+            "furnished "
+        ]
+
+        for keyword in furnished_keywords:
+            if keyword in title:
+                return "Furnished"
+
+
+        return "Unknown"
+
+
+    df["furnishing"] = df["title"].apply(get_furnishing)
+
+    return df
+
 
 
 def extract_property_type(df):
@@ -44,6 +102,7 @@ def create_engineered_features(df):
     pass
 
 if __name__ == "__main__":
+
     from pathlib import Path
     import pandas as pd
 
@@ -53,9 +112,9 @@ if __name__ == "__main__":
         BASE_DIR / "data" / "punjab_rental_dataset.csv"
     )
 
-    df = add_area_category(df)
+    df = extract_furnishing(df)
 
-    print(df[["area", "area_category"]].head(20))
+    print(df[["title", "furnishing"]].head(30))
 
-    print("\nCategory Counts:")
-    print(df["area_category"].value_counts())
+    print("\nCounts:")
+    print(df["furnishing"].value_counts())
