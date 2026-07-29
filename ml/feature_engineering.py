@@ -138,8 +138,13 @@ def extract_property_type(df):
     return df
 
 def create_engineered_features(df):
-    """Apply all feature engineering steps."""
-    pass
+    """ Apply all feature engineering steps. """
+
+    df = add_area_category(df)
+    df = extract_furnishing(df)
+    df = extract_property_type(df)
+
+    return df
 
 if __name__ == "__main__":
 
@@ -152,6 +157,7 @@ if __name__ == "__main__":
         BASE_DIR / "data" / "punjab_rental_dataset.csv"
     )
 
-    df = extract_property_type(df)
-    print(df[["title", "property_type"]].head(30))
-    print(df["property_type"].value_counts())
+
+    df = create_engineered_features(df)
+
+    print(df.columns)   
