@@ -1,8 +1,13 @@
 """
 Feature Engineering Module
 
-This module is responsible for creating new features
-from the existing dataset before model training.
+This module creates additional features from the original
+dataset before preprocessing and model training.
+
+Current engineered features:
+- area_category
+- furnishing
+- property_type
 """
 
 
