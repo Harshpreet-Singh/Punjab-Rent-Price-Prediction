@@ -93,9 +93,49 @@ def extract_furnishing(df):
 
 
 def extract_property_type(df):
-    """Extract property type from title."""
-    pass
+    """
+    Extract property type from property title.
 
+    Categories:
+    - Apartment
+    - Flat
+    - Independent House
+    - Independent Floor
+    - Room Set
+    - PG
+    - Unknown
+    """
+
+    def get_property_type(title):
+
+        if pd.isna(title):
+            return "Unknown"
+
+        title = title.lower()
+
+        if "apartment" in title:
+            return "Apartment"
+
+        if "flat" in title:
+            return "Flat"
+
+        if "independent floor" in title or "floor" in title:
+            return "Independent Floor"
+
+        if "independent house" in title or "house" in title:
+            return "Independent House"
+
+        if "room set" in title or "roomset" in title:
+            return "Room Set"
+
+        if "pg" in title:
+            return "PG"
+
+        return "Unknown"
+
+    df["property_type"] = df["title"].apply(get_property_type)
+
+    return df
 
 def create_engineered_features(df):
     """Apply all feature engineering steps."""
@@ -112,9 +152,6 @@ if __name__ == "__main__":
         BASE_DIR / "data" / "punjab_rental_dataset.csv"
     )
 
-    df = extract_furnishing(df)
-
-    print(df[["title", "furnishing"]].head(30))
-
-    print("\nCounts:")
-    print(df["furnishing"].value_counts())
+    df = extract_property_type(df)
+    print(df[["title", "property_type"]].head(30))
+    print(df["property_type"].value_counts())
