@@ -9,7 +9,8 @@ Current engineered features:
 - furnishing
 - property_type
 """
-
+import pandas as pd
+from pathlib import Path
 
 def add_area_category(df):
     """

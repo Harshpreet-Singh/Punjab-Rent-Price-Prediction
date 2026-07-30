@@ -1,0 +1,7 @@
+Random Forest Tuned Evaluation (without feature engineering)
+========================================
+
+MAE  : 3040.46
+MSE  : 23207172.35
+RMSE : 4817.38
+R�   : 0.8729

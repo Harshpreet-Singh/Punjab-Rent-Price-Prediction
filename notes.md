@@ -1014,3 +1014,12 @@ Name: area, dtype: float64
 | nothing mentioned    | Unknown         |
 
 
+# after feature engineering there is a good shift 
+
+```text
+| Metric   | Before Feature Engineering | After Feature Engineering | Improvement |
+| -------- | -------------------------: | ------------------------: | ----------: |
+| **MAE**  |                    3040.46 |               **2409.65** |   ✅ -630.81 |
+| **RMSE** |                    4817.38 |               **3925.13** |   ✅ -892.25 |
+| **R²**   |                     0.8729 |                **0.9156** |   ✅ +0.0427 |
+```
