@@ -10,6 +10,7 @@ import pandas as pd
 from sklearn.compose import ColumnTransformer
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import OneHotEncoder
+from feature_engineering import create_engineered_features
 
 # Dataset path
 DATA_PATH = "data/punjab_rental_dataset.csv"
@@ -52,6 +53,9 @@ def select_features_target(df):
             "area",
             "location",
             "city",
+            "area_category",
+            "furnishing",
+            "property_type"
         ]
     ]
 
@@ -77,6 +81,9 @@ def encode_features(X_train, X_test):
     categorical_features = [
         "location",
         "city",
+        "area_category",
+        "furnishing",
+        "property_type",
     ]
 
     preprocessor = ColumnTransformer(
@@ -104,6 +111,9 @@ def preprocess_data():
     """
 
     df = load_dataset()
+
+    # Apply Feature Engineering
+    df = create_engineered_features(df)
 
     X, y = select_features_target(df)
 

@@ -143,11 +143,16 @@ def extract_property_type(df):
     return df
 
 def create_engineered_features(df):
-    """ Apply all feature engineering steps. """
+    """
+    Apply all feature engineering steps.
+    """
 
     df = add_area_category(df)
     df = extract_furnishing(df)
     df = extract_property_type(df)
+
+    # Remove raw title after extracting useful information
+    df = df.drop(columns=["title"])
 
     return df
 
