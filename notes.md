@@ -1050,3 +1050,20 @@ Top 20 Important Features
 517                  categorical__furnishing_Furnished    0.005332
 429           categorical__location_Sector 66A, Mohali    0.005097
 ```
+
+- after this feature_importance file was changed to correct/ remove the suffix used by preprocessor
+
+Grouped Feature Importance
+```text
+Grouped Feature Importance
+
+         Feature  Importance
+2            BHK    0.327484
+6       Location    0.302970
+0           Area    0.173760
+3       Bathroom    0.110615
+7  Property Type    0.038707
+5     Furnishing    0.037427
+4           City    0.006256
+1  Area Category    0.002780
+```

@@ -1,531 +1,531 @@
 Feature,Importance
-remainder__bhk,0.327484295297532
-remainder__area,0.17375999195357786
-remainder__bathroom,0.1106148511909433
-categorical__furnishing_Unknown,0.01679412297289118
-categorical__property_type_Independent Floor,0.011224093391627128
-"categorical__location_Sector 82, Mohali",0.011036570931745392
-categorical__furnishing_Fully Furnished,0.009550543360995473
-categorical__property_type_Unknown,0.009428583525707478
-"categorical__location_Sector 85, Mohali",0.00788717492728868
-"categorical__location_Sector 98, Mohali",0.0077220685187905525
-"categorical__location_Sector 21D, Chandigarh",0.006756385770855859
-categorical__property_type_Flat,0.006733110866000178
-"categorical__location_Sector 88, Mohali",0.006576618685233966
-"categorical__location_Sector 79, Mohali",0.00642742626183697
-"categorical__location_Sector 66B, Mohali",0.006237257038488704
-categorical__furnishing_Semi Furnished,0.005749739449919493
-"categorical__location_Sector 60 Phase 3B2, Mohali",0.005692076924208538
-"categorical__location_Sector 66, Mohali",0.005515197745317066
-categorical__furnishing_Furnished,0.0053322464519639755
-"categorical__location_Sector 66A, Mohali",0.005097002175506936
-categorical__property_type_PG,0.004964868964712457
-"categorical__location_Sector 36B, Chandigarh",0.004682154825121642
-"categorical__location_Airport Road, Mohali",0.004678049122578241
-"categorical__location_Sector 45B, Chandigarh",0.004611473660972588
-"categorical__location_Sector 89, Mohali",0.00427989970424343
-"categorical__location_Sector 34D, Chandigarh",0.004265534409949226
-"categorical__location_Landran, Mohali",0.004220250661305835
-"categorical__location_VIP Road, Zirakpur",0.0038896210295736753
-"categorical__location_Airport Road, Zirakpur",0.0038649155844499516
-"categorical__location_Sector 22B, Chandigarh",0.0038398862619832956
-"categorical__location_Sector 70, Mohali",0.0037557031643389127
-"categorical__location_New Chandigarh, Chandigarh",0.0037503522802614254
-"categorical__location_Sector 10B, Chandigarh",0.003745838643609856
-"categorical__location_Sector 8C, Chandigarh",0.0035871471245194565
-"categorical__location_Sector 38A, Chandigarh",0.0035352588146015463
-"categorical__location_Sector 27D, Chandigarh",0.0034503708380683035
-"categorical__location_Kurali Chandigarh Rd, Kharar",0.0034052771131272996
-"categorical__location_Sector 32D, Chandigarh",0.003388077873044533
-"categorical__location_Khanpur, Kharar",0.0033352234527575493
-"categorical__location_Patiala Road, Zirakpur",0.0030407914981355373
-"categorical__location_Sector 61, Mohali",0.0030198800423161167
-"categorical__location_Sector 91, Mohali",0.0029908949632272562
-"categorical__location_Ambala Chandigarh Expressway, Zirakpur",0.00292037958252668
-"categorical__location_Sunny Enclave, Kharar",0.002873374745623454
-"categorical__location_Sector 35A, Chandigarh",0.002779007007284931
-"categorical__location_Peer Muchalla, Zirakpur",0.002728206520121583
-categorical__property_type_Independent House,0.0026462973655312244
-"categorical__location_Sector 33A, Chandigarh",0.002604523232079331
-categorical__city_SAS Nagar,0.002594251235521088
-"categorical__location_Sector 99, Mohali",0.002373817774862558
-"categorical__location_Sector 38D, Chandigarh",0.0022859234899524055
-"categorical__location_Sector 50, Chandigarh",0.0022396895571948254
-"categorical__location_Sector 35C, Chandigarh",0.002218524329407443
-"categorical__location_Guru Teg Bahadur Nagar, Kharar",0.002217386423756429
-"categorical__location_Sector 8, Panchkula",0.0021920623549368428
-"categorical__location_Sector 36D, Chandigarh",0.0021193745064523096
-"categorical__location_Sector 74, Mohali",0.002091890101135295
-categorical__property_type_Apartment,0.0020915143667473795
-"categorical__location_Sector 38B, Chandigarh",0.002012354748304806
-"categorical__location_Sector 59, Mohali",0.0019982907312578067
-categorical__city_Mohali,0.0018922090628353738
-"categorical__location_Sector 35D, Chandigarh",0.001841279407928329
-"categorical__location_Sector 80, Mohali",0.0017802228033103702
-"categorical__location_Sector 40A, Chandigarh",0.0017719789855559318
-categorical__city_Kharar,0.001769898856788548
-"categorical__location_Sector 20A, Chandigarh",0.001752860200108262
-"categorical__location_Sector 63, Mohali",0.0017237591519285445
-"categorical__location_Phase 2, Mohali",0.0016819430078200066
-"categorical__location_Sector 59 Phase 5, Mohali",0.0016732478492750618
-"categorical__location_Sector 117, Mohali",0.0016460019768735957
-categorical__property_type_Room Set,0.0016186197239013123
-"categorical__location_Sector 20, Panchkula",0.0015903796418215474
-"categorical__location_Sector 127, Kharar",0.0015663754798583432
-"categorical__location_Sector 68, Mohali",0.0015184488348116774
-"categorical__location_Sector 15B, Chandigarh",0.0015021230273282054
-"categorical__location_Sector 37A, Chandigarh",0.0014498879703289589
-"categorical__location_Sector 64, Mohali",0.001352582469190979
-"categorical__location_Sector 22C, Chandigarh",0.0013515140146958824
-"categorical__location_Sector 21A, Chandigarh",0.001344153350593509
-"categorical__location_Said He Majra, Dera Bassi",0.0013360353342958624
-"categorical__location_Sector 7, Panchkula",0.0013147040010317423
-categorical__area_category_Medium,0.0012873753195650319
-"categorical__location_Sector 114, Mohali",0.0012704289452811469
-"categorical__location_Sector 115, Mohali",0.001269229092194177
-"categorical__location_Sector 126, Mohali",0.001238535638205019
-"categorical__location_Sector 69, Mohali",0.0012343079726651808
-"categorical__location_Janta Nagar, Kharar",0.0012312302021464652
-"categorical__location_Sector 44D, Chandigarh",0.0012164957133517988
-"categorical__location_Sector 51, Chandigarh",0.0011555665146229458
-"categorical__location_Sector 77, Mohali",0.0011231583117487947
-"categorical__location_Sarita Sangam, Solan",0.001106657324999684
-"categorical__location_Sector 40D, Chandigarh",0.0010874983322114614
-"categorical__location_Sector 37B, Chandigarh",0.001061686429581481
-"categorical__location_Sector 123, Mohali",0.0010388476289406425
-"categorical__location_Gillco Valley, Kharar",0.0010261096156258965
-"categorical__location_Dhakauli, Zirakpur",0.0010259262095506816
-"categorical__location_Sector 44B, Chandigarh",0.0010132383576102351
-"categorical__location_Garden Colony, Kharar",0.000995884161735467
-"categorical__location_Phase 1, Mohali",0.0009780371410268017
-"categorical__location_Sector 115, Kharar",0.0009649218046861774
-"categorical__location_Sector 18C, Chandigarh",0.0009594598260707263
-"categorical__location_Sohana Village, Mohali",0.0009364399463476452
-"categorical__location_Bhabat, Zirakpur",0.0009211853051599646
-"categorical__location_Dhanas, Chandigarh",0.0009182301270534105
-"categorical__location_Sector 46C, Chandigarh",0.0009135257355080102
-"categorical__location_Sector 27B, Chandigarh",0.000903967648045506
-"categorical__location_Sector 32A, Chandigarh",0.0008959822027902218
-"categorical__location_Gazipur, Zirakpur",0.0008797252420343803
-categorical__area_category_Small,0.0008644983606859046
-"categorical__location_Sector 40B, Chandigarh",0.0008584717187148011
-"categorical__location_Sante Majra, Kharar",0.0008438494425995112
-"categorical__location_S.A.S. Nagar, Punjab",0.0007977938141296515
-"categorical__location_Sector 17B, Chandigarh",0.0007795847530244718
-"categorical__location_Sector 41A, Chandigarh",0.0007730429605102062
-"categorical__location_Shivalik City, Kharar",0.0007477224658178622
-"categorical__location_Sector 4, Panchkula",0.000745027415161807
-"categorical__location_Sector 37C, Chandigarh",0.0007412986901355871
-"categorical__location_Balongi, Mohali",0.0007274473196613263
-"categorical__location_Sector 78, Mohali",0.0007163229167939819
-"categorical__location_Sector 49B, Chandigarh",0.0007087083291941315
-"categorical__location_Sector 40C, Chandigarh",0.0007047947823296215
-"categorical__location_Sector 61, Chandigarh",0.0006999297776329118
-"categorical__location_Sector 125, Mohali",0.0006988546187945054
-"categorical__location_Sector 8B, Chandigarh",0.0006940459257832094
-"categorical__location_Sector 126, Kharar",0.0006851971034735928
-"categorical__location_Khuni Majra, Mohali",0.0006760136219612635
-"categorical__location_Sector 37D, Chandigarh",0.0006664342691211569
-"categorical__location_Sector 44A, Chandigarh",0.0006531982585649252
-"categorical__location_Sector 55, Chandigarh",0.0006518336180499693
-"categorical__location_Sector 71, Mohali",0.0006434007811421805
-"categorical__location_Sector 43, Chandigarh",0.0006300166332465413
-categorical__area_category_Large,0.000628535881208679
-"categorical__location_Sector 19B, Chandigarh",0.0006223606817371736
-"categorical__location_Sector 86, Mohali",0.0006156426448018775
-"categorical__location_Sector 65, Mohali",0.0006094350756425291
-"categorical__location_Mauli, Mohali",0.0006041142308133089
-"categorical__location_Sector 110, Mohali",0.0005866824655906412
-"categorical__location_Sector 48, Chandigarh",0.0005865684963672776
-"categorical__location_Rajpura, Nalagarh",0.0005804075830727617
-"categorical__location_Sector 53, Mohali",0.0005713083317445551
-"categorical__location_Sector 116, Mohali",0.0005662653222234045
-"categorical__location_Lohgarh, Zirakpur",0.0005438857263182899
-"categorical__location_Sector 21C, Chandigarh",0.0005422818911011725
-"categorical__location_Sector 22D, Chandigarh",0.0005405229047033751
-"categorical__location_Sector 15, Panchkula",0.000533647413988335
-"categorical__location_Sector 15A, Chandigarh",0.000530051919129352
-"categorical__location_Zirakpur, Punjab",0.0004994498521512059
-"categorical__location_Sector 76, Mohali",0.0004975788725897093
-"categorical__location_Sector 124, Mohali",0.0004940139335029536
-"categorical__location_Baltana Village, Zirakpur",0.0004884622499344568
-"categorical__location_Sector 60, Mohali",0.000483507674068098
-"categorical__location_Sector 38 West, Chandigarh",0.0004811804683463369
-"categorical__location_Lakhnaur, Mohali",0.00047437482574550394
-"categorical__location_Sector 19C, Chandigarh",0.00046831440493493763
-"categorical__location_Chajju Majra, Mohali",0.00046534978417201014
-"categorical__location_MDC Sector 5, Panchkula",0.00046421441192941957
-"categorical__location_Bhago Majra, Mohali",0.0004619652561246757
-"categorical__location_MS Enclave, Zirakpur",0.00045782844727191034
-"categorical__location_JTPL Township, Kharar",0.00045636179854517927
-"categorical__location_Sector 44C, Chandigarh",0.00044977714142827046
-"categorical__location_Sector 42B, Chandigarh",0.00044602975522394406
-"categorical__location_Bakarpur 264, Mohali",0.00043215483402514384
-"categorical__location_MDC Sector 4, Panchkula",0.0004309462701429752
-"categorical__location_Sector 18B, Chandigarh",0.00042979483592529426
-"categorical__location_Main Bazar, Kharar",0.000427196212882393
-"categorical__location_Sector 16, Panchkula",0.0004042874636614916
-"categorical__location_Sector 127, Mohali",0.0004023628400904568
-"categorical__location_Focal Point, Dera Bassi",0.00039873861460913604
-"categorical__location_Sector 49 Sai Enclave, Chandigarh",0.00039651035324318225
-"categorical__location_Sector 21, Panchkula",0.00039404076932482955
-"categorical__location_Harialpur, Mohali",0.00038909352948599137
-"categorical__location_Sector 26, Panchkula",0.0003888533989906949
-"categorical__location_Sector 19, Zirakpur",0.0003855701170066023
-"categorical__location_Sector 30B, Chandigarh",0.00038135674731172776
-"categorical__location_Daliml Vihar, Rajpura",0.0003809017384409888
-"categorical__location_Sector 23D, Chandigarh",0.0003774821274383517
-"categorical__location_Sector 36C, Chandigarh",0.00037720095432027055
-"categorical__location_Sector 45A, Chandigarh",0.00037088134682866885
-"categorical__location_MDC Sector 6, Panchkula",0.0003695613877242732
-"categorical__location_Sector 12A, Panchkula",0.0003394730735174272
-"categorical__location_Sector 41C, Chandigarh",0.00033853726592977655
-"categorical__location_Sector 92, Mohali",0.0003344539941782101
-"categorical__location_Sector 45C, Chandigarh",0.0003244200179508963
-"categorical__location_Ambala Dera Bassi Expy, Dera Bassi",0.00031722139445723713
-"categorical__location_Preet Nagar, Kharar",0.00031499812511506624
-"categorical__location_Sector 118, Mohali",0.00030671511285477386
-"categorical__location_Sector 9, Panchkula",0.0003010390811869225
-"categorical__location_Sector 17, Panchkula",0.0003001156355143971
-"categorical__location_Ranjeet Nagar, Kharar",0.0002956157099404684
-"categorical__location_Nagar Khera, Zirakpur",0.0002948340016382544
-"categorical__location_Sector 105, Mohali",0.00028984239229632537
-"categorical__location_Mani Majra, Chandigarh",0.0002858838301687127
-"categorical__location_Sector 104, Mohali",0.00028309641181829587
-"categorical__location_Shiv Puri Colony, Dera Bassi",0.0002813128882458628
-"categorical__location_Mander Nagar, Kharar",0.0002799538236205971
-"categorical__location_Sector 19D, Chandigarh",0.0002746824052294949
-"categorical__location_Chandigarh Airport Area, Chandigarh",0.0002715571539398349
-"categorical__location_Sector 41D, Chandigarh",0.0002688939793137499
-"categorical__location_Gulmohar City, Dera Bassi",0.00026812110992266506
-"categorical__location_Sector 22A, Chandigarh",0.0002676584984608199
-"categorical__location_Sector 18D, Chandigarh",0.00026632051014407256
-"categorical__location_Sector 120, Mohali",0.00026151165842273004
-"categorical__location_Jarnail Enclave, Zirakpur",0.00026075637550581043
-"categorical__location_Swaraj Nagar, Kharar",0.00025738541905922737
-"categorical__location_Dashmesh Nagar, Kharar",0.0002569677359887585
-"categorical__location_Badal Colony, Zirakpur",0.00025476770011802154
-"categorical__location_Sector 49A, Chandigarh",0.0002521718025617476
-"categorical__location_Desu Majra, Kharar",0.0002443577781697412
-"categorical__location_Sector 113, Mohali",0.00024172367499612928
-"categorical__location_Saraswati Vihar, Dera Bassi",0.00024016436098296505
-"categorical__location_Shivalik Enclave, Chandigarh",0.00023975329713223073
-"categorical__location_Urban Estate, Patiala",0.00023920959199642315
-"categorical__location_Nayagaon, Karoran",0.00023680344264093736
-"categorical__location_New Hari Enclave, Kharar",0.00022967995631984414
-"categorical__location_Sector 67, Mohali",0.0002294612172958195
-"categorical__location_Sector 10, Panchkula",0.00022658300968289217
-"categorical__location_Dera Bassi-Barwala Road, Dera Bassi",0.00021913391189720506
-"categorical__location_Industrial Area Phase 7, Mohali",0.00020840364766609365
-"categorical__location_Gulmohar Nagar, Khanna",0.00020268934938846332
-"categorical__location_Zirakpur Panchkula Kalka Highway, Zirakpur",0.00019274306962170488
-"categorical__location_Sector 19A, Chandigarh",0.00019123318729401126
-"categorical__location_Sector 35B, Chandigarh",0.00018767372033178035
-"categorical__location_Sector 26 East, Chandigarh",0.0001842419963198088
-"categorical__location_Sector 108, Mohali",0.00018260982993827425
-"categorical__location_Sector 11, Panchkula",0.00018060813171958114
-"categorical__location_Mohali, Punjab",0.00017838962619130062
-"categorical__location_Sector 12, Panchkula",0.00017679889506639685
-"categorical__location_Sector 34C, Chandigarh",0.0001679511865024564
-"categorical__location_Chhaju Majra, Kharar",0.00016771931693154924
-"categorical__location_Sector 92A, Mohali",0.00016706608747129353
-"categorical__location_Patiali Rao, Karoran",0.00016626651018060123
-"categorical__location_Bar Majra, Mohali",0.0001658239395351078
-"categorical__location_Kharar, Punjab",0.00015960576977188062
-"categorical__location_Dashmesh Nagar, Patiala",0.00015929782327959974
-"categorical__location_Sector 34A, Chandigarh",0.0001588304012729026
-"categorical__location_Panchsheel Enclave, Zirakpur",0.00015700751673743628
-"categorical__location_Baliali, Mohali",0.00015557922577097015
-"categorical__location_Mohan Nagar, Dera Bassi",0.00015475100889499293
-"categorical__location_Khuda Jassu, Chandigarh",0.00015300154421608192
-"categorical__location_Sector 28D, Chandigarh",0.00015294438287592922
-"categorical__location_Ward No 13, Banur",0.0001524329781512467
-"categorical__location_Sector 36A, Chandigarh",0.00014700592073698787
-"categorical__location_Sector 15C, Chandigarh",0.00014632541071895943
-"categorical__location_Civil Lines, Patiala",0.00014489946170200544
-"categorical__location_Mandi Kharar, Kharar",0.00014434791189260507
-"categorical__location_Kailon Village, Mohali",0.00014399450621378908
-"categorical__location_Sukhgarh Village, Mohali",0.00014391815537407855
-"categorical__location_Tripuri, Patiala",0.00014352933414766642
-"categorical__location_Gharuan, Kharar",0.00013631110839047231
-"categorical__location_Sector 27A, Chandigarh",0.0001342824877346615
-"categorical__location_Hirabagh, Patiala",0.0001334927661473615
-"categorical__location_Industrial Area Phase 8B, Mohali",0.00013342149689904358
-"categorical__location_Ivory Enclave, Zirakpur",0.00013269974863415116
-"categorical__location_Jandpur, Mohali",0.00013172551432842012
-"categorical__location_Saidpura 10, Dera Bassi Industrial Area",0.00012961968721170497
-"categorical__location_Desu Majra Colony, Kharar",0.00012894298125082208
-"categorical__location_Main Market, Ram Garh",0.0001259520490880429
-"categorical__location_Furniture Market, Zirakpur",0.00012463045771318932
-"categorical__location_Govind Vihar, Zirakpur",0.00012285001341436663
-"categorical__location_Khuda Alisher, Chandigarh",0.00012192366897776785
-"categorical__location_Sector 2, Panchkula",0.0001212379760256773
-"categorical__location_Bitna, Pinjore",0.00012102281091469491
-"categorical__location_Kakrali 13, Dera Bassi",0.00012010343019387873
-"categorical__location_Housing Board Colony, Ambala",0.00012010205866464595
-"categorical__location_Basti Lalpura, Ambala",0.00011945023206118036
-"categorical__location_Sector 20D, Chandigarh",0.0001185384863481757
-"categorical__location_Mahesh Nagar, Ambala",0.00011824729272271218
-"categorical__location_Sector 21B, Chandigarh",0.00011236139581019941
-"categorical__location_Hasainpur 178, Mohali",0.00011081326451465645
-"categorical__location_Chachu Majra, Mohali",0.00010830164753942129
-"categorical__location_Anand Nagar, Patiala",0.0001022109709663168
-"categorical__location_Sector 111, Mohali",9.939917298567503e-05
-"categorical__location_Sector 16A, Chandigarh",9.847805215026601e-05
-"categorical__location_Dashmesh Colony, Mandi Govindgarh",9.745344374345252e-05
-"categorical__location_Sector 38C, Chandigarh",9.699839480738207e-05
-"categorical__location_Haibatpur Road, Dera Bassi",9.575206005029726e-05
-"categorical__location_Jhungian, Mohali",9.531452114340457e-05
-"categorical__location_Kumbra 6 Part, Mohali",9.515760976477312e-05
-"categorical__location_Gulabgarh, Dera Bassi",9.496547389532422e-05
-"categorical__location_Bansa Wali Chungi Mohalla, Kharar",9.35385398951753e-05
-"categorical__location_Mundi Kharar Ward No 3, Kharar",9.22769370062502e-05
-"categorical__location_Anaj Mandi Purani Chungi, Kharar",9.101414960279568e-05
-"categorical__location_Sector 109, Mohali",9.016634139290925e-05
-"categorical__location_Ghatiwala, Pinjore",8.987577925240013e-05
-"categorical__location_Sector 25, Panchkula",8.692559086759262e-05
-"categorical__location_Sector 33D, Chandigarh",8.662913394436282e-05
-"categorical__location_Daun, Mohali",8.579719322747215e-05
-"categorical__location_Sihanpur 176, Mohali",8.374124948129646e-05
-"categorical__location_Sector 42C, Chandigarh",8.293188710735566e-05
-"categorical__location_Sector 9C, Chandigarh",8.239271274401723e-05
-"categorical__location_MDC Sector 7, Panchkula",8.099963935112963e-05
-"categorical__location_Bacher, Solan",7.914814709980339e-05
-"categorical__location_Shree Bazaar, Zirakpur",7.864849402206829e-05
-"categorical__location_Professor Colony, Patiala",7.806013726960166e-05
-"categorical__location_Karoran 352, Karoran",7.744694794895783e-05
-"categorical__location_Dashmesh Colony, Zirakpur",7.699078991485004e-05
-"categorical__location_Sector 45 Burail Village, Chandigarh",7.637550311572862e-05
-"categorical__location_Bajigaran Mohalla, Morinda",7.309792460497435e-05
-"categorical__location_Sector 28, Panchkula",7.201836809009569e-05
-"categorical__location_Sector 31, Panchkula",7.108603765552875e-05
-"categorical__location_Ambala Cantt, Ambala",7.108045885665682e-05
-"categorical__location_Kansal, Karoran",6.997610783570083e-05
-"categorical__location_Sector 56, Chandigarh",6.994516254360308e-05
-"categorical__location_Behlana, Chandigarh",6.905913816898903e-05
-"categorical__location_Maujpur Village, Mohali",6.763065705439924e-05
-"categorical__location_Sector 122, Mohali",6.688130538128895e-05
-"categorical__location_Luharan Mohalla, Kharar",6.639184959075633e-05
-"categorical__location_Sector 52, Chandigarh",6.631970965654799e-05
-"categorical__location_Adarsh Enclave, Zirakpur",6.57421914733177e-05
-"categorical__location_Sector 29B, Chandigarh",6.561835608256206e-05
-"categorical__location_Sector 56, Mohali",6.49757989583909e-05
-"categorical__location_Mundi Kharar Ward No 4, Kharar",6.417853323531625e-05
-"categorical__location_Sector 46A, Chandigarh",6.148106173695531e-05
-"categorical__location_Panchkula Industrial Area, Panchkula",6.094232278757671e-05
-"categorical__location_Singhpura, Kurali",5.918543172143931e-05
-"categorical__location_New SBS Colony, Rajpura",5.849075149153435e-05
-"categorical__location_Himmatgarh, Zirakpur",5.84716626050109e-05
-"categorical__location_Upkar Nagar, Patiala",5.694430435592574e-05
-"categorical__location_LIC Colony, Kharar",5.6873272805227724e-05
-"categorical__location_Power Colony, Patiala",5.6792593623234655e-05
-"categorical__location_Bhagat Singh Nagar, Dera Bassi",5.592831203053665e-05
-"categorical__location_Industrial Area Phase 8, Mohali",5.568701203861804e-05
-"categorical__location_Dattowal, Nalagarh",5.544253037557595e-05
-"categorical__location_Bank Colony, Patiala",5.508975611027477e-05
-"categorical__location_Sector 12, Chandigarh",5.44001133129342e-05
-"categorical__location_Ludhiana - Chandigarh State Highway, Kharar",5.3172695106132306e-05
-"categorical__location_Prem Nagar, Lalru",5.169778839621208e-05
-"categorical__location_Sector 39C, Chandigarh",5.167029758796451e-05
-"categorical__location_Sector 119, Mohali",5.160617677920522e-05
-"categorical__location_Sector 107, Mohali",5.0120957546817765e-05
-"categorical__location_Maloha, Chandigarh",4.959667754857759e-05
-"categorical__location_Deonghat, Solan",4.9451696751929554e-05
-"categorical__location_Ghuman Nagar, Patiala",4.8904676493625235e-05
-"categorical__location_Sector 27, Panchkula",4.888424048141864e-05
-"categorical__location_Sector 7C, Chandigarh",4.749386508369343e-05
-"categorical__location_Saini Vihar Phase 2, Zirakpur",4.748540656668668e-05
-"categorical__location_Subhash Nagar, Mandi Govindgarh",4.737562899634516e-05
-"categorical__location_Ratangarh, Ambala",4.7319272911664925e-05
-"categorical__location_Aam Khas Bagh, Sirhind Fatehgarh Sahib",4.6639904191896796e-05
-"categorical__location_Jagtar Nagar, Patiala",4.635917001353911e-05
-"categorical__location_Sector 9, Ambala",4.447245304609606e-05
-"categorical__location_Amar Puri Colony, Lalru",4.409144200749702e-05
-"categorical__location_Vasant Vihar, Zirakpur",4.3057186498523206e-05
-"categorical__location_Housing Board Colony, Kalka",4.202440275888395e-05
-"categorical__location_Ward No 3, Banur",3.949960746067834e-05
-"categorical__location_Behlolpur, Mohali",3.878443053039828e-05
-"categorical__location_Karpalpur 143, Nalagarh",3.75949076632617e-05
-"categorical__location_Hawali Bassi, Banur",3.739637737761505e-05
-"categorical__location_Sector 54, Chandigarh",3.719951976009494e-05
-"categorical__location_Sector 19, Panchkula",3.6248111292759394e-05
-"categorical__location_Charan Bagh, Patiala",3.580959060141445e-05
-"categorical__location_Kalewar, Kurali",3.4293317419037444e-05
-"categorical__location_Sector 83, Mohali",3.370338426076341e-05
-"categorical__location_Katwali Mohalla, Morinda",3.36491487899407e-05
-"categorical__location_Industrial Area Phase 6, Mohali",3.3551551469333704e-05
-"categorical__location_Ambala Cantonment, Haryana",3.092767393679819e-05
-"categorical__location_Lower Mall, Patiala",3.052507506226836e-05
-"categorical__location_Ward 2, Morinda",2.966976519769914e-05
-"categorical__location_MDC Sector 5C, Panchkula",2.9614978582027475e-05
-"categorical__location_Basdevpura 151, Pinjore",2.9183361077977486e-05
-"categorical__location_Radyali, Nalagarh",2.90842232325341e-05
-"categorical__location_Guru Nanak Nagar, Patiala",2.8561937732377568e-05
-"categorical__location_Abchal Nagar, Patiala",2.6679193643023657e-05
-"categorical__location_Chandigarh Road, Ludhiana",2.6655586393195003e-05
-"categorical__location_Budhanpur, Panchkula",2.6212091210074266e-05
-"categorical__location_Guru Nanak Nagar, Zirakpur",2.605118838397925e-05
-"categorical__location_Gian Colony, Patiala",2.506777848672638e-05
-"categorical__location_Sector 10, Ambala",2.4348062253148936e-05
-"categorical__location_Rupnagar, Punjab",2.4136198552346257e-05
-"categorical__location_Hallo Majra, Chandigarh",2.403589828900035e-05
-"categorical__location_Friends Colony, Patiala",2.403304224310075e-05
-"categorical__location_Silver City Extension, Zirakpur",2.303647704777437e-05
-"categorical__location_Sector 23C, Chandigarh",2.2955915439876606e-05
-"categorical__location_Preet Nagar, Sirhind Fatehgarh Sahib",2.2874484106607244e-05
-"categorical__location_Rathpur Colony, Pinjore",2.286171118826894e-05
-"categorical__location_Sector 28B, Chandigarh",2.2006391268761334e-05
-"categorical__location_Sector 15, Kharar",2.1792315247962938e-05
-"categorical__location_Thapar University, Patiala",2.1358662971947287e-05
-"categorical__location_Rabaun, Solan",1.9912388696517777e-05
-"categorical__location_Chandigarh, Chandigarh",1.9568632168992535e-05
-"categorical__location_Model Town, Kharar",1.935607467438519e-05
-"categorical__location_Ram Vihar, Zirakpur",1.9336934287801634e-05
-"categorical__location_Sector 42A, Chandigarh",1.9020028669666085e-05
-"categorical__location_Ranjit Nagar, Patiala",1.834803592351007e-05
-"categorical__location_Bilanwalian, Baddi",1.8305059238467703e-05
-"categorical__location_Sector 18, Panchkula",1.8263228049284512e-05
-"categorical__location_Daria, Chandigarh",1.8052460786532932e-05
-"categorical__location_Ganesh Nagar, Rajpura",1.741031184529704e-05
-"categorical__location_PSEB Power Colony, Patiala",1.7359027955022118e-05
-"categorical__location_Vijay Nagar Village, Patiala",1.7358814349805307e-05
-"categorical__location_Shaheed Udham Singh Colony, Rajpura",1.719782569697017e-05
-"categorical__location_Sector 94, Mohali",1.70454211098568e-05
-"categorical__location_Green Enclave Colony, Mohali",1.6976723672058776e-05
-"categorical__location_Guru Ki Nagri, Mandi Govindgarh",1.6589053439745057e-05
-"categorical__location_Sector 41B, Chandigarh",1.618839833419104e-05
-"categorical__location_Chapar Chiri, Mohali",1.610300063595562e-05
-"categorical__location_Sector 28A, Chandigarh",1.5878998912333627e-05
-"categorical__location_Gobind Nagar, Kharar",1.574475512846725e-05
-"categorical__location_Bank Colony, Khanna",1.534069197973731e-05
-"categorical__location_Sector 62, Mohali",1.4987483518716762e-05
-"categorical__location_Dadhi Kanian 147, Nalagarh",1.4944071995893491e-05
-"categorical__location_Sector 6, Panchkula",1.4770084644416645e-05
-"categorical__location_Dadu Majra, Chandigarh",1.4302347136231306e-05
-"categorical__location_Khali, Dagshai",1.3981287865411769e-05
-"categorical__location_Bhumian 133, Nalagarh",1.3318956471920209e-05
-"categorical__location_Chambaghat Industrial Area, Solan",1.3156417992080214e-05
-"categorical__location_Mirpur, Mubarakpur",1.3122450854719402e-05
-"categorical__location_Sector 96, Mohali",1.3030591104075664e-05
-"categorical__location_Moti Nagar, Khanna",1.2749299620968633e-05
-"categorical__location_Shivalik Nagar, Jharmajri EPIP Phase 1",1.2744113594054062e-05
-"categorical__location_Bagichi Het Ram Colony, Patiala",1.2103371444801294e-05
-"categorical__location_Basant Vihar, Rajpura",1.1924695529931194e-05
-"categorical__location_Baldevnagar, Ambala",1.1773738021087156e-05
-"categorical__location_Sori 132, Nalagarh",1.1643502831389506e-05
-"categorical__location_Model Town, Ambala",1.1579775339555436e-05
-"categorical__location_Adarsh Nagar Ward No 6, Kharar",1.1498486717697777e-05
-"categorical__location_Preet Colony, Zirakpur",1.1409108290547962e-05
-"categorical__location_Chogayan Mohalla, Kharar",1.1213623004899366e-05
-"categorical__location_Sector 11D, Chandigarh",1.1139979889810343e-05
-"categorical__location_Sector 23, Panchkula",1.0632209926847672e-05
-"categorical__location_Suketri 376, Panchkula",1.0598670203633577e-05
-"categorical__location_Banur, Punjab",1.0560221166265864e-05
-"categorical__location_Ravindra Enclave, Zirakpur",1.038746014773461e-05
-"categorical__location_Sector 14, Panchkula",1.0298943739859093e-05
-"categorical__location_Sector 34B, Chandigarh",9.966954731703596e-06
-"categorical__location_Sector 15D, Chandigarh",9.950170893858395e-06
-"categorical__location_Sector 32B, Chandigarh",9.947873829932981e-06
-"categorical__location_Sanour, Patiala",9.726394072136938e-06
-"categorical__location_Mehar Singh Colony, Patiala",9.452867968566605e-06
-"categorical__location_Basant Nagar, Rupnagar",9.35906954052707e-06
-"categorical__location_Barotiwala, Barotiwala Industrial Area",9.321157145056505e-06
-"categorical__location_Jandli, Ambala",9.185786780978793e-06
-"categorical__location_Sector 27C, Chandigarh",9.003277844685922e-06
-"categorical__location_Sector 1, Chandigarh",8.973604110219846e-06
-"categorical__location_Sector 10, Chandigarh",8.96101137227703e-06
-"categorical__location_Thatheryan Mohalla, Kharar",8.585312539402897e-06
-"categorical__location_Kawgri, Solan",8.08024236958943e-06
-"categorical__location_Sambalki Village, Mohali",7.429345002697273e-06
-"categorical__location_Old Town, Ambala",7.38446665665064e-06
-"categorical__location_Water Supply Colony, Nalagarh",7.0334312151938195e-06
-"categorical__location_Rattan Nagar, Patiala",5.888680029989119e-06
-"categorical__location_Mullanpur Garib Dass, Punjab",5.680638521988257e-06
-"categorical__location_Dealwal 75, Patiala",5.564493073018949e-06
-"categorical__location_Golden Squar Apartment, Zirakpur",5.379204612924519e-06
-"categorical__location_Jhil, Patiala",5.276939116378503e-06
-"categorical__location_Defence Colony, Ambala",4.9540593505807045e-06
-"categorical__location_Beli Dayour 153, Bagbania Industrial Area",4.86039035507255e-06
-"categorical__location_Choura Village, Patiala",4.84450010729714e-06
-"categorical__location_Kuldip Nagar, Ambala",4.84306595267891e-06
-"categorical__location_Baba Deep Singh Colony, Kharar",4.8108848854934315e-06
-"categorical__location_Sirhind, Punjab",4.7909524502125016e-06
-"categorical__location_Dhakansu Kalan, Rajpura",4.727321772832155e-06
-"categorical__location_Housing Board Colony Phase 1 & 3, Baddi",4.718218143033936e-06
-"categorical__location_Industrial Area Phase 3, Mohali",4.664004490157183e-06
-"categorical__location_Ambala Sadar, Ambala",4.640065840680952e-06
-"categorical__location_Rauni, Dera Bassi",4.629178855844442e-06
-"categorical__location_Sarangpur, Chandigarh",4.586095627634733e-06
-"categorical__location_Sundar Nagar, Patiala",4.4949686530288405e-06
-"categorical__location_Housing Board Colony, Kharar",4.48607288585234e-06
-"categorical__location_Saini Vihar, Zirakpur",4.340003205074909e-06
-"categorical__location_Sahibnagar, Patiala",4.305189833406113e-06
-"categorical__location_Shakti Enclave, Zirakpur",4.252156356020686e-06
-"categorical__location_Sector 11A, Chandigarh",4.179140524692341e-06
-"categorical__location_Sector 47D, Chandigarh",4.125722805436531e-06
-"categorical__location_Judi Kalan, Baddi",4.112026766755946e-06
-"categorical__location_Mauli Jagran, Chandigarh",4.100162463380846e-06
-"categorical__location_Jaggi Colony, Ambala",4.083856679094723e-06
-"categorical__location_New Defence Colony, Zirakpur",4.004235498789056e-06
-"categorical__location_Punjabi Bagh, Ambala",3.939260071242961e-06
-"categorical__location_Shiv Shakti Colony, Pinjore",3.936069512354915e-06
-"categorical__location_Ashok Nagar, Ambala",3.844788174677124e-06
-"categorical__location_MDC Sector 5A, Panchkula",3.7674239929655167e-06
-"categorical__location_Har Milan Nagar, Zirakpur",3.56115921768751e-06
-"categorical__location_Old Rajpura, Rajpura",3.518383973063717e-06
-"categorical__location_Sector 39B, Chandigarh",3.3580329033175513e-06
-"categorical__location_Sector 97, Mohali",3.2382856626073885e-06
-"categorical__location_Harinder Nagar, Patiala",3.105452676021215e-06
-"categorical__location_Sector 25 West, Chandigarh",3.0249299340552308e-06
-"categorical__location_Badshahi Bagh, Ambala",2.9649165282397844e-06
-"categorical__location_Amrit Vihar, Zirakpur",2.9103397701561767e-06
-"categorical__location_Bajoral Khurd, Solan",2.724411635993234e-06
-"categorical__location_Shiva Vihar, Zirakpur",2.6906463909134383e-06
-"categorical__location_Ram Bagh Mohalla, Kharar",2.650984950288754e-06
-"categorical__location_Gandhi Colony, Rajpura",2.6215487026557975e-06
-"categorical__location_Pawan Vihar, Solan",2.112999409499125e-06
-"categorical__location_Parshu Ram Nagar, Ambala",2.045613459531147e-06
-"categorical__location_Nikoowal 142, Nalagarh",1.895939758140775e-06
-"categorical__location_Sector 9A, Chandigarh",1.8868395786193427e-06
-"categorical__location_Patti Sohana 290, Mohali",1.829266590217195e-06
-"categorical__location_Old Officer Colony, Ambala",1.8167835036694816e-06
-"categorical__location_Trivedi Camp, Bhankarpur",1.7712876040309447e-06
-"categorical__location_Bishan Nagar, Patiala",1.76580203071414e-06
-"categorical__location_Industrial Area Dera Bassi, Dera Bassi",1.6723789880321272e-06
-"categorical__location_Adalat Bazar, Patiala",1.5544965387529526e-06
-"categorical__location_New Pratap Nagar, Ambala",1.469669411738822e-06
-"categorical__location_Sector 32C, Chandigarh",1.4493230497384888e-06
-"categorical__location_Singanwala, Ambala",1.438839386820405e-06
-"categorical__location_Vaishali Enclave, Zirakpur",1.4265664865149789e-06
-"categorical__location_Sector 33C, Chandigarh",1.3948873129076774e-06
-"categorical__location_Dukhniwaran, Patiala",1.364456052712268e-06
-"categorical__location_Labighat, Solan",1.3608926700753862e-06
-"categorical__location_Vikas Colony, Patiala",1.2887822987747848e-06
-"categorical__location_Rajpur Khurd, Chandigarh",1.2853139082951495e-06
-"categorical__location_Shiv Pratap Nagar, Ambala",1.1666338086846235e-06
-"categorical__location_Kathgarh, Zirakpur",1.07890805276867e-06
-"categorical__location_Bhogpur 190, Pinjore",1.028095711150118e-06
-"categorical__location_Shivalik Enclave, Rupnagar",9.423562687617808e-07
-"categorical__location_Railway Quarters, Ambala",8.761257077671116e-07
-"categorical__location_Virk Colony, Patiala",7.972579557175874e-07
-"categorical__location_Amravati Enclave, Pinjore",7.95643217890828e-07
-"categorical__location_Bharat Colony, Rajpura",7.695863482099661e-07
-"categorical__location_Vikash Nagar, Rajpura",7.085391224634599e-07
-"categorical__location_Chau Majra, Mohali",6.625871000997031e-07
-"categorical__location_Sector 5, Panchkula",5.913095936062234e-07
-"categorical__location_Industrial Area, Chandigarh",5.842052051844876e-07
-"categorical__location_Dharampura Bazar, Patiala",5.437232051131854e-07
-"categorical__location_Gholu Majra, Dera Bassi",4.873803010751502e-07
-"categorical__location_Hassanpur Prohtan, Patiala",4.1604767300700126e-07
-"categorical__location_Damonwala, Barotiwala Industrial Area",3.568490655322954e-07
-"categorical__location_Sector 29A, Chandigarh",3.090525031717642e-07
-"categorical__location_Gill Enclave, Patiala",3.051550583150793e-07
-"categorical__location_Palika Vihar, Ambala",2.98464503227258e-07
-"categorical__location_Sewak Colony, Patiala",2.411394574644534e-07
-"categorical__location_Allahdadpura, Amloh",2.3438288285032294e-07
-"categorical__location_Sector 112, Mohali",2.2564887389242e-07
-"categorical__location_Ekta Vihar, Ambala",1.9700777212765637e-07
-"categorical__location_Tripuri Town, Patiala",1.774235743936121e-07
-"categorical__location_Azad Nagar, Patiala",1.3982024728541957e-07
-"categorical__location_Sarita Vihar, Solan",1.1612706447751484e-07
-"categorical__location_Chilla Village, Mohali",7.853600536170096e-08
+bhk,0.327484295297532
+area,0.17375999195357786
+bathroom,0.1106148511909433
+furnishing_Unknown,0.01679412297289118
+property_type_Independent Floor,0.011224093391627128
+"location_Sector 82, Mohali",0.011036570931745392
+furnishing_Fully Furnished,0.009550543360995473
+property_type_Unknown,0.009428583525707478
+"location_Sector 85, Mohali",0.00788717492728868
+"location_Sector 98, Mohali",0.0077220685187905525
+"location_Sector 21D, Chandigarh",0.006756385770855859
+property_type_Flat,0.006733110866000178
+"location_Sector 88, Mohali",0.006576618685233966
+"location_Sector 79, Mohali",0.00642742626183697
+"location_Sector 66B, Mohali",0.006237257038488704
+furnishing_Semi Furnished,0.005749739449919493
+"location_Sector 60 Phase 3B2, Mohali",0.005692076924208538
+"location_Sector 66, Mohali",0.005515197745317066
+furnishing_Furnished,0.0053322464519639755
+"location_Sector 66A, Mohali",0.005097002175506936
+property_type_PG,0.004964868964712457
+"location_Sector 36B, Chandigarh",0.004682154825121642
+"location_Airport Road, Mohali",0.004678049122578241
+"location_Sector 45B, Chandigarh",0.004611473660972588
+"location_Sector 89, Mohali",0.00427989970424343
+"location_Sector 34D, Chandigarh",0.004265534409949226
+"location_Landran, Mohali",0.004220250661305835
+"location_VIP Road, Zirakpur",0.0038896210295736753
+"location_Airport Road, Zirakpur",0.0038649155844499516
+"location_Sector 22B, Chandigarh",0.0038398862619832956
+"location_Sector 70, Mohali",0.0037557031643389127
+"location_New Chandigarh, Chandigarh",0.0037503522802614254
+"location_Sector 10B, Chandigarh",0.003745838643609856
+"location_Sector 8C, Chandigarh",0.0035871471245194565
+"location_Sector 38A, Chandigarh",0.0035352588146015463
+"location_Sector 27D, Chandigarh",0.0034503708380683035
+"location_Kurali Chandigarh Rd, Kharar",0.0034052771131272996
+"location_Sector 32D, Chandigarh",0.003388077873044533
+"location_Khanpur, Kharar",0.0033352234527575493
+"location_Patiala Road, Zirakpur",0.0030407914981355373
+"location_Sector 61, Mohali",0.0030198800423161167
+"location_Sector 91, Mohali",0.0029908949632272562
+"location_Ambala Chandigarh Expressway, Zirakpur",0.00292037958252668
+"location_Sunny Enclave, Kharar",0.002873374745623454
+"location_Sector 35A, Chandigarh",0.002779007007284931
+"location_Peer Muchalla, Zirakpur",0.002728206520121583
+property_type_Independent House,0.0026462973655312244
+"location_Sector 33A, Chandigarh",0.002604523232079331
+city_SAS Nagar,0.002594251235521088
+"location_Sector 99, Mohali",0.002373817774862558
+"location_Sector 38D, Chandigarh",0.0022859234899524055
+"location_Sector 50, Chandigarh",0.0022396895571948254
+"location_Sector 35C, Chandigarh",0.002218524329407443
+"location_Guru Teg Bahadur Nagar, Kharar",0.002217386423756429
+"location_Sector 8, Panchkula",0.0021920623549368428
+"location_Sector 36D, Chandigarh",0.0021193745064523096
+"location_Sector 74, Mohali",0.002091890101135295
+property_type_Apartment,0.0020915143667473795
+"location_Sector 38B, Chandigarh",0.002012354748304806
+"location_Sector 59, Mohali",0.0019982907312578067
+city_Mohali,0.0018922090628353738
+"location_Sector 35D, Chandigarh",0.001841279407928329
+"location_Sector 80, Mohali",0.0017802228033103702
+"location_Sector 40A, Chandigarh",0.0017719789855559318
+city_Kharar,0.001769898856788548
+"location_Sector 20A, Chandigarh",0.001752860200108262
+"location_Sector 63, Mohali",0.0017237591519285445
+"location_Phase 2, Mohali",0.0016819430078200066
+"location_Sector 59 Phase 5, Mohali",0.0016732478492750618
+"location_Sector 117, Mohali",0.0016460019768735957
+property_type_Room Set,0.0016186197239013123
+"location_Sector 20, Panchkula",0.0015903796418215474
+"location_Sector 127, Kharar",0.0015663754798583432
+"location_Sector 68, Mohali",0.0015184488348116774
+"location_Sector 15B, Chandigarh",0.0015021230273282054
+"location_Sector 37A, Chandigarh",0.0014498879703289589
+"location_Sector 64, Mohali",0.001352582469190979
+"location_Sector 22C, Chandigarh",0.0013515140146958824
+"location_Sector 21A, Chandigarh",0.001344153350593509
+"location_Said He Majra, Dera Bassi",0.0013360353342958624
+"location_Sector 7, Panchkula",0.0013147040010317423
+area_category_Medium,0.0012873753195650319
+"location_Sector 114, Mohali",0.0012704289452811469
+"location_Sector 115, Mohali",0.001269229092194177
+"location_Sector 126, Mohali",0.001238535638205019
+"location_Sector 69, Mohali",0.0012343079726651808
+"location_Janta Nagar, Kharar",0.0012312302021464652
+"location_Sector 44D, Chandigarh",0.0012164957133517988
+"location_Sector 51, Chandigarh",0.0011555665146229458
+"location_Sector 77, Mohali",0.0011231583117487947
+"location_Sarita Sangam, Solan",0.001106657324999684
+"location_Sector 40D, Chandigarh",0.0010874983322114614
+"location_Sector 37B, Chandigarh",0.001061686429581481
+"location_Sector 123, Mohali",0.0010388476289406425
+"location_Gillco Valley, Kharar",0.0010261096156258965
+"location_Dhakauli, Zirakpur",0.0010259262095506816
+"location_Sector 44B, Chandigarh",0.0010132383576102351
+"location_Garden Colony, Kharar",0.000995884161735467
+"location_Phase 1, Mohali",0.0009780371410268017
+"location_Sector 115, Kharar",0.0009649218046861774
+"location_Sector 18C, Chandigarh",0.0009594598260707263
+"location_Sohana Village, Mohali",0.0009364399463476452
+"location_Bhabat, Zirakpur",0.0009211853051599646
+"location_Dhanas, Chandigarh",0.0009182301270534105
+"location_Sector 46C, Chandigarh",0.0009135257355080102
+"location_Sector 27B, Chandigarh",0.000903967648045506
+"location_Sector 32A, Chandigarh",0.0008959822027902218
+"location_Gazipur, Zirakpur",0.0008797252420343803
+area_category_Small,0.0008644983606859046
+"location_Sector 40B, Chandigarh",0.0008584717187148011
+"location_Sante Majra, Kharar",0.0008438494425995112
+"location_S.A.S. Nagar, Punjab",0.0007977938141296515
+"location_Sector 17B, Chandigarh",0.0007795847530244718
+"location_Sector 41A, Chandigarh",0.0007730429605102062
+"location_Shivalik City, Kharar",0.0007477224658178622
+"location_Sector 4, Panchkula",0.000745027415161807
+"location_Sector 37C, Chandigarh",0.0007412986901355871
+"location_Balongi, Mohali",0.0007274473196613263
+"location_Sector 78, Mohali",0.0007163229167939819
+"location_Sector 49B, Chandigarh",0.0007087083291941315
+"location_Sector 40C, Chandigarh",0.0007047947823296215
+"location_Sector 61, Chandigarh",0.0006999297776329118
+"location_Sector 125, Mohali",0.0006988546187945054
+"location_Sector 8B, Chandigarh",0.0006940459257832094
+"location_Sector 126, Kharar",0.0006851971034735928
+"location_Khuni Majra, Mohali",0.0006760136219612635
+"location_Sector 37D, Chandigarh",0.0006664342691211569
+"location_Sector 44A, Chandigarh",0.0006531982585649252
+"location_Sector 55, Chandigarh",0.0006518336180499693
+"location_Sector 71, Mohali",0.0006434007811421805
+"location_Sector 43, Chandigarh",0.0006300166332465413
+area_category_Large,0.000628535881208679
+"location_Sector 19B, Chandigarh",0.0006223606817371736
+"location_Sector 86, Mohali",0.0006156426448018775
+"location_Sector 65, Mohali",0.0006094350756425291
+"location_Mauli, Mohali",0.0006041142308133089
+"location_Sector 110, Mohali",0.0005866824655906412
+"location_Sector 48, Chandigarh",0.0005865684963672776
+"location_Rajpura, Nalagarh",0.0005804075830727617
+"location_Sector 53, Mohali",0.0005713083317445551
+"location_Sector 116, Mohali",0.0005662653222234045
+"location_Lohgarh, Zirakpur",0.0005438857263182899
+"location_Sector 21C, Chandigarh",0.0005422818911011725
+"location_Sector 22D, Chandigarh",0.0005405229047033751
+"location_Sector 15, Panchkula",0.000533647413988335
+"location_Sector 15A, Chandigarh",0.000530051919129352
+"location_Zirakpur, Punjab",0.0004994498521512059
+"location_Sector 76, Mohali",0.0004975788725897093
+"location_Sector 124, Mohali",0.0004940139335029536
+"location_Baltana Village, Zirakpur",0.0004884622499344568
+"location_Sector 60, Mohali",0.000483507674068098
+"location_Sector 38 West, Chandigarh",0.0004811804683463369
+"location_Lakhnaur, Mohali",0.00047437482574550394
+"location_Sector 19C, Chandigarh",0.00046831440493493763
+"location_Chajju Majra, Mohali",0.00046534978417201014
+"location_MDC Sector 5, Panchkula",0.00046421441192941957
+"location_Bhago Majra, Mohali",0.0004619652561246757
+"location_MS Enclave, Zirakpur",0.00045782844727191034
+"location_JTPL Township, Kharar",0.00045636179854517927
+"location_Sector 44C, Chandigarh",0.00044977714142827046
+"location_Sector 42B, Chandigarh",0.00044602975522394406
+"location_Bakarpur 264, Mohali",0.00043215483402514384
+"location_MDC Sector 4, Panchkula",0.0004309462701429752
+"location_Sector 18B, Chandigarh",0.00042979483592529426
+"location_Main Bazar, Kharar",0.000427196212882393
+"location_Sector 16, Panchkula",0.0004042874636614916
+"location_Sector 127, Mohali",0.0004023628400904568
+"location_Focal Point, Dera Bassi",0.00039873861460913604
+"location_Sector 49 Sai Enclave, Chandigarh",0.00039651035324318225
+"location_Sector 21, Panchkula",0.00039404076932482955
+"location_Harialpur, Mohali",0.00038909352948599137
+"location_Sector 26, Panchkula",0.0003888533989906949
+"location_Sector 19, Zirakpur",0.0003855701170066023
+"location_Sector 30B, Chandigarh",0.00038135674731172776
+"location_Daliml Vihar, Rajpura",0.0003809017384409888
+"location_Sector 23D, Chandigarh",0.0003774821274383517
+"location_Sector 36C, Chandigarh",0.00037720095432027055
+"location_Sector 45A, Chandigarh",0.00037088134682866885
+"location_MDC Sector 6, Panchkula",0.0003695613877242732
+"location_Sector 12A, Panchkula",0.0003394730735174272
+"location_Sector 41C, Chandigarh",0.00033853726592977655
+"location_Sector 92, Mohali",0.0003344539941782101
+"location_Sector 45C, Chandigarh",0.0003244200179508963
+"location_Ambala Dera Bassi Expy, Dera Bassi",0.00031722139445723713
+"location_Preet Nagar, Kharar",0.00031499812511506624
+"location_Sector 118, Mohali",0.00030671511285477386
+"location_Sector 9, Panchkula",0.0003010390811869225
+"location_Sector 17, Panchkula",0.0003001156355143971
+"location_Ranjeet Nagar, Kharar",0.0002956157099404684
+"location_Nagar Khera, Zirakpur",0.0002948340016382544
+"location_Sector 105, Mohali",0.00028984239229632537
+"location_Mani Majra, Chandigarh",0.0002858838301687127
+"location_Sector 104, Mohali",0.00028309641181829587
+"location_Shiv Puri Colony, Dera Bassi",0.0002813128882458628
+"location_Mander Nagar, Kharar",0.0002799538236205971
+"location_Sector 19D, Chandigarh",0.0002746824052294949
+"location_Chandigarh Airport Area, Chandigarh",0.0002715571539398349
+"location_Sector 41D, Chandigarh",0.0002688939793137499
+"location_Gulmohar City, Dera Bassi",0.00026812110992266506
+"location_Sector 22A, Chandigarh",0.0002676584984608199
+"location_Sector 18D, Chandigarh",0.00026632051014407256
+"location_Sector 120, Mohali",0.00026151165842273004
+"location_Jarnail Enclave, Zirakpur",0.00026075637550581043
+"location_Swaraj Nagar, Kharar",0.00025738541905922737
+"location_Dashmesh Nagar, Kharar",0.0002569677359887585
+"location_Badal Colony, Zirakpur",0.00025476770011802154
+"location_Sector 49A, Chandigarh",0.0002521718025617476
+"location_Desu Majra, Kharar",0.0002443577781697412
+"location_Sector 113, Mohali",0.00024172367499612928
+"location_Saraswati Vihar, Dera Bassi",0.00024016436098296505
+"location_Shivalik Enclave, Chandigarh",0.00023975329713223073
+"location_Urban Estate, Patiala",0.00023920959199642315
+"location_Nayagaon, Karoran",0.00023680344264093736
+"location_New Hari Enclave, Kharar",0.00022967995631984414
+"location_Sector 67, Mohali",0.0002294612172958195
+"location_Sector 10, Panchkula",0.00022658300968289217
+"location_Dera Bassi-Barwala Road, Dera Bassi",0.00021913391189720506
+"location_Industrial Area Phase 7, Mohali",0.00020840364766609365
+"location_Gulmohar Nagar, Khanna",0.00020268934938846332
+"location_Zirakpur Panchkula Kalka Highway, Zirakpur",0.00019274306962170488
+"location_Sector 19A, Chandigarh",0.00019123318729401126
+"location_Sector 35B, Chandigarh",0.00018767372033178035
+"location_Sector 26 East, Chandigarh",0.0001842419963198088
+"location_Sector 108, Mohali",0.00018260982993827425
+"location_Sector 11, Panchkula",0.00018060813171958114
+"location_Mohali, Punjab",0.00017838962619130062
+"location_Sector 12, Panchkula",0.00017679889506639685
+"location_Sector 34C, Chandigarh",0.0001679511865024564
+"location_Chhaju Majra, Kharar",0.00016771931693154924
+"location_Sector 92A, Mohali",0.00016706608747129353
+"location_Patiali Rao, Karoran",0.00016626651018060123
+"location_Bar Majra, Mohali",0.0001658239395351078
+"location_Kharar, Punjab",0.00015960576977188062
+"location_Dashmesh Nagar, Patiala",0.00015929782327959974
+"location_Sector 34A, Chandigarh",0.0001588304012729026
+"location_Panchsheel Enclave, Zirakpur",0.00015700751673743628
+"location_Baliali, Mohali",0.00015557922577097015
+"location_Mohan Nagar, Dera Bassi",0.00015475100889499293
+"location_Khuda Jassu, Chandigarh",0.00015300154421608192
+"location_Sector 28D, Chandigarh",0.00015294438287592922
+"location_Ward No 13, Banur",0.0001524329781512467
+"location_Sector 36A, Chandigarh",0.00014700592073698787
+"location_Sector 15C, Chandigarh",0.00014632541071895943
+"location_Civil Lines, Patiala",0.00014489946170200544
+"location_Mandi Kharar, Kharar",0.00014434791189260507
+"location_Kailon Village, Mohali",0.00014399450621378908
+"location_Sukhgarh Village, Mohali",0.00014391815537407855
+"location_Tripuri, Patiala",0.00014352933414766642
+"location_Gharuan, Kharar",0.00013631110839047231
+"location_Sector 27A, Chandigarh",0.0001342824877346615
+"location_Hirabagh, Patiala",0.0001334927661473615
+"location_Industrial Area Phase 8B, Mohali",0.00013342149689904358
+"location_Ivory Enclave, Zirakpur",0.00013269974863415116
+"location_Jandpur, Mohali",0.00013172551432842012
+"location_Saidpura 10, Dera Bassi Industrial Area",0.00012961968721170497
+"location_Desu Majra Colony, Kharar",0.00012894298125082208
+"location_Main Market, Ram Garh",0.0001259520490880429
+"location_Furniture Market, Zirakpur",0.00012463045771318932
+"location_Govind Vihar, Zirakpur",0.00012285001341436663
+"location_Khuda Alisher, Chandigarh",0.00012192366897776785
+"location_Sector 2, Panchkula",0.0001212379760256773
+"location_Bitna, Pinjore",0.00012102281091469491
+"location_Kakrali 13, Dera Bassi",0.00012010343019387873
+"location_Housing Board Colony, Ambala",0.00012010205866464595
+"location_Basti Lalpura, Ambala",0.00011945023206118036
+"location_Sector 20D, Chandigarh",0.0001185384863481757
+"location_Mahesh Nagar, Ambala",0.00011824729272271218
+"location_Sector 21B, Chandigarh",0.00011236139581019941
+"location_Hasainpur 178, Mohali",0.00011081326451465645
+"location_Chachu Majra, Mohali",0.00010830164753942129
+"location_Anand Nagar, Patiala",0.0001022109709663168
+"location_Sector 111, Mohali",9.939917298567503e-05
+"location_Sector 16A, Chandigarh",9.847805215026601e-05
+"location_Dashmesh Colony, Mandi Govindgarh",9.745344374345252e-05
+"location_Sector 38C, Chandigarh",9.699839480738207e-05
+"location_Haibatpur Road, Dera Bassi",9.575206005029726e-05
+"location_Jhungian, Mohali",9.531452114340457e-05
+"location_Kumbra 6 Part, Mohali",9.515760976477312e-05
+"location_Gulabgarh, Dera Bassi",9.496547389532422e-05
+"location_Bansa Wali Chungi Mohalla, Kharar",9.35385398951753e-05
+"location_Mundi Kharar Ward No 3, Kharar",9.22769370062502e-05
+"location_Anaj Mandi Purani Chungi, Kharar",9.101414960279568e-05
+"location_Sector 109, Mohali",9.016634139290925e-05
+"location_Ghatiwala, Pinjore",8.987577925240013e-05
+"location_Sector 25, Panchkula",8.692559086759262e-05
+"location_Sector 33D, Chandigarh",8.662913394436282e-05
+"location_Daun, Mohali",8.579719322747215e-05
+"location_Sihanpur 176, Mohali",8.374124948129646e-05
+"location_Sector 42C, Chandigarh",8.293188710735566e-05
+"location_Sector 9C, Chandigarh",8.239271274401723e-05
+"location_MDC Sector 7, Panchkula",8.099963935112963e-05
+"location_Bacher, Solan",7.914814709980339e-05
+"location_Shree Bazaar, Zirakpur",7.864849402206829e-05
+"location_Professor Colony, Patiala",7.806013726960166e-05
+"location_Karoran 352, Karoran",7.744694794895783e-05
+"location_Dashmesh Colony, Zirakpur",7.699078991485004e-05
+"location_Sector 45 Burail Village, Chandigarh",7.637550311572862e-05
+"location_Bajigaran Mohalla, Morinda",7.309792460497435e-05
+"location_Sector 28, Panchkula",7.201836809009569e-05
+"location_Sector 31, Panchkula",7.108603765552875e-05
+"location_Ambala Cantt, Ambala",7.108045885665682e-05
+"location_Kansal, Karoran",6.997610783570083e-05
+"location_Sector 56, Chandigarh",6.994516254360308e-05
+"location_Behlana, Chandigarh",6.905913816898903e-05
+"location_Maujpur Village, Mohali",6.763065705439924e-05
+"location_Sector 122, Mohali",6.688130538128895e-05
+"location_Luharan Mohalla, Kharar",6.639184959075633e-05
+"location_Sector 52, Chandigarh",6.631970965654799e-05
+"location_Adarsh Enclave, Zirakpur",6.57421914733177e-05
+"location_Sector 29B, Chandigarh",6.561835608256206e-05
+"location_Sector 56, Mohali",6.49757989583909e-05
+"location_Mundi Kharar Ward No 4, Kharar",6.417853323531625e-05
+"location_Sector 46A, Chandigarh",6.148106173695531e-05
+"location_Panchkula Industrial Area, Panchkula",6.094232278757671e-05
+"location_Singhpura, Kurali",5.918543172143931e-05
+"location_New SBS Colony, Rajpura",5.849075149153435e-05
+"location_Himmatgarh, Zirakpur",5.84716626050109e-05
+"location_Upkar Nagar, Patiala",5.694430435592574e-05
+"location_LIC Colony, Kharar",5.6873272805227724e-05
+"location_Power Colony, Patiala",5.6792593623234655e-05
+"location_Bhagat Singh Nagar, Dera Bassi",5.592831203053665e-05
+"location_Industrial Area Phase 8, Mohali",5.568701203861804e-05
+"location_Dattowal, Nalagarh",5.544253037557595e-05
+"location_Bank Colony, Patiala",5.508975611027477e-05
+"location_Sector 12, Chandigarh",5.44001133129342e-05
+"location_Ludhiana - Chandigarh State Highway, Kharar",5.3172695106132306e-05
+"location_Prem Nagar, Lalru",5.169778839621208e-05
+"location_Sector 39C, Chandigarh",5.167029758796451e-05
+"location_Sector 119, Mohali",5.160617677920522e-05
+"location_Sector 107, Mohali",5.0120957546817765e-05
+"location_Maloha, Chandigarh",4.959667754857759e-05
+"location_Deonghat, Solan",4.9451696751929554e-05
+"location_Ghuman Nagar, Patiala",4.8904676493625235e-05
+"location_Sector 27, Panchkula",4.888424048141864e-05
+"location_Sector 7C, Chandigarh",4.749386508369343e-05
+"location_Saini Vihar Phase 2, Zirakpur",4.748540656668668e-05
+"location_Subhash Nagar, Mandi Govindgarh",4.737562899634516e-05
+"location_Ratangarh, Ambala",4.7319272911664925e-05
+"location_Aam Khas Bagh, Sirhind Fatehgarh Sahib",4.6639904191896796e-05
+"location_Jagtar Nagar, Patiala",4.635917001353911e-05
+"location_Sector 9, Ambala",4.447245304609606e-05
+"location_Amar Puri Colony, Lalru",4.409144200749702e-05
+"location_Vasant Vihar, Zirakpur",4.3057186498523206e-05
+"location_Housing Board Colony, Kalka",4.202440275888395e-05
+"location_Ward No 3, Banur",3.949960746067834e-05
+"location_Behlolpur, Mohali",3.878443053039828e-05
+"location_Karpalpur 143, Nalagarh",3.75949076632617e-05
+"location_Hawali Bassi, Banur",3.739637737761505e-05
+"location_Sector 54, Chandigarh",3.719951976009494e-05
+"location_Sector 19, Panchkula",3.6248111292759394e-05
+"location_Charan Bagh, Patiala",3.580959060141445e-05
+"location_Kalewar, Kurali",3.4293317419037444e-05
+"location_Sector 83, Mohali",3.370338426076341e-05
+"location_Katwali Mohalla, Morinda",3.36491487899407e-05
+"location_Industrial Area Phase 6, Mohali",3.3551551469333704e-05
+"location_Ambala Cantonment, Haryana",3.092767393679819e-05
+"location_Lower Mall, Patiala",3.052507506226836e-05
+"location_Ward 2, Morinda",2.966976519769914e-05
+"location_MDC Sector 5C, Panchkula",2.9614978582027475e-05
+"location_Basdevpura 151, Pinjore",2.9183361077977486e-05
+"location_Radyali, Nalagarh",2.90842232325341e-05
+"location_Guru Nanak Nagar, Patiala",2.8561937732377568e-05
+"location_Abchal Nagar, Patiala",2.6679193643023657e-05
+"location_Chandigarh Road, Ludhiana",2.6655586393195003e-05
+"location_Budhanpur, Panchkula",2.6212091210074266e-05
+"location_Guru Nanak Nagar, Zirakpur",2.605118838397925e-05
+"location_Gian Colony, Patiala",2.506777848672638e-05
+"location_Sector 10, Ambala",2.4348062253148936e-05
+"location_Rupnagar, Punjab",2.4136198552346257e-05
+"location_Hallo Majra, Chandigarh",2.403589828900035e-05
+"location_Friends Colony, Patiala",2.403304224310075e-05
+"location_Silver City Extension, Zirakpur",2.303647704777437e-05
+"location_Sector 23C, Chandigarh",2.2955915439876606e-05
+"location_Preet Nagar, Sirhind Fatehgarh Sahib",2.2874484106607244e-05
+"location_Rathpur Colony, Pinjore",2.286171118826894e-05
+"location_Sector 28B, Chandigarh",2.2006391268761334e-05
+"location_Sector 15, Kharar",2.1792315247962938e-05
+"location_Thapar University, Patiala",2.1358662971947287e-05
+"location_Rabaun, Solan",1.9912388696517777e-05
+"location_Chandigarh, Chandigarh",1.9568632168992535e-05
+"location_Model Town, Kharar",1.935607467438519e-05
+"location_Ram Vihar, Zirakpur",1.9336934287801634e-05
+"location_Sector 42A, Chandigarh",1.9020028669666085e-05
+"location_Ranjit Nagar, Patiala",1.834803592351007e-05
+"location_Bilanwalian, Baddi",1.8305059238467703e-05
+"location_Sector 18, Panchkula",1.8263228049284512e-05
+"location_Daria, Chandigarh",1.8052460786532932e-05
+"location_Ganesh Nagar, Rajpura",1.741031184529704e-05
+"location_PSEB Power Colony, Patiala",1.7359027955022118e-05
+"location_Vijay Nagar Village, Patiala",1.7358814349805307e-05
+"location_Shaheed Udham Singh Colony, Rajpura",1.719782569697017e-05
+"location_Sector 94, Mohali",1.70454211098568e-05
+"location_Green Enclave Colony, Mohali",1.6976723672058776e-05
+"location_Guru Ki Nagri, Mandi Govindgarh",1.6589053439745057e-05
+"location_Sector 41B, Chandigarh",1.618839833419104e-05
+"location_Chapar Chiri, Mohali",1.610300063595562e-05
+"location_Sector 28A, Chandigarh",1.5878998912333627e-05
+"location_Gobind Nagar, Kharar",1.574475512846725e-05
+"location_Bank Colony, Khanna",1.534069197973731e-05
+"location_Sector 62, Mohali",1.4987483518716762e-05
+"location_Dadhi Kanian 147, Nalagarh",1.4944071995893491e-05
+"location_Sector 6, Panchkula",1.4770084644416645e-05
+"location_Dadu Majra, Chandigarh",1.4302347136231306e-05
+"location_Khali, Dagshai",1.3981287865411769e-05
+"location_Bhumian 133, Nalagarh",1.3318956471920209e-05
+"location_Chambaghat Industrial Area, Solan",1.3156417992080214e-05
+"location_Mirpur, Mubarakpur",1.3122450854719402e-05
+"location_Sector 96, Mohali",1.3030591104075664e-05
+"location_Moti Nagar, Khanna",1.2749299620968633e-05
+"location_Shivalik Nagar, Jharmajri EPIP Phase 1",1.2744113594054062e-05
+"location_Bagichi Het Ram Colony, Patiala",1.2103371444801294e-05
+"location_Basant Vihar, Rajpura",1.1924695529931194e-05
+"location_Baldevnagar, Ambala",1.1773738021087156e-05
+"location_Sori 132, Nalagarh",1.1643502831389506e-05
+"location_Model Town, Ambala",1.1579775339555436e-05
+"location_Adarsh Nagar Ward No 6, Kharar",1.1498486717697777e-05
+"location_Preet Colony, Zirakpur",1.1409108290547962e-05
+"location_Chogayan Mohalla, Kharar",1.1213623004899366e-05
+"location_Sector 11D, Chandigarh",1.1139979889810343e-05
+"location_Sector 23, Panchkula",1.0632209926847672e-05
+"location_Suketri 376, Panchkula",1.0598670203633577e-05
+"location_Banur, Punjab",1.0560221166265864e-05
+"location_Ravindra Enclave, Zirakpur",1.038746014773461e-05
+"location_Sector 14, Panchkula",1.0298943739859093e-05
+"location_Sector 34B, Chandigarh",9.966954731703596e-06
+"location_Sector 15D, Chandigarh",9.950170893858395e-06
+"location_Sector 32B, Chandigarh",9.947873829932981e-06
+"location_Sanour, Patiala",9.726394072136938e-06
+"location_Mehar Singh Colony, Patiala",9.452867968566605e-06
+"location_Basant Nagar, Rupnagar",9.35906954052707e-06
+"location_Barotiwala, Barotiwala Industrial Area",9.321157145056505e-06
+"location_Jandli, Ambala",9.185786780978793e-06
+"location_Sector 27C, Chandigarh",9.003277844685922e-06
+"location_Sector 1, Chandigarh",8.973604110219846e-06
+"location_Sector 10, Chandigarh",8.96101137227703e-06
+"location_Thatheryan Mohalla, Kharar",8.585312539402897e-06
+"location_Kawgri, Solan",8.08024236958943e-06
+"location_Sambalki Village, Mohali",7.429345002697273e-06
+"location_Old Town, Ambala",7.38446665665064e-06
+"location_Water Supply Colony, Nalagarh",7.0334312151938195e-06
+"location_Rattan Nagar, Patiala",5.888680029989119e-06
+"location_Mullanpur Garib Dass, Punjab",5.680638521988257e-06
+"location_Dealwal 75, Patiala",5.564493073018949e-06
+"location_Golden Squar Apartment, Zirakpur",5.379204612924519e-06
+"location_Jhil, Patiala",5.276939116378503e-06
+"location_Defence Colony, Ambala",4.9540593505807045e-06
+"location_Beli Dayour 153, Bagbania Industrial Area",4.86039035507255e-06
+"location_Choura Village, Patiala",4.84450010729714e-06
+"location_Kuldip Nagar, Ambala",4.84306595267891e-06
+"location_Baba Deep Singh Colony, Kharar",4.8108848854934315e-06
+"location_Sirhind, Punjab",4.7909524502125016e-06
+"location_Dhakansu Kalan, Rajpura",4.727321772832155e-06
+"location_Housing Board Colony Phase 1 & 3, Baddi",4.718218143033936e-06
+"location_Industrial Area Phase 3, Mohali",4.664004490157183e-06
+"location_Ambala Sadar, Ambala",4.640065840680952e-06
+"location_Rauni, Dera Bassi",4.629178855844442e-06
+"location_Sarangpur, Chandigarh",4.586095627634733e-06
+"location_Sundar Nagar, Patiala",4.4949686530288405e-06
+"location_Housing Board Colony, Kharar",4.48607288585234e-06
+"location_Saini Vihar, Zirakpur",4.340003205074909e-06
+"location_Sahibnagar, Patiala",4.305189833406113e-06
+"location_Shakti Enclave, Zirakpur",4.252156356020686e-06
+"location_Sector 11A, Chandigarh",4.179140524692341e-06
+"location_Sector 47D, Chandigarh",4.125722805436531e-06
+"location_Judi Kalan, Baddi",4.112026766755946e-06
+"location_Mauli Jagran, Chandigarh",4.100162463380846e-06
+"location_Jaggi Colony, Ambala",4.083856679094723e-06
+"location_New Defence Colony, Zirakpur",4.004235498789056e-06
+"location_Punjabi Bagh, Ambala",3.939260071242961e-06
+"location_Shiv Shakti Colony, Pinjore",3.936069512354915e-06
+"location_Ashok Nagar, Ambala",3.844788174677124e-06
+"location_MDC Sector 5A, Panchkula",3.7674239929655167e-06
+"location_Har Milan Nagar, Zirakpur",3.56115921768751e-06
+"location_Old Rajpura, Rajpura",3.518383973063717e-06
+"location_Sector 39B, Chandigarh",3.3580329033175513e-06
+"location_Sector 97, Mohali",3.2382856626073885e-06
+"location_Harinder Nagar, Patiala",3.105452676021215e-06
+"location_Sector 25 West, Chandigarh",3.0249299340552308e-06
+"location_Badshahi Bagh, Ambala",2.9649165282397844e-06
+"location_Amrit Vihar, Zirakpur",2.9103397701561767e-06
+"location_Bajoral Khurd, Solan",2.724411635993234e-06
+"location_Shiva Vihar, Zirakpur",2.6906463909134383e-06
+"location_Ram Bagh Mohalla, Kharar",2.650984950288754e-06
+"location_Gandhi Colony, Rajpura",2.6215487026557975e-06
+"location_Pawan Vihar, Solan",2.112999409499125e-06
+"location_Parshu Ram Nagar, Ambala",2.045613459531147e-06
+"location_Nikoowal 142, Nalagarh",1.895939758140775e-06
+"location_Sector 9A, Chandigarh",1.8868395786193427e-06
+"location_Patti Sohana 290, Mohali",1.829266590217195e-06
+"location_Old Officer Colony, Ambala",1.8167835036694816e-06
+"location_Trivedi Camp, Bhankarpur",1.7712876040309447e-06
+"location_Bishan Nagar, Patiala",1.76580203071414e-06
+"location_Industrial Area Dera Bassi, Dera Bassi",1.6723789880321272e-06
+"location_Adalat Bazar, Patiala",1.5544965387529526e-06
+"location_New Pratap Nagar, Ambala",1.469669411738822e-06
+"location_Sector 32C, Chandigarh",1.4493230497384888e-06
+"location_Singanwala, Ambala",1.438839386820405e-06
+"location_Vaishali Enclave, Zirakpur",1.4265664865149789e-06
+"location_Sector 33C, Chandigarh",1.3948873129076774e-06
+"location_Dukhniwaran, Patiala",1.364456052712268e-06
+"location_Labighat, Solan",1.3608926700753862e-06
+"location_Vikas Colony, Patiala",1.2887822987747848e-06
+"location_Rajpur Khurd, Chandigarh",1.2853139082951495e-06
+"location_Shiv Pratap Nagar, Ambala",1.1666338086846235e-06
+"location_Kathgarh, Zirakpur",1.07890805276867e-06
+"location_Bhogpur 190, Pinjore",1.028095711150118e-06
+"location_Shivalik Enclave, Rupnagar",9.423562687617808e-07
+"location_Railway Quarters, Ambala",8.761257077671116e-07
+"location_Virk Colony, Patiala",7.972579557175874e-07
+"location_Amravati Enclave, Pinjore",7.95643217890828e-07
+"location_Bharat Colony, Rajpura",7.695863482099661e-07
+"location_Vikash Nagar, Rajpura",7.085391224634599e-07
+"location_Chau Majra, Mohali",6.625871000997031e-07
+"location_Sector 5, Panchkula",5.913095936062234e-07
+"location_Industrial Area, Chandigarh",5.842052051844876e-07
+"location_Dharampura Bazar, Patiala",5.437232051131854e-07
+"location_Gholu Majra, Dera Bassi",4.873803010751502e-07
+"location_Hassanpur Prohtan, Patiala",4.1604767300700126e-07
+"location_Damonwala, Barotiwala Industrial Area",3.568490655322954e-07
+"location_Sector 29A, Chandigarh",3.090525031717642e-07
+"location_Gill Enclave, Patiala",3.051550583150793e-07
+"location_Palika Vihar, Ambala",2.98464503227258e-07
+"location_Sewak Colony, Patiala",2.411394574644534e-07
+"location_Allahdadpura, Amloh",2.3438288285032294e-07
+"location_Sector 112, Mohali",2.2564887389242e-07
+"location_Ekta Vihar, Ambala",1.9700777212765637e-07
+"location_Tripuri Town, Patiala",1.774235743936121e-07
+"location_Azad Nagar, Patiala",1.3982024728541957e-07
+"location_Sarita Vihar, Solan",1.1612706447751484e-07
+"location_Chilla Village, Mohali",7.853600536170096e-08
