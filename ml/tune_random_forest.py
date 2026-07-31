@@ -13,11 +13,9 @@ MODELS_DIR = BASE_DIR / "models"
 METRICS_DIR = BASE_DIR / "outputs" / "metrics"
 
 def load_preprocessed_data():
-    """ Load and preprocess the dataset. """
+    """Load and preprocess the dataset."""
 
-    X_train, X_test, y_train, y_test, _ = preprocess_data()
-
-    return X_train, X_test, y_train, y_test
+    return preprocess_data()
 
 
 def create_param_grid():
@@ -66,10 +64,21 @@ def save_model(model):
 
     print(f"\nModel saved to: {model_path}")
 
+def save_preprocessor(preprocessor):
+    """Save the fitted preprocessing pipeline."""
+
+    MODELS_DIR.mkdir(parents=True, exist_ok=True)
+
+    preprocessor_path = MODELS_DIR / "preprocessor.pkl"
+
+    joblib.dump(preprocessor, preprocessor_path)
+
+    print(f"\nPreprocessor saved to: {preprocessor_path}")
+
 def main():
     print("Loading preprocessed data...")
 
-    X_train, X_test, y_train, y_test = load_preprocessed_data()
+    X_train, X_test, y_train, y_test, preprocessor = load_preprocessed_data()
 
     print(f"Training samples : {X_train.shape[0]}")          # len() don't work here so use shape[0] here 0 gives - Number of rows, and [1] gives no. of columns
     print(f"Testing samples  : {X_test.shape[0]}")
@@ -108,6 +117,7 @@ def main():
     )
 
     save_model(best_model)
+    save_preprocessor(preprocessor)
 
     print("\n========== Tuned Model Performance ==========")
 
