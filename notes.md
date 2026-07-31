@@ -1023,3 +1023,30 @@ Name: area, dtype: float64
 | **RMSE** |                    4817.38 |               **3925.13** |   ✅ -892.25 |
 | **R²**   |                     0.8729 |                **0.9156** |   ✅ +0.0427 |
 ```
+
+### feature importance file run krne se pta chlega which feature is more important - list of 20 is printed : 
+
+```text
+Top 20 Important Features
+                                               Feature  Importance
+527                                     remainder__bhk    0.327484
+529                                    remainder__area    0.173760
+528                                remainder__bathroom    0.110615
+519                    categorical__furnishing_Unknown    0.016794
+522       categorical__property_type_Independent Floor    0.011224
+445            categorical__location_Sector 82, Mohali    0.011037
+516            categorical__furnishing_Fully Furnished    0.009551
+526                 categorical__property_type_Unknown    0.009429
+447            categorical__location_Sector 85, Mohali    0.007887
+461            categorical__location_Sector 98, Mohali    0.007722
+325       categorical__location_Sector 21D, Chandigarh    0.006756
+521                    categorical__property_type_Flat    0.006733
+449            categorical__location_Sector 88, Mohali    0.006577
+441            categorical__location_Sector 79, Mohali    0.006427
+430           categorical__location_Sector 66B, Mohali    0.006237
+518             categorical__furnishing_Semi Furnished    0.005750
+420  categorical__location_Sector 60 Phase 3B2, Mohali    0.005692
+428            categorical__location_Sector 66, Mohali    0.005515
+517                  categorical__furnishing_Furnished    0.005332
+429           categorical__location_Sector 66A, Mohali    0.005097
+```
