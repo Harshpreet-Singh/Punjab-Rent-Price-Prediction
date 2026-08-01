@@ -150,16 +150,16 @@ def plot_feature_importance(df):
         exist_ok=True,
     )
 
-    plt.figure(figsize=(8, 5))
+    plt.figure(figsize=(9, 5))
 
     plt.barh(
         df["Feature"],
         df["Importance"],
     )
 
-    plt.xlabel("Importance")
-
-    plt.title("Feature Importance")
+    plt.xlabel("Importance Score")
+    plt.ylabel("Features")
+    plt.title("Random Forest Feature Importance")
 
     plt.gca().invert_yaxis()
 
