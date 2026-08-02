@@ -1071,3 +1071,39 @@ Grouped Feature Importance
 # What is an Ablation Study?
 
 The word ablation means removing something to measure its effect.
+
+
+So far your project has answered:
+
+- How accurate is the model? ✅
+- Which features are important? ✅
+- Did feature engineering help? ✅
+
+Now we'll answer:
+
+`Why did the model predict ₹X for this particular house?`
+
+That's where **SHAP** comes in.
+
+
+What is SHAP?
+
+SHAP stands for:
+
+**SHapley Additive exPlanations**
+
+It comes from Shapley Values in game theory.
+
+- The idea is simple:
+
+Imagine 4 friends win ₹100.
+
+How much money should each friend get?
+
+Not equally.
+
+The friend who contributed the most should receive more.
+
+SHAP applies the same idea to machine learning.
+
+Instead of friends, we have features.
