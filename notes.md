@@ -1067,3 +1067,7 @@ Grouped Feature Importance
 4           City    0.006256
 1  Area Category    0.002780
 ```
+
+# What is an Ablation Study?
+
+The word ablation means removing something to measure its effect.

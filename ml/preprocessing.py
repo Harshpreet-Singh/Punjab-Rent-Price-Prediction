@@ -15,6 +15,17 @@ from feature_engineering import create_engineered_features
 # Dataset path
 DATA_PATH = "data/punjab_rental_dataset.csv"
 
+# Default features used for model training
+DEFAULT_FEATURES = [
+    "bhk",
+    "bathroom",
+    "area",
+    "location",
+    "city",
+    "area_category",
+    "furnishing",
+    "property_type",
+]
 
 def load_dataset():
     """Load the cleaned rental dataset."""
@@ -43,21 +54,10 @@ def inspect_dataset(df):
     print(df.describe())
 
 
-def select_features_target(df):
+def select_features_target(df, selected_features):
     """Separate features and target."""
 
-    X = df[
-        [
-            "bhk",
-            "bathroom",
-            "area",
-            "location",
-            "city",
-            "area_category",
-            "furnishing",
-            "property_type"
-        ]
-    ]
+    X = df[selected_features]
 
     y = df["price"]
 
@@ -78,12 +78,18 @@ def split_data(X, y):
 def encode_features(X_train, X_test):
     """Encode categorical columns using One-Hot Encoding."""
 
-    categorical_features = [
+    all_categorical_features = [
         "location",
         "city",
         "area_category",
         "furnishing",
         "property_type",
+    ]
+
+    categorical_features = [
+        feature
+        for feature in all_categorical_features
+        if feature in X_train.columns
     ]
 
     preprocessor = ColumnTransformer(
@@ -104,7 +110,7 @@ def encode_features(X_train, X_test):
     return X_train_encoded, X_test_encoded, preprocessor
 
 
-def preprocess_data():
+def preprocess_data(selected_features=None):
     """
     Complete preprocessing pipeline.
     Returns processed data ready for model training.
@@ -115,7 +121,13 @@ def preprocess_data():
     # Apply Feature Engineering
     df = create_engineered_features(df)
 
-    X, y = select_features_target(df)
+    if selected_features is None:
+        selected_features = DEFAULT_FEATURES
+
+    X, y = select_features_target(
+        df,
+        selected_features,
+    )
 
     X_train, X_test, y_train, y_test = split_data(X, y)
 
