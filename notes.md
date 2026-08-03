@@ -1107,3 +1107,36 @@ The friend who contributed the most should receive more.
 SHAP applies the same idea to machine learning.
 
 Instead of friends, we have features.
+
+### Why are we learning SHAP?
+
+Because it's used in:
+
+Google
+Microsoft
+Amazon
+Kaggle competitions
+Production ML systems
+
+It's one of the most popular explainability tools today.
+
+ml/shap_explain.py will :-
+Load Model
+        │
+        ▼
+Load Preprocessor
+        │
+        ▼
+Preprocess Dataset
+        │
+        ▼
+Create SHAP Explainer
+        │
+        ▼
+Generate Summary Plot
+        │
+        ▼
+Generate Bar Plot
+        │
+        ▼
+Generate Waterfall Plot
