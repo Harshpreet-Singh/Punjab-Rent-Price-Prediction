@@ -1024,6 +1024,14 @@ Name: area, dtype: float64
 | **R²**   |                     0.8729 |                **0.9156** |   ✅ +0.0427 |
 ```
 
+<hr>
+<hr>
+<hr>
+<hr>
+
+# summary_ver5.md's progress below
+
+
 ### feature importance file run krne se pta chlega which feature is more important - list of 20 is printed : 
 
 ```text
@@ -1144,6 +1152,13 @@ Generate Waterfall Plot
 
 # till summary_ver5.md 
 
+<hr>
+<hr>
+<hr>
+<hr>
+
+# summary_ver6.md's progress below
+
 1. ✅ Data Cleaning
 2. ✅ Feature Engineering
 3. ✅ Linear Regression
@@ -1163,3 +1178,24 @@ Generate Waterfall Plot
 17. Docker (optional)
 18. Deployment
 19. Documentation & README polish
+
+
+# Cross Validation (Current Step)
+
+Now the question has changed.
+
+We're not asking:
+
+`"Which parameters are best?"`
+
+We're asking:
+
+`"How reliable is my best model?"`
+
+## think of an example: GridSearchCV
+
+* Question: Who is the topper?
+suppose **harsh is the topper**
+
+* but cross validation checks 
+if **harsh is performing best consistently ?**
