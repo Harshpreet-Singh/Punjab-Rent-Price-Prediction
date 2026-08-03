@@ -23,6 +23,7 @@ from pathlib import Path
 import joblib
 import pandas as pd
 import matplotlib.pyplot as plt
+from utils import FEATURE_GROUPS, clean_feature_names
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -34,17 +35,6 @@ METRICS_DIR = BASE_DIR / "outputs" / "metrics"
 FIGURES_DIR = BASE_DIR / "outputs" / "figures"
 
 METRICS_DIR.mkdir(parents=True, exist_ok=True)
-
-FEATURE_GROUPS = {
-    "area_category": "Area Category",
-    "property_type": "Property Type",
-    "furnishing": "Furnishing",
-    "location": "Location",
-    "bathroom": "Bathroom",
-    "city": "City",
-    "area": "Area",
-    "bhk": "BHK",
-}
 
 
 
@@ -80,36 +70,56 @@ def extract_feature_importance(model, preprocessor):
     )
 
 
-def clean_feature_names(df):
-    """Remove ColumnTransformer prefixes."""
-
-    df = df.copy()
-
-    df["Feature"] = (
-        df["Feature"]
-        .str.replace("categorical__", "", regex=False)
-        .str.replace("remainder__", "", regex=False)
-    )
-
-    return df
 
 def group_feature_importance(df):
-    """Group encoded features back to original features."""
+    """Group encoded features back to their original feature."""
 
     grouped_features = []
 
     for feature in df["Feature"]:
 
-        original_feature = feature
+        if feature == "BHK":
+            grouped_feature = "BHK"
 
-        for prefix, name in FEATURE_GROUPS.items():
+        elif feature == "Bathroom":
+            grouped_feature = "Bathroom"
 
-            if feature.startswith(prefix):
+        elif feature == "Area":
+            grouped_feature = "Area"
 
-                original_feature = name
-                break
+        elif feature == "City":
+            grouped_feature = "City"
 
-        grouped_features.append(original_feature)
+        elif feature in [
+            "Small",
+            "Medium",
+            "Large",
+        ]:
+            grouped_feature = "Area Category"
+
+        elif feature in [
+            "Fully Furnished",
+            "Semi Furnished",
+            "Furnished",
+            "Unknown",
+        ]:
+            grouped_feature = "Furnishing"
+
+        elif feature in [
+            "Flat",
+            "Apartment",
+            "Independent House",
+            "Independent Floor",
+            "PG",
+            "Room Set",
+        ]:
+            grouped_feature = "Property Type"
+
+        else:
+            # Remaining values are locations
+            grouped_feature = "Location"
+
+        grouped_features.append(grouped_feature)
 
     grouped_df = df.copy()
 
@@ -117,7 +127,10 @@ def group_feature_importance(df):
 
     grouped_df = (
         grouped_df
-        .groupby("Feature", as_index=False)["Importance"]
+        .groupby(
+            "Feature",
+            as_index=False,
+        )["Importance"]
         .sum()
         .sort_values(
             by="Importance",
@@ -126,6 +139,7 @@ def group_feature_importance(df):
     )
 
     return grouped_df
+
 
 def save_feature_importance(df, filename):
     """Save feature importance."""
@@ -192,7 +206,9 @@ def main():
         preprocessor,
     )
 
-    raw_df = clean_feature_names(raw_df)
+    raw_df["Feature"] = clean_feature_names(
+        raw_df["Feature"],
+    )
 
     grouped_df = group_feature_importance(raw_df)
 
