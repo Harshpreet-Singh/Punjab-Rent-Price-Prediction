@@ -1140,3 +1140,26 @@ Generate Bar Plot
         │
         ▼
 Generate Waterfall Plot
+
+
+# till summary_ver5.md 
+
+1. ✅ Data Cleaning
+2. ✅ Feature Engineering
+3. ✅ Linear Regression
+4. ✅ Decision Tree
+5. ✅ Random Forest
+6. ✅ Hyperparameter Tuning
+7. ✅ Feature Importance
+8. ✅ Ablation Study
+9. ✅ SHAP Explainability
+10. Cross Validation (final model robustness)
+11. Model Error Analysis (find where predictions fail)
+12. XGBoost / LightGBM / CatBoost comparison
+13. Final model selection
+14. Packaging / inference pipeline
+15. Flask/FastAPI API
+16. Streamlit Web App
+17. Docker (optional)
+18. Deployment
+19. Documentation & README polish
