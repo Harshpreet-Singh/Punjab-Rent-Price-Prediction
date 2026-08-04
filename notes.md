@@ -1213,3 +1213,7 @@ if **harsh is performing best consistently ?**
 
 * Conclusion : Your tuned Random Forest appears to generalize well on this dataset.
 
+with saving output values of cross validation.py in outputs/metrics/cross_validation_metrics.txt
+
+cross validation is completed
+
