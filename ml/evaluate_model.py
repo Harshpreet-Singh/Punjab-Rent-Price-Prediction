@@ -73,8 +73,9 @@ def save_metrics(metrics, model_name, verbose=True):
 
     metrics_path = METRICS_DIR / f"{model_name}_metrics.txt"
 
+    # with open(metrics_path, "w") as file:
     with open(metrics_path, "w", encoding="utf-8") as file:
-
+        
         file.write(f"{model_name_to_title(model_name)} Evaluation\n")
         file.write("=" * 40 + "\n\n")
 
