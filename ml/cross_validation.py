@@ -1,6 +1,6 @@
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import KFold, cross_val_score
-
+from pathlib import Path
 from preprocessing import (
     load_dataset,
     create_engineered_features,
@@ -8,6 +8,24 @@ from preprocessing import (
     encode_features,
     DEFAULT_FEATURES,
 )
+
+def save_cross_validation_metrics(scores):
+    """Save Cross Validation metrics."""
+
+    output_path = Path("outputs/metrics/cross_validation_metrics.txt")
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+
+    with open(output_path, "w") as file:
+        file.write("========== K-Fold Cross Validation ==========\n\n")
+
+        for i, score in enumerate(scores, start=1):
+            file.write(f"Fold {i}: {score:.4f}\n")
+
+        file.write("\n")
+        file.write(f"Average R² : {scores.mean():.4f}\n")
+        file.write(f"Std Dev    : {scores.std():.4f}\n")
+
+    print(f"\nMetrics saved to: {output_path}")
 
 
 def main():
@@ -63,6 +81,8 @@ def main():
 
     print("\nAverage R² :", f"{scores.mean():.4f}")
     print("Std Dev    :", f"{scores.std():.4f}")
+
+    save_cross_validation_metrics(scores)
 
 
 if __name__ == "__main__":

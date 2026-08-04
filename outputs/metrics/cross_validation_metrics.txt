@@ -1,0 +1,10 @@
+========== K-Fold Cross Validation ==========
+
+Fold 1: 0.9162
+Fold 2: 0.8917
+Fold 3: 0.8973
+Fold 4: 0.9070
+Fold 5: 0.8960
+
+Average R² : 0.9016
+Std Dev    : 0.0088
