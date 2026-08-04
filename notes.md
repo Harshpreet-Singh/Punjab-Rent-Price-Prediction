@@ -1217,3 +1217,35 @@ with saving output values of cross validation.py in outputs/metrics/cross_valida
 
 cross validation is completed
 
+# Phase 1 (Model Validation) is officially complete.
+
+```text
+✅ Data Cleaning
+✅ Feature Engineering
+✅ Preprocessing Pipeline
+✅ Linear Regression
+✅ Decision Tree
+✅ Random Forest
+✅ Hyperparameter Tuning
+✅ Feature Importance
+✅ Ablation Study
+✅ SHAP Explainability
+✅ K-Fold Cross Validation
+
+⬇️ NEXT LEVEL
+
+🚀 Gradient Boosting
+```
+
+we'll start one of the biggest topics in classical ML:
+
+```text
+Gradient Boosting
+        │
+        ├── Gradient Boosting Regressor
+        ├── XGBoost
+        ├── LightGBM
+        └── CatBoost
+```
+
+
