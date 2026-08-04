@@ -10,7 +10,7 @@ import pandas as pd
 from sklearn.compose import ColumnTransformer
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import OneHotEncoder
-from feature_engineering import create_engineered_features
+from ml.feature_engineering import create_engineered_features
 
 # Dataset path
 DATA_PATH = "data/punjab_rental_dataset.csv"

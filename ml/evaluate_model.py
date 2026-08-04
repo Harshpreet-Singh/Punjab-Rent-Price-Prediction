@@ -26,8 +26,7 @@ from sklearn.metrics import (
     r2_score,
 )
 
-from preprocessing import preprocess_data
-
+from ml.preprocessing import preprocess_data
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
