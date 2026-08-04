@@ -1382,3 +1382,16 @@ A common pattern is:
 * LightGBM → Large datasets where speed matters.
 * CatBoost → Datasets with many categorical features.
 
+
+newer algorithm doesn't mean better performance <br>
+gradient boosting is performing worse than random forest 
+
+```text
+Gradient Boosting Evaluation
+========================================
+
+MAE  : 5579.91
+MSE  : 62096778.91
+RMSE : 7880.15
+R�   : 0.6599
+```
