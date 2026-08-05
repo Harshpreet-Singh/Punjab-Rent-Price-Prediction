@@ -9,6 +9,8 @@ from ml.preprocessing import preprocess_data
 BASE_DIR = Path(__file__).resolve().parents[2]
 
 MODEL_PATH = BASE_DIR / "models" / "xgboost.pkl"
+
+
 def main():
     """Train and evaluate an XGBoost Regressor."""
 
