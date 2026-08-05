@@ -7,7 +7,7 @@ using the preprocessed rental dataset.
 
 import joblib
 from sklearn.linear_model import LinearRegression       # importing the algorithm.
-from preprocessing import preprocess_data
+from ml.preprocessing import preprocess_data
 
 
 MODEL_PATH = "./models/linear_regression.pkl"

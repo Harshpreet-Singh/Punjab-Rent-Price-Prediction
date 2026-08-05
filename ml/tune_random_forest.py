@@ -4,8 +4,8 @@ import joblib
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import GridSearchCV
 
-from preprocessing import preprocess_data
-from evaluate_model import calculate_metrics, save_metrics
+from ml.preprocessing import preprocess_data
+from ml.evaluate_model import calculate_metrics, save_metrics
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 

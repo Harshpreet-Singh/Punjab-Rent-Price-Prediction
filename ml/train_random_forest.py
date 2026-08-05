@@ -3,7 +3,7 @@ from pathlib import Path
 import joblib
 from sklearn.ensemble import RandomForestRegressor
 
-from preprocessing import preprocess_data
+from ml.preprocessing import preprocess_data
 
 
 MODEL_DIR = Path("./models")

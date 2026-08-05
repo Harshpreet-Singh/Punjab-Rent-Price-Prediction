@@ -9,6 +9,7 @@ summary_ver7.md
 
 models/random_forest_tuned.old.pkl
 models/random_forest_tuned.pkl
+models/random_forest.pkl
 
 
 __pycache__/

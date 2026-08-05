@@ -913,10 +913,10 @@ Model saved to: E:\Punjab-Rent-Price-Prediction\models\random_forest_tuned.pkl
 
 ========== Tuned Model Performance ==========
 Model : Random Forest Tuned
-MAE   : 3040.46
-MSE   : 23207172.35
-RMSE  : 4817.38
-R²    : 0.8729
+MAE   : 2409.65
+MSE   : 15406626.23
+RMSE  : 3925.13
+R²    : 0.9156
 
 
 # comparing 4 models now (including random_forest_tuned.pkl)
@@ -1470,3 +1470,18 @@ max_delta_step
 grow_policy
 tree_method
 ...
+
+
+# Comparing all my boosting models
+
+```text
+========== Boosting Model Comparison ==========
+
+                     Model      MAE  ...     RMSE      R2
+0      Random Forest Tuned  2409.65  ...  3925.13  0.9156
+1            Random Forest  2415.63  ...  3968.82  0.9137
+2                  Xgboost  4294.77  ...  5965.17  0.8051
+3  Gradient Boosting Tuned  4723.17  ...  6477.87  0.7702
+4            Xgboost Tuned  4787.48  ...  6643.71  0.7582
+5        Gradient Boosting  5579.91  ...  7880.15  0.6599
+```

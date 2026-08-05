@@ -3,7 +3,7 @@ from pathlib import Path
 import joblib
 from sklearn.tree import DecisionTreeRegressor
 
-from preprocessing import preprocess_data
+from ml.preprocessing import preprocess_data
 
 
 MODEL_DIR = Path("./models")

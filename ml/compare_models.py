@@ -43,7 +43,7 @@ from pathlib import Path
 
 import pandas as pd
 
-from evaluate_model import evaluate
+from ml.evaluate_model import evaluate
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 

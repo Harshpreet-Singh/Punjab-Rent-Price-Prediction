@@ -1,7 +1,7 @@
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import KFold, cross_val_score
 from pathlib import Path
-from preprocessing import (
+from ml.preprocessing import (
     load_dataset,
     create_engineered_features,
     select_features_target,
