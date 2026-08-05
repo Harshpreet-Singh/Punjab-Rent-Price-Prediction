@@ -1442,3 +1442,31 @@ R²   : 0.8051
 | **Random Forest (Tuned)**     | **2409** | **3925** | **0.916** |
 
 ```
+
+## After tuning xgboost it got even worse, but no matter we practised
+
+
+```text
+| Model                   |           R² |
+| ----------------------- | -----------: |
+| Decision Tree           |        0.557 |
+| Gradient Boosting       |        0.660 |
+| Linear Regression       |        0.665 |
+| Gradient Boosting Tuned |        0.770 |
+| XGBoost                 |    **0.805** |
+| XGBoost Tuned           |        0.758 |
+| Random Forest Tuned     | **0.916**    |
+```
+
+### we didn't use some more params in gridsearchcv that xgboost 
+
+`they are part of advanced XGBoost optimization.`
+
+gamma
+min_child_weight
+reg_alpha
+reg_lambda
+max_delta_step
+grow_policy
+tree_method
+...
