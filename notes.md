@@ -1403,3 +1403,42 @@ MAE   : 4723.17
 MSE   : 41962852.17
 RMSE  : 6477.87
 R²    : 0.7702
+
+## Why did XGBoost need to be created?
+
+The answer is that traditional Gradient Boosting had several practical limitations:
+
+- It was relatively slow on large datasets because trees were built sequentially without many implementation optimizations.
+- It could overfit more easily without strong built-in regularization.
+- It didn't make efficient use of hardware, so training could be much slower than necessary.
+- Handling missing values and sparse data wasn't as robust as practitioners wanted.
+
+Think of it like this:
+
+* Gradient Boosting is a well-built family car.
+* XGBoost is a race-tuned version of that car.
+
+Xgboost Evaluation
+========================================
+
+MAE  : 4294.77
+
+MSE  : 35583276.00
+
+RMSE : 5965.17
+
+R²   : 0.8051
+
+
+# Current Leaderboard
+```text
+| Model                         |    MAE ↓ |   RMSE ↓ |      R² ↑ |
+| ----------------------------- | -------: | -------: | --------: |
+| Decision Tree                 |    ~6320 |    ~8996 |    ~0.557 |
+| Linear Regression             |    ~5341 |    ~7823 |    ~0.665 |
+| Gradient Boosting             |     5579 |     7880 |     0.660 |
+| **Gradient Boosting (Tuned)** | **4723** | **6478** | **0.770** |
+| **XGBoost (Default)**         | **4295** | **5965** | **0.805** |
+| **Random Forest (Tuned)**     | **2409** | **3925** | **0.916** |
+
+```
