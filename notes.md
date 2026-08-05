@@ -1395,3 +1395,11 @@ MSE  : 62096778.91
 RMSE : 7880.15
 R�   : 0.6599
 ```
+
+### tuned the gradient_bosting model
+========== Tuned Model Performance ==========
+Model : Gradient Boosting Tuned
+MAE   : 4723.17
+MSE   : 41962852.17
+RMSE  : 6477.87
+R²    : 0.7702

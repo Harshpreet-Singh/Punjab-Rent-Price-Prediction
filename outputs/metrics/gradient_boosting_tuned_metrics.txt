@@ -1,0 +1,7 @@
+Gradient Boosting Tuned Evaluation
+========================================
+
+MAE  : 4723.17
+MSE  : 41962852.17
+RMSE : 6477.87
+R²   : 0.7702
