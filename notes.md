@@ -1485,3 +1485,40 @@ tree_method
 4            Xgboost Tuned  4787.48  ...  6643.71  0.7582
 5        Gradient Boosting  5579.91  ...  7880.15  0.6599
 ```
+
+### Gradient Boosting had one weakness...
+
+- It grows trees level by level.
+
+Imagine this tree:
+
+```text
+
+          Root
+         /    \
+       A        B
+      / \      / \
+```
+
+Gradient Boosting first grows the entire level.
+
+### LightGBM thinks differently.
+
+Instead of growing every branch equally, it asks:
+
+- "Which leaf will reduce the error the most?"
+
+Then it grows only that leaf.
+
+Example:
+```text
+          Root
+         /    \
+       A        B
+      /
+     C
+    /
+   D
+```
+
+This is called **leaf-wise growth.**
