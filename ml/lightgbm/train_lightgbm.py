@@ -23,3 +23,13 @@ METRICS_PATH = (
     / "metrics"
     / "lightgbm_metrics.txt"
 )
+
+
+def main():
+    """Train and evaluate a LightGBM Regressor."""
+
+    pass
+
+
+if __name__ == "__main__":
+    main()
