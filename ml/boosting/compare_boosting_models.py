@@ -25,21 +25,24 @@ OUTPUT_PATH = (
     / "boosting_model_comparison.csv"
 )
 
-MODEL_NAMES = [
-    "gradient_boosting",
-    "gradient_boosting_tuned",
-    "xgboost",
-    "xgboost_tuned",
-    "random_forest",
-    "random_forest_tuned",
-]
+def get_boosting_models():
+    """Return the boosting models to compare."""
+
+    return [
+        "gradient_boosting",
+        "gradient_boosting_tuned",
+        "xgboost",
+        "xgboost_tuned",
+        "random_forest",
+        "random_forest_tuned",
+    ]
 def main():
 
     # Load models
     results = []
 
     # Evaluate
-    for model_name in MODEL_NAMES:
+    for model_name in get_boosting_models():
 
         metrics = evaluate(
             model_name,
