@@ -53,7 +53,13 @@ MODELS = [
     "linear_regression",
     "decision_tree",
     "random_forest",
-    "random_forest_tuned"
+    "random_forest_tuned",
+    "gradient_boosting",
+    "gradient_boosting_tuned",
+    "xgboost",
+    "xgboost_tuned",
+    "lightgbm",
+    "lightgbm_tuned",
 ]
 
 
@@ -80,6 +86,13 @@ def compare_models():
         by="R2",
         ascending=False
     )
+
+    comparison_df = comparison_df.round({
+        "MAE": 2,
+        "MSE": 2,
+        "RMSE": 2,
+        "R2": 4,
+    })
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
