@@ -508,6 +508,7 @@ You can now predict rent for new houses.
 # summary_ver3.md's progress below
 
 
+
 we will do most important topic in ML
 * Hyperparameter Tuning <br>
 Parameter v/s Hyperparameter
@@ -1522,3 +1523,30 @@ Example:
 ```
 
 This is called **leaf-wise growth.**
+
+<hr>
+<hr>
+<hr>
+<hr>
+
+# summary_ver8.md's progress below
+
+=== LightGBM Results ===
+Model: Lightgbm
+MAE  : 4738.98
+MSE  : 48116743.71
+RMSE : 6936.62
+R²   : 0.7365
+
+```text
+| Model                   |         MAE |        RMSE |         R² |
+| ----------------------- | ----------: | ----------: | ---------: |
+| Tuned Random Forest     | **2409.65** | **3925.13** | **0.9156** |
+| Random Forest           | **2415.63** | **3968.82** | **0.9137** |
+| XGBoost                 |     4294.77 |     5965.17 |     0.8051 |
+| Gradient Boosting Tuned |     4723.17 |     6477.87 |     0.7702 |
+| **LightGBM**            | **4738.98** | **6936.62** | **0.7365** |
+| XGBoost Tuned           |     4787.48 |     6643.71 |     0.7582 |
+| Gradient Boosting       |     5579.91 |     7880.15 |     0.6599 |
+```
+
