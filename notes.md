@@ -1550,3 +1550,33 @@ R²   : 0.7365
 | Gradient Boosting       |     5579.91 |     7880.15 |     0.6599 |
 ```
 
+## After tuning lightgbm it turned somehow better 
+Best Parameters:
+{'learning_rate': 0.1, 'max_depth': -1, 'min_child_samples': 20, 'n_estimators': 300, 'num_leaves': 70}
+
+Best Cross Validation R²: 0.7627
+
+Evaluating tuned model...
+Saving tuned model...
+Saving metrics...
+
+Metrics saved to: E:\Punjab-Rent-Price-Prediction\outputs\metrics\lightgbm_tuned_metrics.txt
+
+=== Tuned LightGBM Results ===
+Model: Lightgbm Tuned
+MAE  : 4089.56
+MSE  : 35602914.83
+RMSE : 5966.82
+R²   : 0.8050
+
+```text
+| Model                   |           R² |
+| ----------------------- | -----------: |
+| Random Forest Tuned     | **0.9156** ⭐ |
+| Random Forest           |   **0.9137** |
+| XGBoost                 |   **0.8051** |
+| LightGBM Tuned          |   **0.8050** |
+| XGBoost Tuned           |   **0.7582** |
+| Gradient Boosting Tuned |   **0.7702** |
+| LightGBM                |   **0.7365** |
+```
