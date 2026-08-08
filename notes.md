@@ -1599,3 +1599,21 @@ Final Model Comparison <br>
 4        Gradient Boosting  5579.91  62096778.91  7880.15  0.6599
 1            Decision Tree  6253.57  80039427.03  8946.48  0.5616
 ```
+
+
+### Comparing models 
+
+```text
+| Rank | Model                   |         R² | Verdict             |
+| ---- | ----------------------- | ---------: | ------------------- |
+| 🥇   | Random Forest Tuned     | **0.9156** | Best model          |
+| 🥈   | Random Forest           | **0.9137** | Almost identical    |
+| 🥉   | XGBoost                 | **0.8051** | Good                |
+| 4    | LightGBM Tuned          | **0.8050** | Good                |
+| 5    | Gradient Boosting Tuned | **0.7702** | Average             |
+| 6    | XGBoost Tuned           | **0.7582** | Worse than baseline |
+| 7    | LightGBM                | **0.7365** | Baseline            |
+| 8    | Linear Regression       | **0.6799** | Good baseline       |
+| 9    | Gradient Boosting       | **0.6599** | Weak                |
+| 10   | Decision Tree           | **0.5616** | Weak                |
+```
