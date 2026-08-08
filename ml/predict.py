@@ -92,6 +92,27 @@ def create_area_category(area):
 # User Input
 # ============================================================
 
+def get_choice(prompt, options):
+    """Display numbered options and return the selected value."""
+
+    print(f"\n{prompt}")
+
+    for index, option in enumerate(options, start=1):
+        print(f"{index}. {option}")
+
+    while True:
+        try:
+            choice = int(input("Enter choice: "))
+
+            if 1 <= choice <= len(options):
+                return options[choice - 1]
+
+            print(f"Please enter a number between 1 and {len(options)}.")
+
+        except ValueError:
+            print("Please enter a valid number.")
+
+
 def get_user_input():
     """Get property details from the user."""
 
@@ -107,12 +128,27 @@ def get_user_input():
 
     city = get_non_empty_input("City: ")
 
-    furnishing = get_non_empty_input(
-        "Furnishing (Fully Furnished / Semi Furnished / Furnished / Unknown): "
+    furnishing = get_choice(
+        "Furnishing:",
+        [
+            "Fully Furnished",
+            "Semi Furnished",
+            "Furnished",
+            "Unknown",
+        ],
     )
 
-    property_type = get_non_empty_input(
-        "Property Type (Apartment / Flat / Independent House / Independent Floor / Room Set / PG / Unknown): "
+    property_type = get_choice(
+        "Property Type:",
+        [
+            "Apartment",
+            "Flat",
+            "Independent House",
+            "Independent Floor",
+            "Room Set",
+            "PG",
+            "Unknown",
+        ],
     )
 
     area_category = create_area_category(area)
@@ -129,6 +165,7 @@ def get_user_input():
     })
 
     return input_data
+
 
 
 # ============================================================
