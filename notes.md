@@ -1617,3 +1617,22 @@ Final Model Comparison <br>
 | 9    | Gradient Boosting       | **0.6599** | Weak                |
 | 10   | Decision Tree           | **0.5616** | Weak                |
 ```
+
+
+PS E:\Punjab-Rent-Price-Prediction> py -m ml.predict
+==================================================
+Punjab Rent Price Prediction
+==================================================
+
+========== Enter Property Details ==========
+
+BHK: 3
+Bathroom: 2
+Area (sqft): 1500
+Location: Phase 7
+City: SAS Nagar
+Furnishing (Fully Furnished / Semi Furnished / Furnished / Unknown): Semi Furnished
+Property Type (Apartment / Flat / Independent House / Independent Floor / Room Set / PG / Unknown): Flat
+
+========== Prediction ==========
+Estimated Monthly Rent: ₹20,557.97
