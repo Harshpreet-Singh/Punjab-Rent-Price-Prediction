@@ -551,7 +551,7 @@ This project focuses on understanding **why each Machine Learning step is perfor
 
 ---
 
-## ⭐ Project Goal
+## Project Goal
 
 > **Turn real-world Punjab rental data into a practical rental price prediction system.**
 
