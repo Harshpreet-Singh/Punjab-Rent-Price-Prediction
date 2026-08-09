@@ -7,11 +7,11 @@ summary_ver5.md
 summary_ver6.md
 summary_ver7.md
 summary_ver8.md
+summary_ver9.md
 
 models/random_forest_tuned.old.pkl
 models/random_forest_tuned.pkl
 models/random_forest.pkl
-
 
 __pycache__/
 *.pyc
@@ -25,3 +25,18 @@ venv/
 !.vscode/settings.json
 
 outputs/predictions/*.csv
+
+
+# ==============================
+# KIRA - React / Node
+# ==============================
+
+kira/frontend/node_modules/
+kira/frontend/dist/
+kira/frontend/.vite/
+
+# ==============================
+# KIRA - Environment
+# ==============================
+
+kira/backend/.env
