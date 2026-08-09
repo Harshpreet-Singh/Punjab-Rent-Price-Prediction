@@ -46,3 +46,4 @@ kira/backend/.env
 # ==============================
 
 kira/frontend/public/*.glb
+kira/frontend/public/*.png

@@ -182,3 +182,36 @@
     border-right-color: var(--border);
   }
 }
+
+@keyframes kira-float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes kira-pin {
+  0% {
+    transform: translateY(0) rotate(-8deg);
+  }
+
+  25% {
+    transform: translateY(-8px) rotate(4deg);
+  }
+
+  50% {
+    transform: translateY(0) rotate(8deg);
+  }
+
+  75% {
+    transform: translateY(-8px) rotate(-4deg);
+  }
+
+  100% {
+    transform: translateY(0) rotate(-8deg);
+  }
+}
