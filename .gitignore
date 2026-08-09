@@ -40,3 +40,9 @@ kira/frontend/.vite/
 # ==============================
 
 kira/backend/.env
+
+# ==============================
+# KIRA experimental 3D assets
+# ==============================
+
+kira/frontend/public/*.glb
