@@ -35,19 +35,13 @@ function App() {
 
           <button className="mt-10 inline-flex items-center gap-3 rounded-full bg-kira-violet px-7 py-4 text-base font-bold text-white shadow-lg shadow-kira-violet/20 transition duration-300 hover:-translate-y-1 hover:bg-kira-violet-dark">
             Estimate my rent
-
-            <span className="material-symbols-outlined">
-              arrow_forward
-            </span>
+            <span className="material-symbols-outlined">arrow_forward</span>
           </button>
         </div>
 
         {/* Scroll indicator */}
         <div className="mt-20 flex items-center gap-3 text-sm font-semibold text-kira-muted">
-          <span className="material-symbols-outlined text-[20px]">
-            south
-          </span>
-
+          <span className="material-symbols-outlined text-[20px]">south</span>
           Scroll to explore
         </div>
       </section>
@@ -67,7 +61,7 @@ function App() {
         </div>
       </section>
     </main>
-  )
+  );
 }
 
-export default App
+export default App;
