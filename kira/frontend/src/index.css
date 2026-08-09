@@ -1,1 +1,23 @@
 @import "tailwindcss";
+
+@theme {
+  /* Brand */
+  --color-kira-violet: #7c3aed;
+  --color-kira-violet-dark: #6d28d9;
+  --color-kira-violet-light: #ede9fe;
+
+  /* Neutral */
+  --color-kira-ink: #111111;
+  --color-kira-muted: #6b6b6b;
+  --color-kira-surface: #f7f7f5;
+  --color-kira-white: #ffffff;
+  --color-kira-dark: #111111;
+
+  /* Typography */
+  --font-sans: "Manrope", "Helvetica Neue", Arial, sans-serif;
+
+  /* Radius */
+  --radius-kira-sm: 0.75rem;
+  --radius-kira-md: 1.25rem;
+  --radius-kira-lg: 2rem;
+}
