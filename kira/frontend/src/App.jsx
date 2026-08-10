@@ -42,7 +42,7 @@ function App() {
             Punjab rent intelligence
           </p>
 
-          <h1 className="text-6xl font-extrabold leading-[0.95] tracking-[-0.05em] sm:text-7xl lg:text-9xl">
+          <h1 className="text-6xl font-extrabold leading-[0.95] tracking-tighter sm:text-7xl lg:text-9xl">
             Know your rent.
             <br />
             <span className="text-kira-violet">Before you move.</span>
