@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function RentForm() {
+function RentForm({ onPrediction }) {
   const [formData, setFormData] = useState({
     bhk: 2,
     bathroom: 2,
@@ -10,6 +10,9 @@ function RentForm() {
     furnishing: "",
     propertyType: "",
   });
+
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
   const updateField = (field, value) => {
     setFormData((current) => ({
@@ -53,10 +56,52 @@ function RentForm() {
     active:scale-95
   `;
 
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    setError("");
+    setLoading(true);
+
+    try {
+      const payload = {
+        bhk: Number(formData.bhk),
+        bathroom: Number(formData.bathroom),
+        area: Number(formData.area),
+        city: formData.city,
+        location: formData.location,
+        furnishing: formData.furnishing,
+        property_type: formData.propertyType,
+      };
+
+      const response = await fetch("http://127.0.0.1:8000/predict", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(
+          data.detail || "Unable to predict rent. Please try again."
+        );
+      }
+
+      onPrediction(data.predicted_rent);
+    } catch (err) {
+      console.error("Prediction error:", err);
+      setError(err.message || "Something went wrong.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
-    <div className="rounded-[2rem] border border-black/10 bg-white p-6 shadow-xl shadow-black/5 transition-shadow duration-500 hover:shadow-2xl hover:shadow-black/10 sm:p-8 lg:p-10">
+    <form onSubmit={handleSubmit}>
       {/* Header */}
-      <div className="mb-10">
+      <div>
         <p className="text-sm font-bold uppercase tracking-[0.2em] text-kira-violet">
           Property details
         </p>
@@ -71,25 +116,18 @@ function RentForm() {
       </div>
 
       {/* Bedrooms */}
-      <div>
-        <label className="text-sm font-bold">
-          Bedrooms
-        </label>
+      <div className="mt-8">
+        <label className="text-sm font-bold">Bedrooms</label>
 
         <div className="mt-3 flex items-center gap-3">
           <button
             type="button"
             onClick={() =>
-              updateField(
-                "bhk",
-                Math.max(1, formData.bhk - 1)
-              )
+              updateField("bhk", Math.max(1, formData.bhk - 1))
             }
             className={counterButtonClasses}
           >
-            <span className="material-symbols-outlined">
-              remove
-            </span>
+            <span className="material-symbols-outlined">remove</span>
           </button>
 
           <div className="flex h-12 min-w-20 items-center justify-center rounded-xl bg-kira-light text-lg font-bold">
@@ -99,16 +137,11 @@ function RentForm() {
           <button
             type="button"
             onClick={() =>
-              updateField(
-                "bhk",
-                Math.min(10, formData.bhk + 1)
-              )
+              updateField("bhk", Math.min(10, formData.bhk + 1))
             }
             className={counterButtonClasses}
           >
-            <span className="material-symbols-outlined">
-              add
-            </span>
+            <span className="material-symbols-outlined">add</span>
           </button>
         </div>
       </div>
@@ -116,13 +149,12 @@ function RentForm() {
       {/* Bathroom + Area */}
       <div className="mt-8 grid gap-6 sm:grid-cols-2">
         <div>
-          <label className="text-sm font-bold">
-            Bathrooms
-          </label>
+          <label className="text-sm font-bold">Bathrooms</label>
 
           <input
             type="number"
             min="1"
+            max="10"
             value={formData.bathroom}
             onChange={(event) =>
               updateField("bathroom", event.target.value)
@@ -133,14 +165,13 @@ function RentForm() {
         </div>
 
         <div>
-          <label className="text-sm font-bold">
-            Area
-          </label>
+          <label className="text-sm font-bold">Area</label>
 
           <div className="relative">
             <input
               type="number"
               min="1"
+              max="10000"
               value={formData.area}
               onChange={(event) =>
                 updateField("area", event.target.value)
@@ -159,9 +190,7 @@ function RentForm() {
       {/* City + Location */}
       <div className="mt-8 grid gap-6 sm:grid-cols-2">
         <div>
-          <label className="text-sm font-bold">
-            City
-          </label>
+          <label className="text-sm font-bold">City</label>
 
           <select
             value={formData.city}
@@ -169,10 +198,9 @@ function RentForm() {
               updateField("city", event.target.value)
             }
             className={selectClasses}
+            required
           >
-            <option value="">
-              Select city
-            </option>
+            <option value="">Select city</option>
             <option>SAS Nagar</option>
             <option>Kharar</option>
             <option>Mohali</option>
@@ -180,9 +208,7 @@ function RentForm() {
         </div>
 
         <div>
-          <label className="text-sm font-bold">
-            Location
-          </label>
+          <label className="text-sm font-bold">Location</label>
 
           <select
             value={formData.location}
@@ -190,10 +216,9 @@ function RentForm() {
               updateField("location", event.target.value)
             }
             className={selectClasses}
+            required
           >
-            <option value="">
-              Select location
-            </option>
+            <option value="">Select location</option>
             <option>Phase 7</option>
             <option>Phase 3B2</option>
             <option>Sector 70</option>
@@ -204,9 +229,7 @@ function RentForm() {
       {/* Furnishing + Property Type */}
       <div className="mt-8 grid gap-6 sm:grid-cols-2">
         <div>
-          <label className="text-sm font-bold">
-            Furnishing
-          </label>
+          <label className="text-sm font-bold">Furnishing</label>
 
           <select
             value={formData.furnishing}
@@ -214,10 +237,9 @@ function RentForm() {
               updateField("furnishing", event.target.value)
             }
             className={selectClasses}
+            required
           >
-            <option value="">
-              Select furnishing
-            </option>
+            <option value="">Select furnishing</option>
             <option>Fully Furnished</option>
             <option>Semi Furnished</option>
             <option>Furnished</option>
@@ -226,9 +248,7 @@ function RentForm() {
         </div>
 
         <div>
-          <label className="text-sm font-bold">
-            Property type
-          </label>
+          <label className="text-sm font-bold">Property type</label>
 
           <select
             value={formData.propertyType}
@@ -236,10 +256,9 @@ function RentForm() {
               updateField("propertyType", event.target.value)
             }
             className={selectClasses}
+            required
           >
-            <option value="">
-              Select type
-            </option>
+            <option value="">Select type</option>
             <option>Apartment</option>
             <option>Flat</option>
             <option>Independent House</option>
@@ -250,9 +269,17 @@ function RentForm() {
         </div>
       </div>
 
+      {/* Error */}
+      {error && (
+        <div className="mt-6 rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm font-medium text-red-600">
+          {error}
+        </div>
+      )}
+
       {/* Submit */}
       <button
-        type="button"
+        type="submit"
+        disabled={loading}
         className="
           group mt-10 flex w-full
           items-center justify-center gap-3
@@ -268,15 +295,20 @@ function RentForm() {
           hover:shadow-kira-violet/30
           active:translate-y-0
           active:scale-[0.99]
+          disabled:cursor-not-allowed
+          disabled:opacity-60
+          disabled:hover:translate-y-0
         "
       >
-        Predict my rent
+        {loading ? "Estimating..." : "Predict my rent"}
 
-        <span className="material-symbols-outlined transition-transform duration-300 group-hover:translate-x-1">
-          arrow_forward
-        </span>
+        {!loading && (
+          <span className="material-symbols-outlined transition-transform duration-300 group-hover:translate-x-1">
+            arrow_forward
+          </span>
+        )}
       </button>
-    </div>
+    </form>
   );
 }
 

@@ -1718,3 +1718,259 @@ Random Forest Tuned
    ↓
 ₹17,922.67
 ```
+
+```
+
+1. Project Idea
+
+Punjab Rent Price Prediction using real rental listing data.
+
+2. Data Collection
+
+Collected rental listings from OLX for Punjab locations.
+
+3. Raw Dataset Preparation
+
+Combined the scraped datasets from SAS Nagar, Mohali and Kharar.
+
+4. Data Cleaning
+
+Removed irrelevant columns, invalid listings, duplicates, sale listings and problematic values.
+
+5. Property Feature Extraction
+
+Extracted BHK, bathroom, area and other useful property information.
+
+6. Dataset Consolidation
+
+Created the final punjab_rental_dataset.csv with around 13,877 listings.
+
+7. Exploratory Data Analysis
+
+Inspected distributions, missing values, property sizes, BHK counts and rental patterns.
+
+8. ML Preprocessing
+
+Built the reusable preprocessing pipeline with ColumnTransformer and OneHotEncoder.
+
+9. Feature Engineering
+
+Added area_category, furnishing and property_type.
+
+10. Linear Regression
+
+Trained and evaluated the baseline Linear Regression model.
+
+11. Decision Tree
+
+Trained and evaluated the Decision Tree model.
+
+12. Random Forest
+
+Trained Random Forest and significantly improved prediction performance.
+
+13. Random Forest Tuning
+
+Tuned Random Forest and selected random_forest_tuned.pkl as the main model.
+
+14. Gradient Boosting
+
+Trained and evaluated Gradient Boosting.
+
+15. XGBoost
+
+Trained and evaluated XGBoost and its tuned version.
+
+16. Model Comparison
+
+Compared Random Forest, tuned Random Forest, Gradient Boosting and XGBoost.
+
+17. Final Model Selection
+
+Selected Tuned Random Forest as the primary production prediction model.
+
+18. Prediction Script
+
+Created reusable Python prediction logic using the saved model and preprocessor.
+
+19. KIRA Concept
+
+Started building KIRA as the user-facing rent intelligence application.
+
+20. KIRA Frontend Setup
+
+Created React + Vite frontend architecture.
+
+21. Tailwind CSS
+
+Integrated Tailwind CSS into the KIRA frontend.
+
+22. KIRA Design System
+
+Created the minimal premium visual direction with lock-violet branding.
+
+23. KIRA Hero
+
+Built the large typography-based hero section.
+
+24. KIRA Navigation
+
+Built the minimal navigation and interaction elements.
+
+25. How KIRA Works
+
+Created the three-step explanation section.
+
+26. Rent Estimator UI
+
+Created the property input form for rent prediction.
+
+27. Location Selection
+
+Designed city/location selection instead of manual location typing.
+
+28. Prediction Result UI
+
+Created the dedicated estimated-rent result section.
+
+29. UI Animations
+
+Added hover, transition, reveal and interaction effects.
+
+30. 3D Experiment
+
+Experimented with React Three Fiber and a GLB house model.
+
+31. 3D Decision
+
+Dropped the 3D implementation because it distracted from the actual ML/product goal.
+
+32. KIRA UI v1
+
+Completed and committed the first polished KIRA interface.
+
+33. KIRA UI Enhancement
+
+Added interaction and hover improvements.
+
+34. FastAPI Backend
+
+Created the KIRA backend using FastAPI.
+
+35. ML Artifact Integration
+
+Connected FastAPI to random_forest_tuned.pkl and preprocessor.pkl.
+
+36. Prediction Endpoint
+
+Created POST /predict.
+
+37. API Validation
+
+Added Pydantic validation for property inputs.
+
+38. API Error Handling
+
+Added proper prediction error handling.
+
+39. CORS Configuration
+
+Configured FastAPI to communicate with the React development server.
+
+40. Backend Testing
+
+Successfully tested a real prediction returning ₹17,922.67.
+
+41. Validation Testing
+
+Successfully confirmed invalid inputs return 422 validation errors.
+
+What's Pending
+42. React → FastAPI Integration
+
+Connect RentForm.jsx to /predict.
+
+43. Real Prediction Result
+
+Replace the current ₹ — placeholder with the actual prediction.
+
+44. Loading State
+
+Show a polished loading state while the model predicts.
+
+45. Prediction Error State
+
+Handle backend/network errors gracefully in the UI.
+
+46. Result Experience
+
+Make the prediction result feel like a proper KIRA experience rather than plain JSON.
+
+47. Rent Confidence / Estimate Context
+
+Add something professional around the prediction, such as an estimated range or confidence indicator only if we can calculate it honestly from the model/data.
+
+48. Form Validation
+
+Add frontend validation before sending requests.
+
+49. Location Data
+
+Replace the temporary hard-coded locations with a cleaner structured location dataset based on the actual training data.
+
+50. API Configuration
+
+Move the backend URL into a frontend environment variable instead of hard-coding it.
+
+51. Production Backend Structure
+
+Cleanly separate API schemas, model loading, prediction logic and configuration if the project grows.
+
+52. API Documentation
+
+Improve the FastAPI documentation and endpoint descriptions.
+
+53. Security / Production Hardening
+
+Add appropriate production CORS, environment configuration and request safeguards.
+
+54. Testing
+
+Add backend tests for valid predictions, invalid inputs and edge cases.
+
+55. Frontend Responsiveness
+
+Polish mobile/tablet layouts.
+
+56. Accessibility
+
+Improve labels, keyboard navigation, focus states and semantic structure.
+
+57. Performance Optimization
+
+Optimize frontend assets and model-loading behavior.
+
+58. Deployment
+
+Deploy the KIRA frontend and FastAPI backend.
+
+59. Production Model Packaging
+
+Decide how the .pkl artifacts should be stored and loaded in deployment.
+
+60. Production Environment
+
+Configure environment variables, API URLs and deployment-specific settings.
+
+61. Final Portfolio Polish
+
+Add README, architecture diagram, screenshots, model metrics and project explanation.
+
+62. GitHub Documentation
+
+Document the complete ML → API → React pipeline.
+
+63. Final KIRA Demo
+
+Create the polished end-to-end portfolio demonstration.
+```

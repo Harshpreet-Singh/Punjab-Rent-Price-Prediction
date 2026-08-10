@@ -1,7 +1,21 @@
+import { useState } from "react";
 import RentForm from "./components/RentForm";
 import useReveal from "./hooks/useReveal";
 
 function App() {
+  const [prediction, setPrediction] = useState(null);
+
+  const handlePrediction = (value) => {
+    setPrediction(value);
+
+    setTimeout(() => {
+      resultRef.current?.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
+    }, 100);
+  };
+
   const howItWorksRef = useReveal();
   const estimatorRef = useReveal();
   const resultRef = useReveal();
@@ -28,7 +42,6 @@ function App() {
           className="group hidden items-center gap-2 rounded-full border border-black/10 bg-white px-5 py-3 text-sm font-semibold transition-all duration-300 hover:-translate-y-0.5 hover:border-kira-violet hover:text-kira-violet hover:shadow-md sm:flex"
         >
           How it works
-
           <span className="material-symbols-outlined text-[18px] transition-transform duration-300 group-hover:translate-x-1">
             arrow_forward
           </span>
@@ -58,7 +71,6 @@ function App() {
             className="group mt-10 inline-flex items-center gap-3 rounded-full bg-kira-violet px-7 py-4 text-base font-bold text-white shadow-lg shadow-kira-violet/20 transition-all duration-300 ease-out hover:-translate-y-1 hover:bg-kira-violet-dark hover:shadow-xl hover:shadow-kira-violet/30 active:translate-y-0"
           >
             Estimate my rent
-
             <span className="material-symbols-outlined transition-transform duration-300 group-hover:translate-x-1">
               arrow_forward
             </span>
@@ -108,13 +120,11 @@ function App() {
                 01
               </p>
 
-              <h3 className="mt-3 text-2xl font-bold">
-                Choose your location
-              </h3>
+              <h3 className="mt-3 text-2xl font-bold">Choose your location</h3>
 
               <p className="mt-4 leading-7 text-white/60">
-                Select your city and area instead of typing complicated
-                location details.
+                Select your city and area instead of typing complicated location
+                details.
               </p>
             </div>
 
@@ -128,9 +138,7 @@ function App() {
                 02
               </p>
 
-              <h3 className="mt-3 text-2xl font-bold">
-                Describe the property
-              </h3>
+              <h3 className="mt-3 text-2xl font-bold">Describe the property</h3>
 
               <p className="mt-4 leading-7 text-white/60">
                 Add bedrooms, bathrooms, area, furnishing and property type.
@@ -147,13 +155,10 @@ function App() {
                 03
               </p>
 
-              <h3 className="mt-3 text-2xl font-bold">
-                Get your estimate
-              </h3>
+              <h3 className="mt-3 text-2xl font-bold">Get your estimate</h3>
 
               <p className="mt-4 leading-7 text-white/60">
-                KIRA uses our trained rental model to estimate the monthly
-                rent.
+                KIRA uses our trained rental model to estimate the monthly rent.
               </p>
             </div>
           </div>
@@ -185,7 +190,7 @@ function App() {
           </div>
 
           <div className="mt-16">
-            <RentForm />
+            <RentForm onPrediction={handlePrediction} />
           </div>
         </div>
       </section>
@@ -208,14 +213,20 @@ function App() {
                 </p>
 
                 <p className="mt-3 text-6xl font-extrabold tracking-tight transition-transform duration-500 sm:text-8xl">
-                  ₹ —
+                  {prediction !== null
+                    ? `₹${prediction.toLocaleString("en-IN", {
+                        minimumFractionDigits: 2,
+                        maximumFractionDigits: 2,
+                      })}`
+                    : "₹ —"}
                 </p>
               </div>
 
               <div className="max-w-sm">
                 <p className="text-sm leading-6 text-white/50">
-                  Your prediction will appear here after you submit the
-                  property details.
+                  {prediction !== null
+                    ? "This estimate is generated using KIRA's trained rental prediction model."
+                    : "Your prediction will appear here after you submit the property details."}
                 </p>
               </div>
             </div>
@@ -226,13 +237,9 @@ function App() {
       {/* Footer */}
       <footer className="bg-black px-6 py-10 text-white lg:px-10">
         <div className="mx-auto flex max-w-7xl flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-          <p className="text-lg font-black tracking-[-0.04em]">
-            KIRA.
-          </p>
+          <p className="text-lg font-black tracking-[-0.04em]">KIRA.</p>
 
-          <p className="text-sm text-white/40">
-            Punjab Rent Intelligence
-          </p>
+          <p className="text-sm text-white/40">Punjab Rent Intelligence</p>
         </div>
       </footer>
     </main>
