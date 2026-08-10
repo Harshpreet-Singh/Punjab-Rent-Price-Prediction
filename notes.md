@@ -1676,3 +1676,45 @@ Estimated Monthly Rent: ₹20,557.97
 ## load frontend : `npm run dev` in E:\Punjab-Rent-Price-Prediction\kira\frontend>
 
 ## load backend : `uvicorn main:app --reload` in E:\Punjab-Rent-Price-Prediction\kira\backend>
+
+
+### in main.py in ./backend
+
+we are adding pydantic validation 
+
+bhk: int = Field(..., ge=1, le=10)
+
+So FastAPI automatically rejects:
+```
+{
+  "bhk": -2
+}
+```
+instead of sending nonsense into your model.
+
+similarly for area and for furnishing etc too
+
+### CORS limitation too 
+
+allow_origins only from 5173 port of localhost
+
+Without CORS, the browser can block your React request.
+
+for being safe side also gave main.py try exception, error handling
+
+
+# NOW THE ML PIPELINE IS :
+
+```
+Request
+   ↓
+Pydantic validation
+   ↓
+Feature engineering
+   ↓
+Preprocessor
+   ↓
+Random Forest Tuned
+   ↓
+₹17,922.67
+```
