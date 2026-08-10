@@ -1636,3 +1636,37 @@ Property Type (Apartment / Flat / Independent House / Independent Floor / Room S
 
 ========== Prediction ==========
 Estimated Monthly Rent: ₹20,557.97
+
+
+
+# Giving UI to my project
+
+```text
+             KIRA
+              │
+       React Frontend
+              │
+          HTTP POST
+              │
+              ▼
+       ┌──────────────┐
+       │   FastAPI    │
+       │   Backend    │
+       └──────┬───────┘
+              │
+       Load ML artifacts
+              │
+       ┌──────┴───────┐
+       │              │
+ preprocessor.pkl  RF model
+       │              │
+       └──────┬───────┘
+              │
+        predicted rent
+              │
+              ▼
+        JSON response
+              │
+              ▼
+       React Result UI
+```

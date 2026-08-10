@@ -18,7 +18,7 @@ function App() {
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 lg:px-10">
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="text-2xl font-black tracking-[-0.05em] transition-transform duration-300 hover:scale-105"
+          className="text-2xl font-black tracking-tighter transition-transform duration-300 hover:scale-105"
         >
           KIRA.
         </button>
