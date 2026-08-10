@@ -1670,3 +1670,9 @@ Estimated Monthly Rent: ₹20,557.97
               ▼
        React Result UI
 ```
+
+
+
+## load frontend : `npm run dev` in E:\Punjab-Rent-Price-Prediction\kira\frontend>
+
+## load backend : `uvicorn main:app --reload` in E:\Punjab-Rent-Price-Prediction\kira\backend>
