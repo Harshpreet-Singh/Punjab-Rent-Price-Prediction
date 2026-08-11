@@ -2019,3 +2019,44 @@ Example API structure:
     "SAS Nagar": []
   }
 }
+```
+
+### Searchable Location Selector UX Polish
+
+Improved `SearchableSelect.jsx` with keyboard and interaction support.
+
+Added:
+
+- Arrow Down navigation
+- Arrow Up navigation
+- Enter to select highlighted location
+- Escape to close the dropdown
+- Arrow Down opens the selector when closed
+- Automatic scrolling of the highlighted option into view
+- Mouse hover highlighting
+- Improved selected-option visual state
+- Outside-click handling
+- Search reset behavior
+- No-results state
+
+The component remains reusable and dependency-free.
+
+### Final Location Selector Flow
+
+```text
+City selected
+    ↓
+City-specific locations loaded
+    ↓
+SearchableSelect opens
+    ↓
+User searches/filter locations
+    ↓
+Mouse OR keyboard navigation
+    ↓
+Location selected
+    ↓
+React Hook Form receives selected value
+    ↓
+Prediction payload remains unchanged
+```
