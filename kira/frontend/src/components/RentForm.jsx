@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { useForm } from "react-hook-form";
+import { Controller, useForm } from "react-hook-form";
+import SearchableSelect from "./SearchableSelect";
 
 function RentForm({ onPrediction }) {
   const [loading, setLoading] = useState(false);
@@ -12,6 +13,7 @@ function RentForm({ onPrediction }) {
     handleSubmit,
     setValue,
     watch,
+    control,
     formState: { errors },
   } = useForm({
     defaultValues: {
@@ -50,6 +52,8 @@ function RentForm({ onPrediction }) {
 
   const bhk = watch("bhk");
   const selectedCity = watch("city");
+  const selectedLocation = watch("location");
+
   // const [loading, setLoading] = useState(false);
   // const [error, setError] = useState("");
 
@@ -282,28 +286,29 @@ function RentForm({ onPrediction }) {
         <div>
           <label className="text-sm font-bold">Location</label>
 
-          <select
-            {...register("location", {
+          <Controller
+            name="location"
+            control={control}
+            rules={{
               required: "Please select a location.",
-            })}
-            disabled={!selectedCity || locationsLoading}
-            className={selectClasses}
-          >
-            <option value="">
-              {locationsLoading
-                ? "Loading locations..."
-                : selectedCity
-                  ? "Select location"
-                  : "Select city first"}
-            </option>
-
-            {selectedCity &&
-              locations[selectedCity]?.map((location) => (
-                <option key={location} value={location}>
-                  {location}
-                </option>
-              ))}
-          </select>
+            }}
+            render={({ field }) => (
+              <SearchableSelect
+                value={field.value}
+                onChange={field.onChange}
+                options={selectedCity ? locations[selectedCity] || [] : []}
+                placeholder={
+                  locationsLoading
+                    ? "Loading locations..."
+                    : selectedCity
+                      ? "Search location..."
+                      : "Select city first"
+                }
+                disabled={!selectedCity || locationsLoading}
+                error={errors.location?.message}
+              />
+            )}
+          />
 
           {errors.location && (
             <p className="mt-2 text-sm font-medium text-red-500">
