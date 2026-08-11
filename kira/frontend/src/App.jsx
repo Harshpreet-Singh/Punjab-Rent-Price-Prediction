@@ -206,30 +206,117 @@ function App() {
           </p>
 
           <div className="mt-10 rounded-[2rem] border border-white/10 bg-white/5 p-8 transition-all duration-500 hover:border-kira-violet/30 hover:bg-white/[0.07] sm:p-12">
-            <div className="flex flex-col justify-between gap-10 sm:flex-row sm:items-end">
-              <div>
-                <p className="text-sm font-semibold text-white/50">
-                  Estimated monthly rent
-                </p>
+            {prediction ? (
+              <>
+                <div className="flex flex-col justify-between gap-10 sm:flex-row sm:items-end">
+                  <div>
+                    <p className="text-sm font-semibold text-white/50">
+                      Estimated monthly rent
+                    </p>
 
-                <p className="mt-3 text-6xl font-extrabold tracking-tight transition-transform duration-500 sm:text-8xl">
-                  {prediction !== null
-                    ? `₹${prediction.toLocaleString("en-IN", {
-                        minimumFractionDigits: 2,
-                        maximumFractionDigits: 2,
-                      })}`
-                    : "₹ —"}
-                </p>
-              </div>
+                    <p className="mt-3 text-6xl font-extrabold tracking-tight sm:text-8xl">
+                      ₹
+                      {Number(prediction.predictedRent).toLocaleString(
+                        "en-IN",
+                        {
+                          minimumFractionDigits: 2,
+                          maximumFractionDigits: 2,
+                        },
+                      )}
+                    </p>
+                  </div>
 
-              <div className="max-w-sm">
-                <p className="text-sm leading-6 text-white/50">
-                  {prediction !== null
-                    ? "This estimate is generated using KIRA's trained rental prediction model."
-                    : "Your prediction will appear here after you submit the property details."}
-                </p>
+                  <div className="max-w-sm">
+                    <p className="text-sm leading-6 text-white/50">
+                      This estimate is generated using KIRA's trained rental
+                      prediction model.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Property Summary */}
+                <div className="mt-12 border-t border-white/10 pt-8">
+                  <p className="text-sm font-semibold uppercase tracking-widest text-white/40">
+                    Based on your property
+                  </p>
+
+                  <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                    <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+                      <p className="text-xs font-semibold text-white/40">
+                        Bedrooms
+                      </p>
+
+                      <p className="mt-2 text-lg font-bold">
+                        {prediction.property.bhk} BHK
+                      </p>
+                    </div>
+
+                    <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+                      <p className="text-xs font-semibold text-white/40">
+                        Bathrooms
+                      </p>
+
+                      <p className="mt-2 text-lg font-bold">
+                        {prediction.property.bathroom}
+                      </p>
+                    </div>
+
+                    <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+                      <p className="text-xs font-semibold text-white/40">
+                        Area
+                      </p>
+
+                      <p className="mt-2 text-lg font-bold">
+                        {prediction.property.area.toLocaleString("en-IN")} sqft
+                      </p>
+                    </div>
+
+                    <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+                      <p className="text-xs font-semibold text-white/40">
+                        Property type
+                      </p>
+
+                      <p className="mt-2 text-lg font-bold">
+                        {prediction.property.propertyType}
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="mt-4 flex flex-wrap gap-3">
+                    <span className="rounded-full bg-kira-violet/10 px-4 py-2 text-sm font-semibold text-kira-violet-light">
+                      {prediction.property.city}
+                    </span>
+
+                    <span className="rounded-full bg-white/5 px-4 py-2 text-sm font-semibold text-white/60">
+                      {prediction.property.location}
+                    </span>
+
+                    <span className="rounded-full bg-white/5 px-4 py-2 text-sm font-semibold text-white/60">
+                      {prediction.property.furnishing}
+                    </span>
+                  </div>
+                </div>
+              </>
+            ) : (
+              <div className="flex flex-col justify-between gap-10 sm:flex-row sm:items-end">
+                <div>
+                  <p className="text-sm font-semibold text-white/50">
+                    Estimated monthly rent
+                  </p>
+
+                  <p className="mt-3 text-6xl font-extrabold tracking-tight sm:text-8xl">
+                    ₹ —
+                  </p>
+                </div>
+
+                <div className="max-w-sm">
+                  <p className="text-sm leading-6 text-white/50">
+                    Your prediction will appear here after you submit the
+                    property details.
+                  </p>
+                </div>
               </div>
-            </div>
+            )}
           </div>
         </div>
       </section>

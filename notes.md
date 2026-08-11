@@ -1675,7 +1675,9 @@ Estimated Monthly Rent: ₹20,557.97
 
 ## load frontend : `npm run dev` in E:\Punjab-Rent-Price-Prediction\kira\frontend>
 
-## load backend : `uvicorn main:app --reload` in E:\Punjab-Rent-Price-Prediction\kira\backend>
+## load backend : `.\.venv\Scripts\Activate.ps1` in E:\Punjab-Rent-Price-Prediction\kira\backend>
+##  then run `uvicorn main:app --reload`
+
 
 
 ### in main.py in ./backend

@@ -92,7 +92,18 @@ function RentForm({ onPrediction }) {
         );
       }
 
-      onPrediction(data.predicted_rent);
+      onPrediction({
+        predictedRent: data.predicted_rent,
+        property: {
+          bhk: Number(formData.bhk),
+          bathroom: Number(formData.bathroom),
+          area: Number(formData.area),
+          city: formData.city,
+          location: formData.location,
+          furnishing: formData.furnishing,
+          propertyType: formData.propertyType,
+        },
+      });
     } catch (err) {
       console.error("Prediction error:", err);
       setError(err.message || "Something went wrong.");
