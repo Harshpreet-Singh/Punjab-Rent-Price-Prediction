@@ -77,7 +77,7 @@ function SearchableSelect({
           focus:ring-4
           focus:ring-kira-violet/10
           disabled:cursor-not-allowed
-          disabled:bg-black/[0.03]
+          disabled:bg-black/3
         `}
       >
         <span className="truncate">

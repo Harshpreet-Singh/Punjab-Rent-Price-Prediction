@@ -1993,3 +1993,29 @@ GET /locations
       ↓
 instant response
 ```
+
+
+
+## KIRA – Dynamic Locations & Searchable Location Selector
+
+### Dynamic Location API
+
+Implemented a dynamic location system instead of hardcoding cities and locations in the React frontend.
+
+- Added `DATASET_PATH` in `backend/main.py`.
+- Backend loads `data/punjab_rental_dataset.csv` when FastAPI starts.
+- Validates that `city` and `location` columns exist.
+- Builds a `city → locations` mapping dynamically from the dataset.
+- Removes missing values and duplicate city/location combinations.
+- Added `GET /locations` endpoint.
+
+Example API structure:
+
+```json
+{
+  "locations": {
+    "Kharar": [],
+    "Mohali": [],
+    "SAS Nagar": []
+  }
+}
