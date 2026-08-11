@@ -1976,3 +1976,20 @@ Document the complete ML → API → React pipeline.
 
 Create the polished end-to-end portfolio demonstration.
 ```
+
+
+## Dynamically Location Loading:
+
+```
+FastAPI startup
+      ↓
+Load processed dataset
+      ↓
+Build unique city → location mapping
+      ↓
+Keep it in memory
+      ↓
+GET /locations
+      ↓
+instant response
+```
