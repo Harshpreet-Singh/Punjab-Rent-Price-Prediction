@@ -1,25 +1,30 @@
 import { useState } from "react";
+import { useForm } from "react-hook-form";
 
 function RentForm({ onPrediction }) {
-  const [formData, setFormData] = useState({
-    bhk: 2,
-    bathroom: 2,
-    area: "",
-    city: "",
-    location: "",
-    furnishing: "",
-    propertyType: "",
-  });
-
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const {
+    register,
+    handleSubmit,
+    setValue,
+    watch,
+    formState: { errors },
+  } = useForm({
+    defaultValues: {
+      bhk: 2,
+      bathroom: 2,
+      area: "",
+      city: "",
+      location: "",
+      furnishing: "",
+      propertyType: "",
+    },
+  });
 
-  const updateField = (field, value) => {
-    setFormData((current) => ({
-      ...current,
-      [field]: value,
-    }));
-  };
+  const bhk = watch("bhk");
+  // const [loading, setLoading] = useState(false);
+  // const [error, setError] = useState("");
 
   const inputClasses = `
     mt-3 w-full rounded-xl
@@ -56,9 +61,7 @@ function RentForm({ onPrediction }) {
     active:scale-95
   `;
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-
+  const onSubmit = async (formData) => {
     setError("");
     setLoading(true);
 
@@ -85,7 +88,7 @@ function RentForm({ onPrediction }) {
 
       if (!response.ok) {
         throw new Error(
-          data.detail || "Unable to predict rent. Please try again."
+          data.detail || "Unable to predict rent. Please try again.",
         );
       }
 
@@ -99,7 +102,7 @@ function RentForm({ onPrediction }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit(onSubmit)}>
       {/* Header */}
       <div>
         <p className="text-sm font-bold uppercase tracking-[0.2em] text-kira-violet">
@@ -122,23 +125,19 @@ function RentForm({ onPrediction }) {
         <div className="mt-3 flex items-center gap-3">
           <button
             type="button"
-            onClick={() =>
-              updateField("bhk", Math.max(1, formData.bhk - 1))
-            }
+            onClick={() => setValue("bhk", Math.max(1, bhk - 1))}
             className={counterButtonClasses}
           >
             <span className="material-symbols-outlined">remove</span>
           </button>
 
           <div className="flex h-12 min-w-20 items-center justify-center rounded-xl bg-kira-light text-lg font-bold">
-            {formData.bhk} BHK
+            {bhk} BHK
           </div>
 
           <button
             type="button"
-            onClick={() =>
-              updateField("bhk", Math.min(10, formData.bhk + 1))
-            }
+            onClick={() => setValue("bhk", Math.min(10, bhk + 1))}
             className={counterButtonClasses}
           >
             <span className="material-symbols-outlined">add</span>
@@ -150,18 +149,31 @@ function RentForm({ onPrediction }) {
       <div className="mt-8 grid gap-6 sm:grid-cols-2">
         <div>
           <label className="text-sm font-bold">Bathrooms</label>
-
           <input
             type="number"
             min="1"
             max="10"
-            value={formData.bathroom}
-            onChange={(event) =>
-              updateField("bathroom", event.target.value)
-            }
+            {...register("bathroom", {
+              required: "Please enter the number of bathrooms.",
+              min: {
+                value: 1,
+                message: "Bathrooms must be at least 1.",
+              },
+              max: {
+                value: 10,
+                message: "Bathrooms cannot exceed 10.",
+              },
+              valueAsNumber: true,
+            })}
             className={inputClasses}
             placeholder="2"
           />
+
+          {errors.bathroom && (
+            <p className="mt-2 text-sm font-medium text-red-500">
+              {errors.bathroom.message}
+            </p>
+          )}
         </div>
 
         <div>
@@ -172,10 +184,18 @@ function RentForm({ onPrediction }) {
               type="number"
               min="1"
               max="10000"
-              value={formData.area}
-              onChange={(event) =>
-                updateField("area", event.target.value)
-              }
+              {...register("area", {
+                required: "Please enter the property area.",
+                min: {
+                  value: 1,
+                  message: "Area must be at least 1 sqft.",
+                },
+                max: {
+                  value: 10000,
+                  message: "Area cannot exceed 10,000 sqft.",
+                },
+                valueAsNumber: true,
+              })}
               className={`${inputClasses} pr-20`}
               placeholder="1200"
             />
@@ -183,6 +203,11 @@ function RentForm({ onPrediction }) {
             <span className="pointer-events-none absolute right-4 top-1/2 mt-1 -translate-y-1/2 text-sm font-semibold text-kira-muted">
               sqft
             </span>
+            {errors.area && (
+              <p className="mt-2 text-sm font-medium text-red-500">
+                {errors.area.message}
+              </p>
+            )}
           </div>
         </div>
       </div>
@@ -193,36 +218,44 @@ function RentForm({ onPrediction }) {
           <label className="text-sm font-bold">City</label>
 
           <select
-            value={formData.city}
-            onChange={(event) =>
-              updateField("city", event.target.value)
-            }
+            {...register("city", {
+              required: "Please select a city.",
+            })}
             className={selectClasses}
-            required
           >
             <option value="">Select city</option>
             <option>SAS Nagar</option>
             <option>Kharar</option>
             <option>Mohali</option>
           </select>
+
+          {errors.city && (
+            <p className="mt-2 text-sm font-medium text-red-500">
+              {errors.city.message}
+            </p>
+          )}
         </div>
 
         <div>
           <label className="text-sm font-bold">Location</label>
 
           <select
-            value={formData.location}
-            onChange={(event) =>
-              updateField("location", event.target.value)
-            }
+            {...register("location", {
+              required: "Please select a location.",
+            })}
             className={selectClasses}
-            required
           >
             <option value="">Select location</option>
             <option>Phase 7</option>
             <option>Phase 3B2</option>
             <option>Sector 70</option>
           </select>
+
+          {errors.location && (
+            <p className="mt-2 text-sm font-medium text-red-500">
+              {errors.location.message}
+            </p>
+          )}
         </div>
       </div>
 
@@ -232,12 +265,10 @@ function RentForm({ onPrediction }) {
           <label className="text-sm font-bold">Furnishing</label>
 
           <select
-            value={formData.furnishing}
-            onChange={(event) =>
-              updateField("furnishing", event.target.value)
-            }
+            {...register("furnishing", {
+              required: "Please select the furnishing type.",
+            })}
             className={selectClasses}
-            required
           >
             <option value="">Select furnishing</option>
             <option>Fully Furnished</option>
@@ -245,18 +276,22 @@ function RentForm({ onPrediction }) {
             <option>Furnished</option>
             <option>Unknown</option>
           </select>
+
+          {errors.furnishing && (
+            <p className="mt-2 text-sm font-medium text-red-500">
+              {errors.furnishing.message}
+            </p>
+          )}
         </div>
 
         <div>
           <label className="text-sm font-bold">Property type</label>
 
           <select
-            value={formData.propertyType}
-            onChange={(event) =>
-              updateField("propertyType", event.target.value)
-            }
+            {...register("propertyType", {
+              required: "Please select the property type.",
+            })}
             className={selectClasses}
-            required
           >
             <option value="">Select type</option>
             <option>Apartment</option>
@@ -266,15 +301,14 @@ function RentForm({ onPrediction }) {
             <option>Room Set</option>
             <option>PG</option>
           </select>
+
+          {errors.propertyType && (
+            <p className="mt-2 text-sm font-medium text-red-500">
+              {errors.propertyType.message}
+            </p>
+          )}
         </div>
       </div>
-
-      {/* Error */}
-      {error && (
-        <div className="mt-6 rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm font-medium text-red-600">
-          {error}
-        </div>
-      )}
 
       {/* Submit */}
       <button
