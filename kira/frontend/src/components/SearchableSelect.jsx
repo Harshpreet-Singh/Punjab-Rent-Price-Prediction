@@ -10,9 +10,11 @@ function SearchableSelect({
 }) {
   const [isOpen, setIsOpen] = useState(false);
   const [search, setSearch] = useState("");
+  const [highlightedIndex, setHighlightedIndex] = useState(-1);
 
   const containerRef = useRef(null);
   const inputRef = useRef(null);
+  const optionRefs = useRef([]);
 
   const filteredOptions = options.filter((option) =>
     option.toLowerCase().includes(search.toLowerCase()),
@@ -25,6 +27,7 @@ function SearchableSelect({
         !containerRef.current.contains(event.target)
       ) {
         setIsOpen(false);
+        setHighlightedIndex(-1);
       }
     };
 
@@ -41,10 +44,26 @@ function SearchableSelect({
     }
   }, [value]);
 
+  useEffect(() => {
+    setHighlightedIndex(-1);
+  }, [search]);
+
+  useEffect(() => {
+    if (
+      highlightedIndex >= 0 &&
+      optionRefs.current[highlightedIndex]
+    ) {
+      optionRefs.current[highlightedIndex].scrollIntoView({
+        block: "nearest",
+      });
+    }
+  }, [highlightedIndex]);
+
   const handleSelect = (option) => {
     onChange(option);
     setSearch("");
     setIsOpen(false);
+    setHighlightedIndex(-1);
   };
 
   const handleOpen = () => {
@@ -57,8 +76,69 @@ function SearchableSelect({
     }, 0);
   };
 
+  const handleKeyDown = (event) => {
+    if (disabled) return;
+
+    if (event.key === "ArrowDown") {
+      event.preventDefault();
+
+      if (!isOpen) {
+        handleOpen();
+        return;
+      }
+
+      if (filteredOptions.length === 0) return;
+
+      setHighlightedIndex((current) =>
+        current < filteredOptions.length - 1
+          ? current + 1
+          : 0,
+      );
+    }
+
+    if (event.key === "ArrowUp") {
+      event.preventDefault();
+
+      if (!isOpen) {
+        handleOpen();
+        return;
+      }
+
+      if (filteredOptions.length === 0) return;
+
+      setHighlightedIndex((current) =>
+        current > 0
+          ? current - 1
+          : filteredOptions.length - 1,
+      );
+    }
+
+    if (event.key === "Enter") {
+      event.preventDefault();
+
+      if (
+        isOpen &&
+        highlightedIndex >= 0 &&
+        filteredOptions[highlightedIndex]
+      ) {
+        handleSelect(filteredOptions[highlightedIndex]);
+      }
+    }
+
+    if (event.key === "Escape") {
+      event.preventDefault();
+
+      setIsOpen(false);
+      setHighlightedIndex(-1);
+    }
+  };
+
   return (
-    <div ref={containerRef} className="relative">
+    <div
+      ref={containerRef}
+      className="relative"
+      onKeyDown={handleKeyDown}
+    >
       <button
         type="button"
         onClick={handleOpen}
@@ -128,21 +208,28 @@ function SearchableSelect({
           {/* Options */}
           <div className="max-h-60 overflow-y-auto p-1">
             {filteredOptions.length > 0 ? (
-              filteredOptions.map((option) => (
+              filteredOptions.map((option, index) => (
                 <button
                   key={option}
+                  ref={(element) => {
+                    optionRefs.current[index] = element;
+                  }}
                   type="button"
+                  onMouseEnter={() => setHighlightedIndex(index)}
                   onClick={() => handleSelect(option)}
                   className={`
                     flex w-full items-center justify-between
                     rounded-lg px-3 py-2.5
                     text-left text-sm
                     transition-colors duration-150
-                    hover:bg-kira-violet/5
-                    hover:text-kira-violet
+                    ${
+                      highlightedIndex === index
+                        ? "bg-kira-violet/10 text-kira-violet"
+                        : "hover:bg-kira-violet/5 hover:text-kira-violet"
+                    }
                     ${
                       value === option
-                        ? "bg-kira-violet/10 font-semibold text-kira-violet"
+                        ? "font-semibold text-kira-violet"
                         : ""
                     }
                   `}
