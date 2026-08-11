@@ -1,9 +1,12 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 
 function RentForm({ onPrediction }) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const [locations, setLocations] = useState({});
+  const [locationsLoading, setLocationsLoading] = useState(true);
+
   const {
     register,
     handleSubmit,
@@ -22,7 +25,31 @@ function RentForm({ onPrediction }) {
     },
   });
 
+  useEffect(() => {
+    const fetchLocations = async () => {
+      try {
+        const response = await fetch("http://127.0.0.1:8000/locations");
+
+        if (!response.ok) {
+          throw new Error("Unable to load locations.");
+        }
+
+        const data = await response.json();
+
+        setLocations(data.locations || {});
+      } catch (err) {
+        console.error("Location loading error:", err);
+        setError("Unable to load locations. Please refresh the page.");
+      } finally {
+        setLocationsLoading(false);
+      }
+    };
+
+    fetchLocations();
+  }, []);
+
   const bhk = watch("bhk");
+  const selectedCity = watch("city");
   // const [loading, setLoading] = useState(false);
   // const [error, setError] = useState("");
 
@@ -231,13 +258,18 @@ function RentForm({ onPrediction }) {
           <select
             {...register("city", {
               required: "Please select a city.",
+              onChange: () => {
+                setValue("location", "");
+              },
             })}
             className={selectClasses}
           >
             <option value="">Select city</option>
-            <option>SAS Nagar</option>
-            <option>Kharar</option>
-            <option>Mohali</option>
+            {Object.keys(locations).map((city) => (
+              <option key={city} value={city}>
+                {city}
+              </option>
+            ))}
           </select>
 
           {errors.city && (
@@ -254,12 +286,23 @@ function RentForm({ onPrediction }) {
             {...register("location", {
               required: "Please select a location.",
             })}
+            disabled={!selectedCity || locationsLoading}
             className={selectClasses}
           >
-            <option value="">Select location</option>
-            <option>Phase 7</option>
-            <option>Phase 3B2</option>
-            <option>Sector 70</option>
+            <option value="">
+              {locationsLoading
+                ? "Loading locations..."
+                : selectedCity
+                  ? "Select location"
+                  : "Select city first"}
+            </option>
+
+            {selectedCity &&
+              locations[selectedCity]?.map((location) => (
+                <option key={location} value={location}>
+                  {location}
+                </option>
+              ))}
           </select>
 
           {errors.location && (

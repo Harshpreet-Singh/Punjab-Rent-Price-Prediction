@@ -17,6 +17,39 @@ BASE_DIR = Path(__file__).resolve().parents[2]
 MODEL_PATH = BASE_DIR / "models" / "random_forest_tuned.pkl"
 PREPROCESSOR_PATH = BASE_DIR / "models" / "preprocessor.pkl"
 
+DATASET_PATH = BASE_DIR / "data" / "punjab_rental_dataset.csv"
+
+
+# ============================================================
+# Load Rental Dataset
+# ============================================================
+
+try:
+    rental_data = pd.read_csv(DATASET_PATH)
+
+except Exception as error:
+    raise RuntimeError(
+        f"Failed to load rental dataset: {error}"
+    ) from error
+
+required_columns = {"city", "location"}
+
+missing_columns = required_columns - set(rental_data.columns)
+
+if missing_columns:
+    raise RuntimeError(
+        f"Dataset is missing required columns: {missing_columns}"
+    )
+
+location_map = (
+    rental_data[["city", "location"]]
+    .dropna()
+    .drop_duplicates()
+    .groupby("city")["location"]
+    .apply(lambda locations: sorted(locations.tolist()))
+    .to_dict()
+)
+
 
 # ============================================================
 # Load ML Artifacts
@@ -140,6 +173,18 @@ def root():
         "status": "ok",
     }
 
+
+# ============================================================
+# Location Endpoint
+# ============================================================
+
+@app.get("/locations")
+def get_locations():
+    """Return available cities and their locations."""
+
+    return {
+        "locations": location_map
+    }
 
 # ============================================================
 # Prediction Endpoint
