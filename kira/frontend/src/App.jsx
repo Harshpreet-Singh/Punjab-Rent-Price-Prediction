@@ -234,6 +234,68 @@ function App() {
                   </div>
                 </div>
 
+                {/* Expected Rental Range */}
+                <div className="mt-10 rounded-2xl border border-white/10 bg-white/5 p-6 sm:p-8">
+                  <p className="text-sm font-bold uppercase tracking-[0.2em] text-kira-violet-light">
+                    Expected rental range
+                  </p>
+
+                  <div className="mt-6">
+                    <div className="flex items-center justify-between gap-4">
+                      <div>
+                        <p className="text-xs font-semibold text-white/40">
+                          Lower estimate
+                        </p>
+
+                        <p className="mt-1 text-xl font-bold sm:text-2xl">
+                          ₹
+                          {Number(prediction.rentRange.lower).toLocaleString(
+                            "en-IN",
+                          )}
+                        </p>
+                      </div>
+
+                      <div className="flex flex-1 items-center gap-2 px-2">
+                        <div className="h-px flex-1 bg-white/20" />
+
+                        <div className="flex h-3 w-3 shrink-0 rounded-full bg-kira-violet" />
+
+                        <div className="h-px flex-1 bg-white/20" />
+                      </div>
+
+                      <div className="text-right">
+                        <p className="text-xs font-semibold text-white/40">
+                          Upper estimate
+                        </p>
+
+                        <p className="mt-1 text-xl font-bold sm:text-2xl">
+                          ₹
+                          {Number(prediction.rentRange.upper).toLocaleString(
+                            "en-IN",
+                          )}
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="mt-5 flex justify-center">
+                      <div className="rounded-full bg-kira-violet/10 px-4 py-2 text-sm font-bold text-kira-violet-light">
+                        Your estimate: ₹
+                        {Number(prediction.predictedRent).toLocaleString(
+                          "en-IN",
+                          {
+                            maximumFractionDigits: 0,
+                          },
+                        )}
+                      </div>
+                    </div>
+
+                    <p className="mt-5 text-sm leading-6 text-white/40">
+                      This range reflects the variation across KIRA's Random
+                      Forest predictions for this property.
+                    </p>
+                  </div>
+                </div>
+
                 {/* Property Summary */}
                 <div className="mt-12 border-t border-white/10 pt-8">
                   <p className="text-sm font-semibold uppercase tracking-widest text-white/40">

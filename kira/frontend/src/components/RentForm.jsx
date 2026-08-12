@@ -125,6 +125,12 @@ function RentForm({ onPrediction }) {
 
       onPrediction({
         predictedRent: data.predicted_rent,
+
+        rentRange: {
+          lower: data.rent_range.lower,
+          upper: data.rent_range.upper,
+        },
+
         property: {
           bhk: Number(formData.bhk),
           bathroom: Number(formData.bathroom),

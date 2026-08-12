@@ -214,17 +214,48 @@ def predict_rent(property_details: PropertyDetails):
             input_data
         )
 
+        # ============================================================
+        # Ensemble Prediction & Rental Range
+        # ============================================================
+
+        # Main Random Forest prediction
         prediction = model.predict(
             transformed_data
         )
 
         predicted_rent = float(prediction[0])
 
+        # Get prediction from every individual tree
+        tree_predictions = [
+            float(tree.predict(transformed_data)[0])
+            for tree in model.estimators_
+        ]
+
+        # Use ensemble spread to estimate an expected rental range.
+        # These are model-derived estimates, not guaranteed confidence intervals.
+        lower_rent = float(
+            pd.Series(tree_predictions).quantile(0.10)
+        )
+
+        upper_rent = float(
+            pd.Series(tree_predictions).quantile(0.90)
+        )
+
         return {
             "predicted_rent": round(
                 predicted_rent,
                 2,
-            )
+            ),
+            "rent_range": {
+                "lower": round(
+                    lower_rent,
+                    2,
+                ),
+                "upper": round(
+                    upper_rent,
+                    2,
+                ),
+            },
         }
 
     except Exception as error:
