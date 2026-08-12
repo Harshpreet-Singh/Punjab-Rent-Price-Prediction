@@ -399,9 +399,11 @@ function RentForm({ onPrediction }) {
           disabled:hover:translate-y-0
         "
       >
-        {loading ? "Estimating..." : "Predict my rent"}
+        {loading ? "Estimating your rent..." : "Predict my rent"}
 
-        {!loading && (
+        {loading ? (
+          <span className="h-5 w-5 animate-spin rounded-full border-2 border-white/30 border-t-white" />
+        ) : (
           <span className="material-symbols-outlined transition-transform duration-300 group-hover:translate-x-1">
             arrow_forward
           </span>
