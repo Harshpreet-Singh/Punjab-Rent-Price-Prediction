@@ -397,6 +397,8 @@ function RentForm({ onPrediction }) {
           disabled:cursor-not-allowed
           disabled:opacity-60
           disabled:hover:translate-y-0
+          disabled:bg-kira-violet
+          disabled:shadow-none
         "
       >
         {loading ? "Estimating your rent..." : "Predict my rent"}
