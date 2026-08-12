@@ -2060,3 +2060,23 @@ React Hook Form receives selected value
     ↓
 Prediction payload remains unchanged
 ```
+
+
+## 2026-08-12 — KIRA Prediction UX & Rental Range
+
+### Expected Rental Range
+
+Added an expected rental range to the KIRA prediction result.
+
+The Random Forest model contains 200 individual decision trees. For each prediction, KIRA collects the prediction from every tree and calculates the 10th and 90th percentiles of those predictions.
+
+The API now returns:
+
+```json
+{
+  "predicted_rent": 22384.17,
+  "rent_range": {
+    "lower": 18600,
+    "upper": 26000
+  }
+}
