@@ -2080,3 +2080,60 @@ The API now returns:
     "upper": 26000
   }
 }
+
+## 2026-08-13 — KIRA Prediction Explainability
+
+### Local Feature Impact Engine
+
+Added `ml/explanation.py` to provide local explanations for KIRA rent predictions.
+
+The explanation system uses controlled counterfactual predictions:
+- One property feature is changed at a time.
+- All other property details remain fixed.
+- The difference between the original and comparison prediction is treated as the feature's local model impact.
+
+Current factors:
+- Area
+- Bedrooms
+- Bathrooms
+- Furnishing
+- Property Type
+
+Location is still used by the prediction model but is intentionally excluded from the current impact ranking because a reliable location baseline has not yet been established.
+
+### Impact Classification
+
+Impacts are converted into simple UI-friendly labels:
+
+- `>= ₹2500` → Strong influence
+- `>= ₹1000` → Moderate influence
+- `< ₹1000` → Small influence
+
+### Counterfactual Baselines
+
+Furnishing comparisons:
+- Fully Furnished ↔ Semi Furnished
+- Furnished → Semi Furnished
+
+Property type comparisons:
+- Apartment ↔ Flat
+- Independent House ↔ Independent Floor
+- Room Set ↔ PG
+
+`Unknown` values are not compared.
+
+### SHAP Investigation
+
+Investigated SHAP using `ml/inspect_shap.py`.
+
+The trained Random Forest and preprocessor were inspected. SHAP initially produced invalid extremely large values because the transformed sparse/OHE representation caused TreeExplainer additivity issues.
+
+Because of this, the project currently uses the controlled counterfactual approach instead of exposing raw SHAP values to KIRA users.
+
+### Current Status
+
+ML-side local explanation engine is working independently.
+
+Next step:
+- Integrate `feature_impacts` into the FastAPI `/predict` response.
+- Then connect the explanation data to the KIRA React UI.
