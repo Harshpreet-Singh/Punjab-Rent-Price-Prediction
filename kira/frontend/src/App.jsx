@@ -295,6 +295,66 @@ function App() {
                     </p>
                   </div>
                 </div>
+                {/* Feature Impact */}
+                <div className="mt-10 rounded-2xl border border-white/10 bg-white/5 p-6 sm:p-8">
+                  <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+                    <div>
+                      <p className="text-sm font-bold uppercase tracking-[0.2em] text-kira-violet-light">
+                        What influenced your estimate?
+                      </p>
+
+                      <p className="mt-2 text-sm leading-6 text-white/40">
+                        These factors had the strongest influence on KIRA's
+                        prediction for this property.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="mt-8 space-y-5">
+                    {prediction.featureImpacts?.map((item) => {
+                      const impact = Number(item.impact);
+                      const isPositive = impact >= 0;
+
+                      return (
+                        <div
+                          key={item.feature}
+                          className="rounded-xl border border-white/10 bg-white/[0.03] p-5"
+                        >
+                          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                            <div>
+                              <p className="font-bold text-white">
+                                {item.feature}
+                              </p>
+
+                              <p className="mt-1 text-sm text-white/40">
+                                {item.value}
+                              </p>
+                            </div>
+
+                            <div className="sm:text-right">
+                              <p
+                                className={`text-lg font-bold ${
+                                  isPositive
+                                    ? "text-emerald-400"
+                                    : "text-rose-400"
+                                }`}
+                              >
+                                {isPositive ? "+" : "-"}₹
+                                {Math.abs(impact).toLocaleString("en-IN", {
+                                  maximumFractionDigits: 0,
+                                })}
+                              </p>
+
+                              <p className="mt-1 text-xs font-semibold uppercase tracking-wider text-white/30">
+                                {item.influence}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
 
                 {/* Property Summary */}
                 <div className="mt-12 border-t border-white/10 pt-8">

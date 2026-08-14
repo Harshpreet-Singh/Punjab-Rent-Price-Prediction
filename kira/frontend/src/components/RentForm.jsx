@@ -131,6 +131,8 @@ function RentForm({ onPrediction }) {
           upper: data.rent_range.upper,
         },
 
+        featureImpacts: data.feature_impacts,
+
         property: {
           bhk: Number(formData.bhk),
           bathroom: Number(formData.bathroom),
