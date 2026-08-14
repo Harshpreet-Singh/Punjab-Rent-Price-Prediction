@@ -210,12 +210,21 @@ def predict_rent(property_details: PropertyDetails):
             "area_category": [area_category],
             "furnishing": [property_details.furnishing],
             "property_type": [property_details.property_type],
+            
         })
 
         transformed_data = preprocessor.transform(
             input_data
         )
-
+        feature_impacts = calculate_feature_impacts(
+            bhk=property_details.bhk,
+            bathroom=property_details.bathroom,
+            area=property_details.area,
+            location=property_details.location,
+            city=property_details.city,
+            furnishing=property_details.furnishing,
+            property_type=property_details.property_type,
+        )
         # ============================================================
         # Ensemble Prediction & Rental Range
         # ============================================================
@@ -258,6 +267,7 @@ def predict_rent(property_details: PropertyDetails):
                     2,
                 ),
             },
+            "feature_impacts": feature_impacts,
         }
 
     except Exception as error:
