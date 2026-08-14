@@ -2137,3 +2137,79 @@ ML-side local explanation engine is working independently.
 Next step:
 - Integrate `feature_impacts` into the FastAPI `/predict` response.
 - Then connect the explanation data to the KIRA React UI.
+
+
+## Evaluation Question: What does "Influence" mean in KIRA?
+
+### Question
+**What does "Strong / Moderate / Small influence" mean in the prediction result?**
+
+### Answer
+
+The "Influence" shown by KIRA represents **how sensitive the model's prediction is to a particular feature for the specific property being evaluated**.
+
+KIRA uses a **local counterfactual comparison** to calculate this.
+
+For a particular property:
+
+1. KIRA first calculates the original rent prediction.
+2. It changes one feature while keeping the other property details constant.
+3. It calculates the prediction again.
+4. The difference between the two predictions is treated as that feature's **local impact**.
+
+For example:
+
+```text
+Original prediction:              ₹23,278
+Prediction with one fewer bathroom: ₹20,535
+
+Impact = ₹23,278 - ₹20,535
+       = +₹2,743
+
+
+Meaning of Positive and Negative Impact
+Positive Impact
+
+A positive impact means that the current feature value produces a higher prediction than the chosen counterfactual value.
+
+Example:
+
+Bathrooms
++₹2,743
+
+The model predicted a higher rent for the current bathroom value compared with the controlled comparison.
+
+Negative Impact
+
+A negative impact means that the current feature value produces a lower prediction than the chosen counterfactual value.
+
+Example:
+
+Furnishing
+-₹7,291
+
+This does NOT mean that furnishing inherently reduces rent by ₹7,291.
+
+It only means that, under the specific counterfactual comparison used by KIRA, the model's prediction was approximately ₹7,291 lower.
+
+Why is Location currently not shown?
+
+Location is an important feature in KIRA's model, but it is not currently included in the feature-impact explanation.
+
+The dataset contains hundreds of unique locations (approximately 510 encoded location categories). Creating a meaningful counterfactual comparison for location is difficult because arbitrarily changing a property from one location to another would not necessarily provide a reliable or intuitive explanation.
+
+Therefore, KIRA currently focuses its explanation on features for which a controlled comparison can be defined more clearly.
+
+Best Viva / Evaluation Answer
+
+If asked:
+
+"How did you calculate feature influence?"
+
+Answer:
+
+"KIRA uses local counterfactual analysis. We change one property feature at a time while keeping the other features constant, run the model again, and calculate the difference between the original and counterfactual predictions. This difference represents the feature's local influence on the model's prediction. It explains model sensitivity for that particular property rather than claiming causation."
+
+Short Version
+
+"Influence tells us how much KIRA's prediction changes when one feature is changed while the rest of the property remains constant. It is a local model-sensitivity measure, not a causal claim."

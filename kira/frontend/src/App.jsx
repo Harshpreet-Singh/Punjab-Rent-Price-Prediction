@@ -318,7 +318,7 @@ function App() {
                       return (
                         <div
                           key={item.feature}
-                          className="rounded-xl border border-white/10 bg-white/[0.03] p-5"
+                          className="rounded-xl border border-white/10 bg-white/3 p-5"
                         >
                           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                             <div>
