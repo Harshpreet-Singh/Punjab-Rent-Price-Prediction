@@ -2386,3 +2386,47 @@ Added:
 
 ```js
 generateSmartVerdict(prediction)
+The function:
+
+handles missing prediction data
+handles missing feature impacts
+calculates rental-range position
+separates positive and negative impacts
+identifies strongest influences
+generates the final Smart Verdict text
+
+The verdict is calculated once inside App():
+
+const verdict = prediction ? generateSmartVerdict(prediction) : null;
+
+The result is displayed conditionally inside the prediction result section.
+
+Backend Changes
+
+No backend changes were required.
+
+The existing prediction API already provides the information needed for the
+Smart Verdict.
+
+This keeps the feature lightweight and avoids creating unnecessary API
+endpoints.
+
+Status
+
+Smart Verdict: ✅ Complete
+
+Prediction range interpretation: ✅
+
+Positive influence detection: ✅
+
+Negative influence detection: ✅
+
+Strongest influence detection: ✅
+
+Natural feature grammar: ✅
+
+Missing-data fallback: ✅
+
+Frontend integration: ✅
+
+Backend changes: Not required
