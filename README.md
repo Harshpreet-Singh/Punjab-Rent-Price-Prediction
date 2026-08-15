@@ -1,85 +1,155 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
   <img src="https://img.shields.io/badge/Scikit--learn-ML-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="Scikit-learn" />
+  <img src="https://img.shields.io/badge/Random%20Forest-Best%20Model-9ACD32?style=for-the-badge" alt="Random Forest" />
   <img src="https://img.shields.io/badge/XGBoost-ML-189FDD?style=for-the-badge" alt="XGBoost" />
   <img src="https://img.shields.io/badge/LightGBM-ML-9ACD32?style=for-the-badge" alt="LightGBM" />
-  <img src="https://img.shields.io/badge/Power%20BI-Dashboard-F2C811?style=for-the-badge&logo=powerbi&logoColor=black" alt="Power BI" />
+  <img src="https://img.shields.io/badge/React-Vite-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React" />
+  <img src="https://img.shields.io/badge/Tailwind%20CSS-UI-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind CSS" />
+  <img src="https://img.shields.io/badge/FastAPI-Backend-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI" />
 </p>
-
 <p align="center">
-  <img src="https://img.shields.io/badge/Status-In%20Development-blue?style=for-the-badge" alt="Status" />
+  <img src="https://img.shields.io/badge/Status-Portfolio%20Ready-success?style=for-the-badge" alt="Status" />
   <img src="https://img.shields.io/badge/Best%20R²-0.9156-brightgreen?style=for-the-badge" alt="Best R2" />
 </p>
 
-# Punjab Rent Price Prediction
+<h1 align="center">Punjab Rent Price Prediction</h1>
 
-A Machine Learning project that predicts rental property prices using real-world rental listings collected from OLX for cities in Punjab.
+<p align="center">
+  <strong>KIRA — Punjab Rent Intelligence</strong>
+</p>
 
-The project follows an end-to-end Machine Learning workflow — from data collection and cleaning to feature engineering, model training, hyperparameter tuning, evaluation, model comparison, and an interactive prediction system.
-
-The project is being developed as a **learning-focused but production-style modular ML codebase**, with the eventual goal of providing a convenient web interface for rent prediction.
-
----
-
-## Project Objective
-
-The main goal of this project is to learn and implement Machine Learning from scratch while building a practical real-world application.
-
-### Objectives
-
-* Build a rental price prediction model using real-world data.
-* Understand the complete Machine Learning workflow.
-* Perform data cleaning and preprocessing.
-* Apply meaningful Feature Engineering.
-* Train and compare multiple regression algorithms.
-* Perform hyperparameter tuning.
-* Evaluate models using standard regression metrics.
-* Analyze feature importance and model explainability.
-* Build a reusable prediction pipeline.
-* Follow modular and clean software engineering practices.
-* Eventually provide an easy-to-use web interface for predictions.
+<p align="center">
+  An end-to-end Machine Learning project that turns real-world Punjab rental listings into rent estimates, model insights, and an interactive web prediction experience.
+</p>
 
 ---
 
-## Dataset
+## Overview
 
-The dataset consists of rental property listings collected from **OLX** for three locations in Punjab:
+**Punjab Rent Price Prediction** is an end-to-end Machine Learning project built around real rental listings collected from OLX for locations across Punjab.
 
-* SAS Nagar
-* Mohali
-* Kharar
+The project started as a learning-focused ML workflow and evolved into **KIRA (Punjab Rent Intelligence)** — a user-facing prediction application built around the trained rental-price model.
 
-### Dataset Size
+The project covers the complete pipeline:
+
+```text
+Real-world Rental Data
+        ↓
+Data Cleaning
+        ↓
+Feature Engineering
+        ↓
+Preprocessing
+        ↓
+Model Training
+        ↓
+Hyperparameter Tuning
+        ↓
+Model Evaluation
+        ↓
+Explainability
+        ↓
+Prediction API
+        ↓
+KIRA Web Application
+```
+
+The goal is not only to predict rent, but also to make the prediction understandable through expected rental ranges and a human-readable **KIRA'S TAKE** Smart Verdict.
+
+---
+
+# KIRA
+
+## Punjab Rent Intelligence
+
+KIRA is the web-facing layer of the project.
+
+Instead of requiring users to interact with a Python command-line program, KIRA provides a clean interface where users can describe a rental property and receive an estimated monthly rent.
+
+### KIRA currently provides
+
+- Property-based rent prediction
+- City and location selection
+- Bedrooms and bathroom inputs
+- Area input
+- Furnishing selection
+- Property type selection
+- Estimated monthly rent
+- Expected rental range
+- Feature-impact explanation
+- **KIRA'S TAKE** Smart Verdict
+- Property summary after prediction
+
+The application is designed around a simple principle:
+
+> **Know your rent before you move.**
+
+---
+
+# Project Objective
+
+The primary objective is to build a practical rental-price prediction system while learning and implementing the complete Machine Learning lifecycle.
+
+### Core objectives
+
+- Build a rental price prediction model using real-world data.
+- Understand the complete Machine Learning workflow.
+- Clean and prepare scraped rental listings.
+- Engineer meaningful rental-property features.
+- Train and compare multiple regression algorithms.
+- Tune promising models using hyperparameter search.
+- Evaluate models using standard regression metrics.
+- Analyze feature importance and model behaviour.
+- Build a reusable preprocessing and prediction pipeline.
+- Expose the trained model through a backend API.
+- Build a user-facing web application around the model.
+- Present model predictions in a clear and understandable way.
+
+---
+
+# Dataset
+
+The project uses rental property listings collected from **OLX** for three major locations in Punjab:
+
+- SAS Nagar
+- Mohali
+- Kharar
+
+### Dataset size
 
 **13,877 rental listings**
 
-### Target Variable
+### Target variable
 
 ```text
 price
 ```
 
-The target represents the rental price of the property.
+The target represents the monthly rental price of a property.
 
 ---
 
-## Data Cleaning
+# Data Cleaning
 
-The raw rental listings were cleaned and prepared before Machine Learning.
+The raw scraped listings required substantial preprocessing before they could be used for Machine Learning.
 
-Major cleaning steps included:
+Major cleaning operations included:
 
-* Removing unnecessary URL information.
-* Extracting BHK, bathroom and area information.
-* Converting price values into numerical format.
-* Standardizing BHK values.
-* Removing sale listings.
-* Handling invalid area values.
-* Removing unrealistic/outlier listings.
-* Removing duplicate listings.
-* Cleaning and merging datasets from multiple locations.
+- Removing unnecessary URL information.
+- Extracting BHK information.
+- Extracting bathroom information.
+- Extracting property area.
+- Converting rental prices into numerical values.
+- Standardizing BHK representations.
+- Removing sale listings.
+- Handling invalid area values.
+- Removing unrealistic and extreme listings.
+- Removing duplicate records.
+- Cleaning location and property information.
+- Merging the cleaned regional datasets.
 
-The cleaned datasets were then combined into:
+The final merged dataset is stored at:
 
 ```text
 data/punjab_rental_dataset.csv
@@ -87,164 +157,168 @@ data/punjab_rental_dataset.csv
 
 ---
 
-## Feature Engineering
+# Feature Engineering
 
-Feature Engineering was applied to extract additional information useful for rental price prediction.
+Feature engineering was used to convert raw listing information into features suitable for the prediction pipeline.
 
-### Original Features
+## Core Features
 
-* `bhk`
-* `bathroom`
-* `area`
-* `location`
-* `city`
+- `bhk`
+- `bathroom`
+- `area`
+- `location`
+- `city`
 
-### Engineered Features
+## Engineered Features
 
-#### Area Category
+### Area Category
 
-The property area is categorized into:
+Properties are grouped into area categories:
 
-* Small
-* Medium
-* Large
+- Small
+- Medium
+- Large
 
-Based on the project's defined area thresholds.
+### Furnishing
 
-#### Furnishing
+Furnishing information is extracted and standardized into categories such as:
 
-Furnishing information is extracted from property listing titles:
+- Fully Furnished
+- Semi Furnished
+- Furnished
+- Unknown
 
-* Fully Furnished
-* Semi Furnished
-* Furnished
-* Unknown
+### Property Type
 
-#### Property Type
+Property information is extracted and standardized into categories such as:
 
-Property types are extracted from listing titles:
+- Apartment
+- Flat
+- Independent House
+- Independent Floor
+- Room Set
+- PG
+- Unknown
 
-* Apartment
-* Flat
-* Independent House
-* Independent Floor
-* Room Set
-* PG
-* Unknown
-
-These features are integrated into the preprocessing pipeline before model training.
+These engineered features are passed through the same preprocessing pipeline used during model training and prediction.
 
 ---
 
-## Machine Learning Workflow
-
-The project follows the following workflow:
+# Machine Learning Workflow
 
 ```text
-Raw OLX Data
-     │
-     ▼
+Raw OLX Listings
+       │
+       ▼
 Data Cleaning
-     │
-     ▼
+       │
+       ▼
 Dataset Merging
-     │
-     ▼
+       │
+       ▼
 Feature Engineering
-     │
-     ▼
+       │
+       ▼
 Feature Selection
-     │
-     ▼
+       │
+       ▼
 Train / Test Split
-     │
-     ▼
-One-Hot Encoding
-     │
-     ▼
+       │
+       ▼
+Preprocessing
+       │
+       ▼
 Model Training
-     │
-     ▼
+       │
+       ▼
 Hyperparameter Tuning
-     │
-     ▼
+       │
+       ▼
 Model Evaluation
-     │
-     ▼
+       │
+       ▼
 Model Comparison
-     │
-     ▼
+       │
+       ▼
 Best Model Selection
-     │
-     ▼
-Rent Prediction
+       │
+       ▼
+Prediction Pipeline
+       │
+       ▼
+FastAPI Backend
+       │
+       ▼
+KIRA Web Application
 ```
 
 ---
 
-## Models Implemented
+# Models Implemented
 
-The project currently contains **10 trained model configurations** across multiple regression algorithms.
+The project contains **10 model configurations** across traditional regression and boosting algorithms.
 
-### Traditional Regression Models
+### Traditional Regression
 
-* Linear Regression
-* Decision Tree Regressor
-* Random Forest Regressor
-* Tuned Random Forest Regressor
+- Linear Regression
+- Decision Tree Regressor
+- Random Forest Regressor
+- Tuned Random Forest Regressor
 
-### Boosting Models
+### Boosting
 
-* Gradient Boosting Regressor
-* Tuned Gradient Boosting Regressor
-* XGBoost
-* Tuned XGBoost
-* LightGBM
-* Tuned LightGBM
+- Gradient Boosting Regressor
+- Tuned Gradient Boosting Regressor
+- XGBoost
+- Tuned XGBoost
+- LightGBM
+- Tuned LightGBM
 
-Hyperparameter tuning was performed using **GridSearchCV** for selected models.
-
----
-
-## Model Comparison
-
-The models were evaluated using the same test set and compared using MAE, MSE, RMSE and R².
-
-| Rank | Model                   |         MAE |        RMSE |         R² |
-| ---: | ----------------------- | ----------: | ----------: | ---------: |
-|    1 | **Random Forest Tuned** | **2409.65** | **3925.13** | **0.9156** |
-|    2 | Random Forest           |     2415.63 |     3968.82 |     0.9137 |
-|    3 | XGBoost                 |     4294.77 |     5965.17 |     0.8051 |
-|    4 | LightGBM Tuned          |     4089.56 |     5966.82 |     0.8050 |
-|    5 | Gradient Boosting Tuned |     4723.17 |     6477.87 |     0.7702 |
-|    6 | XGBoost Tuned           |     4787.48 |     6643.71 |     0.7582 |
-|    7 | LightGBM                |     4738.98 |     6936.62 |     0.7365 |
-|    8 | Linear Regression       |     5235.75 |     7645.27 |     0.6799 |
-|    9 | Gradient Boosting       |     5579.91 |     7880.15 |     0.6599 |
-|   10 | Decision Tree           |     6253.57 |     8946.48 |     0.5616 |
-
-> **Note:** The values above are from the project's current `outputs/metrics/model_comparison.csv`.
+Selected models were tuned using **GridSearchCV**.
 
 ---
 
-## Best Model
+# Model Comparison
 
-The current best-performing model is:
+The current model comparison is based on the project's generated metrics:
+
+`outputs/metrics/model_comparison.csv`
+
+| Rank | Model                   |           MAE |          RMSE |         R² |
+| ---: | ----------------------- | ------------: | ------------: | ---------: |
+|    1 | **Random Forest Tuned** | **₹2,409.65** | **₹3,925.13** | **0.9156** |
+|    2 | Random Forest           |     ₹2,415.63 |     ₹3,968.82 |     0.9137 |
+|    3 | XGBoost                 |     ₹4,294.77 |     ₹5,965.17 |     0.8051 |
+|    4 | LightGBM Tuned          |     ₹4,089.56 |     ₹5,966.82 |     0.8050 |
+|    5 | Gradient Boosting Tuned |     ₹4,723.17 |     ₹6,477.87 |     0.7702 |
+|    6 | XGBoost Tuned           |     ₹4,787.48 |     ₹6,643.71 |     0.7582 |
+|    7 | LightGBM                |     ₹4,738.98 |     ₹6,936.62 |     0.7365 |
+|    8 | Linear Regression       |     ₹5,235.75 |     ₹7,645.27 |     0.6799 |
+|    9 | Gradient Boosting       |     ₹5,579.91 |     ₹7,880.15 |     0.6599 |
+|   10 | Decision Tree           |     ₹6,253.57 |     ₹8,946.48 |     0.5616 |
+
+> **Note:** These values are from the project's current `outputs/metrics/model_comparison.csv`.
+
+---
+
+# Best Model
 
 ## Tuned Random Forest Regressor
 
+The current best-performing model is the tuned Random Forest Regressor.
+
 ### Performance
 
-| Metric       |             Value |
-| ------------ | ----------------: |
-| **MAE**      |     **₹2,409.65** |
-| **MSE**      | **15,406,626.23** |
-| **RMSE**     |     **₹3,925.13** |
-| **R² Score** |        **0.9156** |
+| Metric   |             Value |
+| -------- | ----------------: |
+| **MAE**  |     **₹2,409.65** |
+| **MSE**  | **15,406,626.23** |
+| **RMSE** |     **₹3,925.13** |
+| **R²**   |        **0.9156** |
 
-An R² score of **0.9156** means the model explains approximately **91.56% of the variance** in rental prices on the evaluated test set.
+An R² score of **0.9156** means that the model explains approximately **91.56% of the variance** in rental prices on the evaluated test set.
 
-The trained model is saved as:
+The trained model is stored at:
 
 ```text
 models/random_forest_tuned.pkl
@@ -252,54 +326,137 @@ models/random_forest_tuned.pkl
 
 ---
 
-## Evaluation Metrics
+# Evaluation Metrics
 
-The models are evaluated using four standard regression metrics:
+The models are evaluated using standard regression metrics.
 
 ### MAE — Mean Absolute Error
 
-Measures the average absolute difference between actual and predicted rent.
+Average absolute difference between actual and predicted rent.
 
-Lower is better.
+**Lower is better.**
 
 ### MSE — Mean Squared Error
 
-Penalizes larger prediction errors more heavily.
+Squares prediction errors, giving larger errors greater weight.
 
-Lower is better.
+**Lower is better.**
 
 ### RMSE — Root Mean Squared Error
 
-Represents prediction error in the same unit as the target variable (₹).
+Measures prediction error in the same unit as rental price.
 
-Lower is better.
+**Lower is better.**
 
 ### R² — R-Squared
 
-Measures how much variance in rental prices is explained by the model.
+Measures the proportion of variance in rental prices explained by the model.
 
-Higher is better.
+**Higher is better.**
 
 ---
 
-## Prediction System
+# Model Explainability
 
-A reusable command-line prediction system has been implemented in:
+The project includes multiple tools for understanding model behaviour.
+
+Current analysis includes:
+
+- Feature Importance
+- Grouped Feature Importance
+- Ablation Study
+- Cross Validation
+- SHAP Analysis
+- Prediction-level feature impacts
+
+Generated analysis outputs include:
+
+```text
+outputs/figures/
+├── ablation_study.png
+├── feature_importance.png
+├── shap_bar.png
+├── shap_summary.png
+└── shap_waterfall.png
+```
+
+These analyses help answer not only:
+
+> **"What rent did the model predict?"**
+
+but also:
+
+> **"Which property characteristics influenced the prediction?"**
+
+---
+
+# KIRA Smart Verdict
+
+KIRA includes a lightweight interpretation layer called **Smart Verdict**.
+
+After a prediction is generated, KIRA uses the model's existing prediction information to create a short human-readable interpretation.
+
+### Smart Verdict uses
+
+- Predicted rent
+- Expected rental range
+- Feature impacts
+- Impact direction
+- Impact strength
+
+### Example
+
+For a property where:
+
+```text
+Predicted rent: ₹21,259
+Expected range: ₹13,000 – ₹33,000
+
+Bedrooms:    +₹3,494
+Furnishing:  -₹5,967
+Area:        +₹1,407
+Property:    +₹455
+Bathrooms:   +₹150
+```
+
+KIRA can generate:
+
+> **Your estimate sits around the middle of KIRA's expected rental range.**
+
+> **Bedrooms have a strong positive influence on KIRA's prediction. Furnishing has a strong downward influence on KIRA's prediction.**
+
+The Smart Verdict is intentionally described as **model interpretation**, not causal analysis.
+
+For example, KIRA says:
+
+> "Bedrooms have a strong positive influence on KIRA's prediction."
+
+rather than claiming:
+
+> "Adding a bedroom increases rent by ₹3,494."
+
+This distinction is important because feature impact represents model sensitivity, not a causal real-world effect.
+
+---
+
+# Prediction System
+
+The original reusable command-line prediction system is available at:
 
 ```text
 ml/predict.py
 ```
 
-The system:
+It:
 
-1. Loads the trained Random Forest model.
+1. Loads the trained model.
 2. Loads the fitted preprocessing pipeline.
-3. Accepts property details from the user.
+3. Accepts property information.
 4. Generates required engineered features.
 5. Applies the same preprocessing used during training.
-6. Generates the predicted monthly rent.
+6. Produces the estimated monthly rent.
 
-### Example Input
+### Example
 
 ```text
 BHK: 3
@@ -315,7 +472,7 @@ Property Type:
 2. Flat
 ```
 
-### Example Output
+Example:
 
 ```text
 ========== Prediction ==========
@@ -323,52 +480,100 @@ Property Type:
 Estimated Monthly Rent: ₹20,557.97
 ```
 
-The prediction system also validates numerical inputs and uses predefined choices for categorical features to keep prediction inputs consistent with the training data.
-
 ---
 
-## Model Analysis & Explainability
+# Backend API
 
-The repository also contains analysis tools for understanding model behaviour, including:
+The project has been extended from a command-line prediction workflow into a web-ready prediction system.
 
-* Feature Importance
-* Grouped Feature Importance
-* Ablation Study
-* Cross Validation
-* SHAP Analysis
+The backend exposes the trained model through an API.
 
-Generated analysis outputs include:
+The prediction flow is:
 
 ```text
-outputs/figures/
-├── ablation_study.png
-├── feature_importance.png
-├── shap_bar.png
-├── shap_summary.png
-└── shap_waterfall.png
+KIRA Frontend
+      ↓
+Rent Form
+      ↓
+API Request
+      ↓
+FastAPI Backend
+      ↓
+Preprocessing Pipeline
+      ↓
+Tuned Random Forest
+      ↓
+Prediction + Range + Feature Impacts
+      ↓
+KIRA Frontend
 ```
 
-These analyses help understand which features contribute to rental price predictions and how the model behaves.
+The API response provides the frontend with the information required to render:
+
+- Estimated rent
+- Expected rental range
+- Feature impacts
+- Property summary
+- Smart Verdict
 
 ---
 
-## Power BI Dashboard
+# Web Application
 
-Before the Machine Learning phase, the rental data was also analyzed using **Power BI**.
+## KIRA — Punjab Rent Intelligence
 
-The dashboard was used to explore:
+The frontend is built using:
 
-* Rental price patterns
-* BHK distribution
-* Location-wise rental prices
-* Property trends
-* Dataset-level business insights
+- React
+- Vite
+- Tailwind CSS
+- JavaScript
 
-This helped establish an understanding of the dataset before moving into Machine Learning.
+KIRA focuses on a clean, minimal and user-friendly rental estimation experience.
+
+### Frontend flow
+
+```text
+Landing Page
+    ↓
+How KIRA Works
+    ↓
+Property Input Form
+    ↓
+Prediction
+    ↓
+Estimated Rent
+    ↓
+Expected Rental Range
+    ↓
+KIRA'S TAKE
+    ↓
+Feature Impacts
+    ↓
+Property Summary
+```
+
+The interface avoids unnecessary complexity and presents the prediction in a way that is understandable even to users without Machine Learning knowledge.
 
 ---
 
-## Project Structure
+# Power BI Dashboard
+
+Before building the Machine Learning pipeline, the rental dataset was explored using **Power BI**.
+
+The dashboard was used to understand:
+
+- Rental price patterns
+- BHK distribution
+- Location-wise rental prices
+- Property trends
+- Dataset-level business insights
+
+This analysis helped establish an understanding of the rental market before model development.
+
+---
+
+# Project Structure
 
 ```text
 Punjab-Rent-Price-Prediction/
@@ -433,6 +638,10 @@ Punjab-Rent-Price-Prediction/
 │   ├── metrics/
 │   └── predictions/
 │
+├── kira/
+│   ├── backend/
+│   └── frontend/
+│
 ├── insights.md
 ├── notes.md
 ├── requirements.txt
@@ -440,43 +649,61 @@ Punjab-Rent-Price-Prediction/
 └── .gitignore
 ```
 
+> The KIRA folder contains the web application layer. The exact frontend/backend file structure may evolve as the application is developed.
+
 ---
 
-## Tech Stack
+# Tech Stack
 
-### Programming & Data
+### Data & Programming
 
-* Python
-* Pandas
-* NumPy
+- Python
+- Pandas
+- NumPy
 
 ### Machine Learning
 
-* Scikit-learn
-* XGBoost
-* LightGBM
-* Joblib
+- Scikit-learn
+- XGBoost
+- LightGBM
+- Joblib
 
-### Visualization & Analysis
+### Explainability & Visualization
 
-* Matplotlib
-* Seaborn
-* SHAP
+- Matplotlib
+- Seaborn
+- SHAP
+
+### Backend
+
+- FastAPI
+- Python
+
+### Frontend
+
+- React
+- Vite
+- Tailwind CSS
+- JavaScript
 
 ### Business Intelligence
 
-* Power BI
+- Power BI
 
 ### Development
 
-* Git
-* GitHub
+- Git
+- GitHub
 
 ---
 
-# Running the Prediction System
+# Running the ML Prediction System
 
 Clone the repository and install the required dependencies.
+
+```bash
+pip install -r requirements.txt
+```
 
 Then run:
 
@@ -484,75 +711,184 @@ Then run:
 py -m ml.predict
 ```
 
-The program will ask for property details and return an estimated monthly rental price.
+The command-line system will request the required property details and return an estimated monthly rental price.
 
 ---
 
-#  Current Status
+# Running KIRA
 
-##  Completed
+The KIRA application contains separate frontend and backend components.
 
-* [x] Data Collection
-* [x] Data Cleaning
-* [x] Dataset Merging
-* [x] Exploratory Data Analysis
-* [x] Business Insights
-* [x] Power BI Dashboard
-* [x] Machine Learning Preprocessing
-* [x] Feature Engineering
-* [x] Linear Regression
-* [x] Decision Tree
-* [x] Random Forest
-* [x] Random Forest Hyperparameter Tuning
-* [x] Gradient Boosting
-* [x] Gradient Boosting Tuning
-* [x] XGBoost
-* [x] XGBoost Tuning
-* [x] LightGBM
-* [x] LightGBM Tuning
-* [x] Model Evaluation
-* [x] Cross Validation
-* [x] Model Comparison
-* [x] Feature Importance Analysis
-* [x] Ablation Study
-* [x] SHAP Explainability
-* [x] Prediction Pipeline
-* [x] Validated User Input
+### Backend
+
+From the backend directory, start the FastAPI application using the project's configured backend entry point.
+
+### Frontend
+
+From the frontend directory:
+
+```bash
+npm install
+npm run dev
+```
+
+> Refer to the current project files for the exact backend entry point and environment configuration.
 
 ---
 
-## Next Phase
+# Project Status
 
-The Machine Learning experimentation and prediction pipeline are currently complete.
+## Machine Learning
 
-The next major phase is to build a **web application** around the trained model.
+- [x] Data Collection
+- [x] Data Cleaning
+- [x] Dataset Merging
+- [x] Exploratory Data Analysis
+- [x] Feature Engineering
+- [x] Preprocessing
+- [x] Linear Regression
+- [x] Decision Tree
+- [x] Random Forest
+- [x] Random Forest Tuning
+- [x] Gradient Boosting
+- [x] Gradient Boosting Tuning
+- [x] XGBoost
+- [x] XGBoost Tuning
+- [x] LightGBM
+- [x] LightGBM Tuning
+- [x] Model Evaluation
+- [x] Cross Validation
+- [x] Model Comparison
+- [x] Feature Importance
+- [x] Ablation Study
+- [x] SHAP Explainability
+- [x] Reusable Prediction Pipeline
 
-The planned application will provide a convenient user interface where users can enter property details and receive an estimated rental price without using the command line.
+## KIRA Application
 
-The exact UI, features and application architecture will be designed in the next phase.
-
-Possible future extensions after the web application include:
-
-* Model deployment
-* Cloud hosting
-* Additional data collection
-* Model retraining with newer rental listings
-* Further experimentation with additional algorithms such as CatBoost
+- [x] Frontend foundation
+- [x] Property input form
+- [x] Prediction API integration
+- [x] Rent prediction result
+- [x] Expected rental range
+- [x] Feature impact display
+- [x] Property summary
+- [x] KIRA Smart Verdict
+- [x] Responsive UI
+- [x] Prediction result UX
 
 ---
 
-## Author
+# What This Project Demonstrates
+
+This project brings together several stages of practical Machine Learning development:
+
+### Data Engineering
+
+Working with messy real-world scraped rental data and converting it into a usable dataset.
+
+### Feature Engineering
+
+Extracting meaningful property characteristics from semi-structured listing information.
+
+### Model Development
+
+Training, comparing and tuning multiple regression algorithms instead of relying on a single model.
+
+### Model Evaluation
+
+Using MAE, MSE, RMSE and R² to compare model performance.
+
+### Explainability
+
+Using feature importance, SHAP and prediction-level impacts to understand model behaviour.
+
+### Software Engineering
+
+Keeping data cleaning, ML training, preprocessing, prediction and application code modular.
+
+### Deployment-Oriented Thinking
+
+Connecting the trained ML pipeline to an API and building a user-facing application around it.
+
+---
+
+# Limitations
+
+The model is trained on a dataset collected from online rental listings and therefore reflects the patterns and limitations of that dataset.
+
+Important considerations:
+
+- Rental prices can change over time.
+- Listing prices may differ from final negotiated rents.
+- Some locations may have more data than others.
+- Online listings can contain missing or noisy information.
+- The model should be treated as an estimation tool rather than a guaranteed market price.
+- The expected rental range represents model prediction variation, not a statistical confidence interval.
+
+---
+
+# Future Improvements
+
+Potential future improvements include:
+
+- Larger and more frequently updated rental datasets.
+- Automated data refresh and model retraining.
+- Additional geographic coverage across Punjab and other regions.
+- Improved location-level features.
+- More extensive model validation.
+- Model monitoring after deployment.
+- Cloud deployment.
+- Automated CI/CD.
+- Additional model experimentation such as CatBoost.
+- More advanced prediction uncertainty estimation.
+
+---
+
+# Learning Journey
+
+This project was built as a practical way to learn Machine Learning from the ground up.
+
+Instead of treating Machine Learning as only model training, the project explores the complete lifecycle:
+
+```text
+Data
+ ↓
+Understanding
+ ↓
+Cleaning
+ ↓
+Feature Engineering
+ ↓
+Model Development
+ ↓
+Evaluation
+ ↓
+Explainability
+ ↓
+API
+ ↓
+Application
+```
+
+The emphasis throughout the project is on understanding **why** each step is performed, while maintaining a modular and portfolio-quality codebase.
+
+---
+
+# Author
 
 **Harshpreet Singh**
 
-A Computer Science student learning Machine Learning from scratch by building practical, real-world projects using Python and modern data science tools.
-
-This project focuses on understanding **why each Machine Learning step is performed**, while maintaining a clean and modular project structure.
+B.Tech Computer Science student building practical projects while learning Machine Learning, Data Analysis and full-stack development.
 
 ---
 
-## Project Goal
+# Project Goal
 
-> **Turn real-world Punjab rental data into a practical rental price prediction system.**
+> **Turn real-world Punjab rental data into a practical, explainable and user-friendly rental price prediction system.**
 
-The project started as a learning exercise in Data Analysis and Machine Learning and is now progressing toward a complete user-facing application.
+**Punjab Rent Price Prediction** is the Machine Learning foundation.
+
+**KIRA** is the application built on top of it.
+
+Together, they transform a raw rental dataset into an end-to-end prediction product.
