@@ -49,4 +49,15 @@ kira/backend/.env
 # ==============================
 
 kira/frontend/public/*.glb
-kira/frontend/public/*.png
+
+# ==============================
+# KIRA - Local / Experimental Public Assets
+# ==============================
+
+kira/frontend/public/favicon.svg
+kira/frontend/public/icons.svg
+kira/frontend/public/kira-apartment.glb
+kira/frontend/public/kira-hero.png
+kira/frontend/public/kira-house.png
+kira/frontend/public/kira-location.png
+kira/frontend/public/photo.png
