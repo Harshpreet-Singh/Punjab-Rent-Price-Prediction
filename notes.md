@@ -1675,8 +1675,8 @@ Estimated Monthly Rent: ₹20,557.97
 
 ## load frontend : `npm run dev` in E:\Punjab-Rent-Price-Prediction\kira\frontend>
 
-## load backend : `.\.venv\Scripts\Activate.ps1` in (.venv) PS E:\Punjab-Rent-Price-Prediction> 
-##  then run `uvicorn kira.backend.main:app --reload`
+## load backend : `.\.venv\Scripts\Activate.ps1` in PS E:\Punjab-Rent-Price-Prediction\kira\backend>
+##  then in (.venv) PS E:\Punjab-Rent-Price-Prediction\kira\backend>  run `uvicorn kira.backend.main:app --reload`
 
 
 
@@ -2080,6 +2080,7 @@ The API now returns:
     "upper": 26000
   }
 }
+```
 
 ## 2026-08-13 — KIRA Prediction Explainability
 
@@ -2159,7 +2160,7 @@ For a particular property:
 
 For example:
 
-```text
+
 Original prediction:              ₹23,278
 Prediction with one fewer bathroom: ₹20,535
 
@@ -2213,3 +2214,175 @@ Answer:
 Short Version
 
 "Influence tells us how much KIRA's prediction changes when one feature is changed while the rest of the property remains constant. It is a local model-sensitivity measure, not a causal claim."
+
+
+
+
+<hr>
+<hr>
+<hr>
+<hr>
+
+# summary_ver11.md's progress below
+
+## Smart Verdict — Completed
+
+### What was added
+
+KIRA now includes a **Smart Verdict** layer after generating a rent prediction.
+
+The feature converts the existing prediction information into a short,
+human-readable interpretation for the user.
+
+The Smart Verdict uses:
+
+- `predictedRent`
+- `rentRange.lower`
+- `rentRange.upper`
+- `featureImpacts`
+- feature impact direction
+- feature influence strength
+
+No additional backend endpoint was required.
+
+---
+
+## How It Works
+
+The Smart Verdict is generated on the frontend using the existing prediction
+response.
+
+Flow:
+
+Prediction API response
+        ↓
+predicted rent + rental range + feature impacts
+        ↓
+generateSmartVerdict()
+        ↓
+range interpretation
+        ↓
+strongest positive influence
+        ↓
+strongest negative influence
+        ↓
+KIRA'S TAKE
+
+---
+
+## Rental Range Interpretation
+
+KIRA determines where the predicted rent sits inside the expected rental range.
+
+The range position is calculated as:
+
+position = (predictedRent - lower) / (upper - lower)
+
+Current interpretation:
+
+- position < 0.33
+  → estimate is toward the lower end of the expected range
+
+- position between 0.33 and 0.67
+  → estimate is around the middle of the expected range
+
+- position > 0.67
+  → estimate is toward the upper end of the expected range
+
+If valid range information is unavailable, KIRA falls back to a generic
+message rather than breaking the UI.
+
+---
+
+## Feature Influence Interpretation
+
+Feature impacts are sorted by absolute impact magnitude.
+
+The strongest positive and strongest negative influences are then selected.
+
+Examples:
+
+- Bedrooms → strong positive influence
+- Furnishing → strong downward influence
+- Area → moderate positive influence
+- Property type → small positive influence
+
+The Smart Verdict does not claim that a feature causally changes rent.
+
+Instead, it describes the feature as having an influence on KIRA's model
+prediction.
+
+Example:
+
+"Bedrooms have a strong positive influence on KIRA's prediction."
+
+This wording is intentional because the calculated feature impact represents
+model sensitivity rather than a causal real-world effect.
+
+---
+
+## Feature Grammar
+
+Feature-specific grammar was added so generated sentences remain natural.
+
+Examples:
+
+- Bedrooms → "Bedrooms have..."
+- Bathrooms → "Bathrooms have..."
+- Area → "Area has..."
+- Furnishing → "Furnishing has..."
+- Property type → "Property type has..."
+
+This prevents awkward output such as:
+
+"bedrooms has a strong positive influence..."
+
+---
+
+## Current UI Structure
+
+The prediction result now follows this order:
+
+1. Estimated monthly rent
+2. Expected rental range
+3. KIRA'S TAKE
+4. What influenced your estimate?
+5. Property summary
+
+This creates a clearer information hierarchy:
+
+**Prediction → Context → Interpretation → Details**
+
+---
+
+## Example
+
+For a property with:
+
+- Predicted rent: ₹21,259.44
+- Expected range: ₹13,000 – ₹33,000
+- Bedrooms: +₹3,494
+- Furnishing: -₹5,967
+- Area: +₹1,407
+- Property type: +₹455
+- Bathrooms: +₹150
+
+KIRA can produce:
+
+"Your estimate sits around the middle of KIRA's expected rental range."
+
+"Bedrooms have a strong positive influence on KIRA's prediction.
+Furnishing has a strong downward influence on KIRA's prediction."
+
+---
+
+## Implementation
+
+Main implementation:
+
+`kira/frontend/src/App.jsx`
+
+Added:
+
+```js
+generateSmartVerdict(prediction)
