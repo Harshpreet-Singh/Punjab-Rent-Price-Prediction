@@ -23,6 +23,13 @@
   An end-to-end Machine Learning project that turns real-world Punjab rental listings into rent estimates, model insights, and an interactive web prediction experience.
 </p>
 
+
+## KIRA Preview
+
+<p align="center">
+  <img src="docs/kira-preview.png" alt="KIRA Rent Prediction Application" width="900" />
+</p>
+
 ---
 
 ## Overview
